@@ -1,0 +1,2606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xiao (xiao) -->
+<!-- id:地图编号
+		 name:地图名字
+		 filename:地图文件名
+		 width:地图宽度
+		 height:地图高度
+		 backtocity:在本地图死亡后回到的地图编号
+		 foreignerbackto:在外国地图死亡后回到的地图编号
+		 function:地图功能类型（二进制），1表示潜水地图（必须用氧气瓶才可以进入），2表示不能骑马，4表示不能使用卷轴，32表示团战场，64表示是个人战场，128表示是PVE副本
+            MapProperty_Cross        = 1;       //穿人穿怪
+            MapProperty_ReliveHealth = 2;       //原地复活
+            MapProperty_RandTransfer = 4;       //随机传送
+            MapProperty_DieLost      = 8;       //死亡掉落
+            MapProperty_AddPkValue   = 16;      //pk值变化
+            MapProperty_AllowPk      = 32;      //允许PK
+		 commonuserbackto:无国家人在外国地图死后回到的城市
+		 backtodare:国战目的地
+		 isolate:独立场景类型，0表示非独立场景， 〉0表示独立场景
+	//复活方式 type=下列枚举,描述为按钮显示文本,
+		enum
+		{
+			ReliveHome=0,		/**< 回城康复 */
+			ReliveMoney=1,		/**< 原地康复 */
+			ReliveHealth=2,		/**< 原地健康康复 */
+			ReliveCopyMap=3,	/**< 副本定点复活 */
+			ReliveMax			/**< 最大值*/
+		};
+	//pk模式
+		enum
+		{
+			PKMODE_NORMAL=1,	/**<和平模式*/
+			PKMODE_ENTIRE=2,	/**<全体模式*/
+			PKMODE_GOODNESS=3,	/**<善恶模式*/
+			PKMODE_COUNTRY=4,	/**<国家模式*/
+			PKMODE_TEAM=5,		/**<组队模式*/
+			PKMODE_CORPS=6,		/**<团队模式*/
+			PKMODm本模式*/
+			PKMODE_MAX			/**<最大值*/
+		}; -->
+<!--
+			MATYPE_COUNTRY=1,	/**<国家地图*/
+			MATYPE_MIDDLE=2,	/**<中立地图*/
+			MATYPE_COPY=4,		/**<副本地图*/
+			MATYPE_COPY=8,		/**<需预加载的副本地图*/
+
+			 CountryType_LCountry= 4,    /**< 所在左相邻国家 */
+			CountryType_RCountry= 5,    /**< 所在右相邻国家 */
+			CountryType_MCountry= 6,    /**< 所在国家中立 */
+			CountryType_Normal  = 7,    /**< 普通国家 */
+		-->
+<!-- checklevel 角色等级限制，checkworldlevel 人类进程限制 checkusabletiledpoint 体力值限制 -->
+<!-- 小黑友情提醒：为避免超框，地图名称不能超过6个汉字！ -->
+<!-- 翅膀友情提醒：地图id和名称都不能有重复的情况存在，否则会导致服务器启动失败！ -->
+<mapinfo>
+
+	<map id="1" name="新手村" filename="map1" filename_client="Map/map1"  xmlname="map1" arname="map1" picture="1" width="86" height="52" function="7" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="2" name="比麒城" filename="map2" filename_client="Map/map2"  xmlname="map2" arname="map2" picture="1" width="180" height="103" function="63" isolate="0" armytype="1" checklevel="25" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="3" name="遗失矿洞" filename="map3" filename_client="Map/map3"  xmlname="map3" arname="map3" picture="1" width="52" height="35" function="63" isolate="0" armytype="1" checklevel="35" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="4" name="百足虫洞" filename="map4" filename_client="Map/map4"  xmlname="map4" arname="map4" picture="1" width="69" height="52" function="7" isolate="0" armytype="1" checklevel="40" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="5" name="古墓洞穴" filename="map5" filename_client="Map/map5"  xmlname="map5" arname="map5" picture="1" width="103" height="60" function="7" isolate="0" armytype="1" checklevel="45" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="6" name="玛雅禁地" filename="map6" filename_client="Map/map6"  xmlname="map6" arname="map6" picture="1" width="77" height="52" function="63" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="7" name="诅咒回廊" filename="map7" filename_client="Map/map7"  xmlname="map7" arname="map7" picture="1" width="60" height="69" function="63" isolate="0" armytype="1" checklevel="65" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="8" name="堕落魔域" filename="map8" filename_client="Map/map8"  xmlname="map8" arname="map8" picture="1" width="69" height="77" function="63" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="9" name="失落神庙" filename="map9" filename_client="Map/map9"  xmlname="map9" arname="map9" picture="1" width="69" height="52" function="63" isolate="0" armytype="1" checklevel="74" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="10" name="幽冥地域" filename="map10" filename_client="Map/map10"  xmlname="map10" arname="map10" picture="1" width="69" height="52" function="63" isolate="0" armytype="1" checklevel="74" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="11" name="龙骨洞穴" filename="map11" filename_client="Map/map11"  xmlname="map11" arname="map11" picture="1" width="86" height="52" function="63" isolate="0" armytype="1" checklevel="79" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="12" name="封魔山谷" filename="map12" filename_client="Map/map12"  xmlname="map12" arname="map12" picture="1" width="86" height="60" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="2" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+		<map id="13" name="皇宫" filename="map13" filename_client="Map/map13"  xmlname="map13" arname="map13" picture="1" width="43" height="35" function="43" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+		<map id="14" name="王城" filename="map14" filename_client="Map/map14"  xmlname="map14" arname="map14" picture="1" width="128" height="77" function="47" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="15" name="遗失矿洞二层" filename="map15" filename_client="Map/map15"  xmlname="map15" arname="map15" picture="1" width="52" height="35" function="7" isolate="0" armytype="1" checklevel="35" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="16" name="土城" filename="map16" filename_client="Map/map16"  xmlname="map16" arname="map16" picture="1" width="111" height="69" function="63" isolate="0" armytype="1" checklevel="55" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="17" name="堕落魔域二层" filename="map17" filename_client="Map/map17"  xmlname="map17" arname="map17" picture="1" width="43" height="35" function="63" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="18" name="失落神庙二层" filename="map18" filename_client="Map/map18"  xmlname="map18" arname="map18" picture="1" width="69" height="43" function="63" isolate="0" armytype="1" checklevel="75" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="19" name="幽冥地域二层" filename="map19" filename_client="Map/map19"  xmlname="map19" arname="map19" picture="1" width="69" height="43" function="63" isolate="0" armytype="1" checklevel="75" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="20" name="龙骨洞穴二层" filename="map20" filename_client="Map/map20"  xmlname="map20" arname="map20" picture="1" width="77" height="43" function="63" isolate="0" armytype="1" checklevel="79" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="21" name="百足虫洞二层" filename="map21" filename_client="Map/map21"  xmlname="map21" arname="map21" picture="1" width="35" height="26" function="63" isolate="0" armytype="1" checklevel="40" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="22" name="古墓洞穴二层" filename="map22" filename_client="Map/map22"  xmlname="map22" arname="map22" picture="1" width="60" height="43" function="63" isolate="0" armytype="1" checklevel="45" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="23" name="古墓洞穴三层" filename="map23" filename_client="Map/map23"  xmlname="map23" arname="map23" picture="1" width="43" height="26" function="63" isolate="0" armytype="1" checklevel="45" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="24" name="玛雅禁地二层" filename="map24" filename_client="Map/map24"  xmlname="map24" arname="map24" picture="1" width="77" height="60" function="63" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="25" name="诅咒回廊二层" filename="map25" filename_client="Map/map25"  xmlname="map25" arname="map25" picture="1" width="77" height="52" function="63" isolate="0" armytype="1" checklevel="65" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="26" name="封魔山谷二层" filename="map26" filename_client="Map/map26"  xmlname="map26" arname="map26" picture="1" width="94" height="69" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="2" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="27" name="蛮荒古地" filename="map27" filename_client="Map/map27"  xmlname="map27" arname="map27" picture="1" width="77" height="60" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="4" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="28" name="蛮荒古地二层" filename="map28" filename_client="Map/map28"  xmlname="map28" arname="map28" picture="1" width="86" height="60" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="4" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="29" name="三魔窟" filename="map29" filename_client="Map/map29"  xmlname="map29" arname="map29" picture="1" width="86" height="69" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="6" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="30" name="三魔窟二层" filename="map30" filename_client="Map/map30"  xmlname="map30" arname="map30" picture="1" width="35" height="26" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="6" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="31" name="炼狱深渊" filename="map31" filename_client="Map/map31"  xmlname="map31" arname="map31" picture="1" width="103" height="69" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="8" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="32" name="炼狱深渊二层" filename="map32" filename_client="Map/map32"  xmlname="map32" arname="map32" picture="1" width="103" height="69" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="8" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="47" name="雪域冰原" filename="map47" filename_client="Map/map47"  xmlname="map47" arname="map47" picture="1" width="86" height="69" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="10" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="48" name="雪域冰原二层" filename="map48" filename_client="Map/map48"  xmlname="map48" arname="map48" picture="1" width="86" height="52" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="10" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="49" name="塞外荒漠" filename="map49" filename_client="Map/map49"  xmlname="map49" arname="map49" picture="1" width="86" height="52" function="63" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="101" name="遗失矿洞（任务）" filename="map101" filename_client="Map/map101"  xmlname="map101" arname="map101" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="102" name="百足虫洞（任务）" filename="map102" filename_client="Map/map102"  xmlname="map102" arname="map102" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="103" name="古墓洞穴（任务）" filename="map103" filename_client="Map/map103"  xmlname="map103" arname="map103" picture="1" width="43" height="26" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="104" name="王城（任务）" filename="map104" filename_client="Map/map104"  xmlname="map104" arname="map104" picture="1" width="129" height="77" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="105" name="玛雅禁地（任务）" filename="map105" filename_client="Map/map105"  xmlname="map105" arname="map105" picture="1" width="77" height="60" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="106" name="诅咒回廊（任务）" filename="map106" filename_client="Map/map106"  xmlname="map106" arname="map106" picture="1" width="77" height="52" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="107" name="堕落魔域（任务）" filename="map107" filename_client="Map/map107"  xmlname="map107" arname="map107" picture="1" width="43" height="35" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="108" name="失落神庙（任务）" filename="map108" filename_client="Map/map108"  xmlname="map108" arname="map108" picture="1" width="69" height="43" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="109" name="幽冥地域（任务）" filename="map109" filename_client="Map/map109"  xmlname="map109" arname="map109" picture="1" width="69" height="43" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="110" name="龙骨洞穴（任务）" filename="map110" filename_client="Map/map110"  xmlname="map110" arname="map110" picture="1" width="77" height="43" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="111" name="龙骨洞穴二层（任务）" filename="map111" filename_client="Map/map111"  xmlname="map111" arname="map111" picture="1" width="77" height="43" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="112" name="封魔山谷（任务）" filename="map112" filename_client="Map/map112"  xmlname="map112" arname="map112" picture="1" width="94" height="69" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="113" name="蛮荒古地（任务）" filename="map113" filename_client="Map/map113"  xmlname="map113" arname="map113" picture="1" width="86" height="60" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="114" name="三魔窟（任务）" filename="map114" filename_client="Map/map114"  xmlname="map114" arname="map114" picture="1" width="35" height="26" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="115" name="炼狱深渊（任务）" filename="map115" filename_client="Map/map115"  xmlname="map115" arname="map115" picture="1" width="103" height="69" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="116" name="雪域冰原（任务）" filename="map116" filename_client="Map/map116"  xmlname="map116" arname="map116" picture="1" width="86" height="52" function="3" isolate="0" armytype="1" checklevel="1" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="129" name="幽冥山涧（经验）" filename="map129" filename_client="Map/map129"  xmlname="map129" arname="map129" picture="1" width="26" height="18" function="3" isolate="0" armytype="1" checklevel="55" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="130" name="苍云邪洞（经验）" filename="map130" filename_client="Map/map130"  xmlname="map130" arname="map130" picture="1" width="26" height="18" function="3" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="131" name="泽西幽境（经验）" filename="map131" filename_client="Map/map131"  xmlname="map131" arname="map131" picture="1" width="26" height="18" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="132" name="冰封雪境（经验）" filename="map132" filename_client="Map/map132"  xmlname="map132" arname="map132" picture="1" width="26" height="18" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="2" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="133" name="上古荒漠（经验）" filename="map133" filename_client="Map/map133"  xmlname="map133" arname="map133" picture="1" width="26" height="18" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="4" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="142" name="恶魔领主（装备）" filename="map142" filename_client="Map/map142"  xmlname="map142" arname="map142" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="143" name="诅咒魔王（装备）" filename="map143" filename_client="Map/map143"  xmlname="map143" arname="map143" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="144" name="牛魔王（装备）" filename="map144" filename_client="Map/map144"  xmlname="map144" arname="map144" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="145" name="黄泉尊主（装备）" filename="map145" filename_client="Map/map145"  xmlname="map145" arname="map145" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="1" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="146" name="玛雅教主（装备）" filename="map146" filename_client="Map/map146"  xmlname="map146" arname="map146" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="2" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="147" name="炼狱魔王（装备）" filename="map147" filename_client="Map/map147"  xmlname="map147" arname="map147" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="4" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="151" name="爬塔副本1层" filename="map151" filename_client="Map/map151"  xmlname="map151" arname="map151" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="152" name="爬塔副本2层" filename="map152" filename_client="Map/map152"  xmlname="map152" arname="map152" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="153" name="爬塔副本3层" filename="map153" filename_client="Map/map153"  xmlname="map153" arname="map153" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="154" name="爬塔副本4层" filename="map154" filename_client="Map/map154"  xmlname="map154" arname="map154" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="155" name="爬塔副本5层" filename="map155" filename_client="Map/map155"  xmlname="map155" arname="map155" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="156" name="爬塔副本6层" filename="map156" filename_client="Map/map156"  xmlname="map156" arname="map156" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="157" name="爬塔副本7层" filename="map157" filename_client="Map/map157"  xmlname="map157" arname="map157" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="158" name="爬塔副本8层" filename="map158" filename_client="Map/map158"  xmlname="map158" arname="map158" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="159" name="爬塔副本9层" filename="map159" filename_client="Map/map159"  xmlname="map159" arname="map159" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="160" name="爬塔副本10层" filename="map160" filename_client="Map/map160"  xmlname="map160" arname="map160" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="161" name="爬塔副本11层" filename="map161" filename_client="Map/map161"  xmlname="map161" arname="map161" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="162" name="爬塔副本12层" filename="map162" filename_client="Map/map162"  xmlname="map162" arname="map162" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="163" name="爬塔副本13层" filename="map163" filename_client="Map/map163"  xmlname="map163" arname="map163" picture="1" width="35" height="26" function="1" isolate="0" armytype="1" checklevel="70" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+		</map>
+	<map id="164" name="神秘暗殿一层(装备)" filename="map164" filename_client="Map/map164"  xmlname="map164" arname="map164" picture="1" width="120" height="77" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="165" name="神秘暗殿二层(装备)" filename="map165" filename_client="Map/map165"  xmlname="map165" arname="map165" picture="1" width="120" height="77" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="180" name="碎银玄界" filename="map180" filename_client="Map/map180"  xmlname="map180" arname="map180" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="50" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="181" name="秘银玄界" filename="map181" filename_client="Map/map181"  xmlname="map181" arname="map181" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="182" name="塔防封魔" filename="map182" filename_client="Map/map182"  xmlname="map182" arname="map182" picture="1" width="35" height="18" function="1" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="183" name="石牢竞技场" filename="map183" filename_client="Map/map183"  xmlname="map183" arname="map183" picture="1" width="26" height="18" function="33" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="184" name="熔岩竞技场" filename="map184" filename_client="Map/map184"  xmlname="map184" arname="map184" picture="1" width="26" height="18" function="33" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="185" name="地宫竞技场" filename="map185" filename_client="Map/map185"  xmlname="map185" arname="map185" picture="1" width="26" height="18" function="33" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="186" name="深渊迷宫一层" filename="map186" filename_client="Map/map186"  xmlname="map186" arname="map186" picture="1" width="60" height="43" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="187" name="深渊迷宫二层" filename="map187" filename_client="Map/map187"  xmlname="map187" arname="map187" picture="1" width="60" height="35" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="188" name="深渊迷宫三层" filename="map188" filename_client="Map/map188"  xmlname="map188" arname="map188" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="189" name="BOSS之家一层" filename="map189" filename_client="Map/map189"  xmlname="map189" arname="map189" picture="1" width="111" height="77" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="190" name="BOSS之家二层" filename="map190" filename_client="Map/map190"  xmlname="map190" arname="map190" picture="1" width="111" height="77" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="191" name="BOSS之家三层" filename="map191" filename_client="Map/map191"  xmlname="map191" arname="map191" picture="1" width="86" height="60" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="193" name="宝石战场" filename="map193" filename_client="Map/map193"  xmlname="map193" arname="map193" picture="1" width="43" height="35" function="35" isolate="0" armytype="1" checklevel="61" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="194" name="群雄夺宝" filename="map194" filename_client="Map/map194"  xmlname="map194" arname="map194" picture="1" width="86" height="52" function="35" isolate="0" armytype="1" checklevel="61" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="195" name="金银岛" filename="map195" filename_client="Map/map195"  xmlname="map195" arname="map195" picture="1" width="35" height="26" function="49" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="196" name="血战到底" filename="map196" filename_client="Map/map196"  xmlname="map196" arname="map196" picture="1" width="86" height="52" function="33" isolate="0" armytype="1" checklevel="61" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="197" name="转生殿堂1层" filename="map197" filename_client="Map/map197"  xmlname="map197" arname="map197" picture="1" width="26" height="26" function="59" isolate="0" armytype="1" checklevel="50" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="198" name="转生殿堂2层" filename="map198" filename_client="Map/map198"  xmlname="map198" arname="map198" picture="1" width="26" height="26" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="199" name="转生殿堂3层" filename="map199" filename_client="Map/map199"  xmlname="map199" arname="map199" picture="1" width="26" height="26" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="1" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="200" name="转生殿堂4层" filename="map200" filename_client="Map/map200"  xmlname="map200" arname="map200" picture="1" width="26" height="26" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="3" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+		<map id="201" name="转生殿堂5层" filename="map201" filename_client="Map/map201"  xmlname="map201" arname="map201" picture="1" width="26" height="26" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="5" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+		<map id="202" name="转生殿堂6层" filename="map202" filename_client="Map/map202"  xmlname="map202" arname="map202" picture="1" width="26" height="26" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="7" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+		<map id="203" name="转生殿堂7层" filename="map203" filename_client="Map/map203"  xmlname="map203" arname="map203" picture="1" width="26" height="26" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="9" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+		<map id="204" name="激情闭关" filename="map204" filename_client="Map/map204"  xmlname="map204" arname="map204" picture="1" width="52" height="35" function="57" isolate="0" armytype="1" checklevel="61" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+		<map id="205" name="普通挂机" filename="map205" filename_client="Map/map205"  xmlname="map205" arname="map205" picture="1" width="77" height="52" function="7" isolate="0" armytype="1" checklevel="30" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+		<map id="206" name="VIP挂机" filename="map206" filename_client="Map/map206"  xmlname="map206" arname="map206" picture="1" width="77" height="52" function="7" isolate="0" armytype="1" checklevel="30" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="207" name="魔兽殿堂一层" filename="map207" filename_client="Map/map207"  xmlname="map207" arname="map207" picture="1" width="111" height="69" function="59" isolate="0" armytype="1" checklevel="30" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="208" name="魔兽殿堂二层" filename="map208" filename_client="Map/map208"  xmlname="map208" arname="map208" picture="1" width="60" height="86" function="59" isolate="0" armytype="1" checklevel="30" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="209" name="魔兽殿堂三层" filename="map209" filename_client="Map/map209"  xmlname="map209" arname="map209" picture="1" width="60" height="52" function="59" isolate="0" armytype="1" checklevel="30" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="210" name="魔古堡玄界一层" filename="map210" filename_client="Map/map210"  xmlname="map210" arname="map210" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="75" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0"> <Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="211" name="魔古堡玄界二层" filename="map211" filename_client="Map/map211"  xmlname="map211" arname="map211" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="2" checkusabletiledpoint="0" maptype="1" mapmode="0"> <Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="212" name="魔古堡玄界三层" filename="map212" filename_client="Map/map212"  xmlname="map212" arname="map212" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="4" checkusabletiledpoint="0" maptype="1" mapmode="0"> <Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+    <map id="213" name="灵兽岛" filename="map213" filename_client="Map/map213"  xmlname="map213" arname="map213" picture="1" width="86" height="52" function="3" isolate="0" armytype="1" checklevel="57" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+    <map id="214" name="傲雪岭" filename="map214" filename_client="Map/map214"  xmlname="map214" arname="map214" picture="1" width="60" height="69" function="3" isolate="0" armytype="1" checklevel="57" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+    <map id="215" name="地魔狱" filename="map215" filename_client="Map/map215"  xmlname="map215" arname="map215" picture="1" width="103" height="60" function="3" isolate="0" armytype="1" checklevel="57" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+    <map id="216" name="常羊山" filename="map216" filename_client="Map/map216"  xmlname="map216" arname="map216" picture="1" width="69" height="52" function="3" isolate="0" armytype="1" checklevel="57" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+    <map id="217" name="无定山" filename="map217" filename_client="Map/map217"  xmlname="map217" arname="map217" picture="1" width="86" height="60" function="3" isolate="0" armytype="1" checklevel="57" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+    <map id="218" name="千幻梦境" filename="map218" filename_client="Map/map218"  xmlname="map218" arname="map218" picture="1" width="77" height="52" function="3" isolate="0" armytype="1" checklevel="57" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+	<map id="220" name="大型藏宝山洞" filename="map220" filename_client="Map/map220"  xmlname="map220" arname="map220" picture="1" width="120" height="77" function="59" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+		<map id="221" name="小型藏宝山洞" filename="map221" filename_client="Map/map221"  xmlname="map221" arname="map221" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+	<map id="222" name="藏宝图任务" filename="map222" filename_client="Map/map222"  xmlname="map222" arname="map222" picture="1" width="52" height="35" function="35" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+	<map id="223" name="晶源矿脉" filename="map223" filename_client="Map/map223"  xmlname="map223" arname="map223" picture="1" width="69" height="52" function="35" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+	<map id="224" name="帮会领地" filename="map224" filename_client="Map/map224"  xmlname="map224" arname="map224" picture="1" width="129" height="77" function="3" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+		<map id="225" name="帮会势力战" filename="map225" filename_client="Map/map225"  xmlname="map225" arname="map225" picture="1" width="69" height="60" function="3" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+	<map id="227" name="混乱深渊一层" filename="map227" filename_client="Map/map227"  xmlname="map227" arname="map227" picture="1" width="103" height="60" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="2" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+	<map id="228" name="混乱深渊二层" filename="map228" filename_client="Map/map228"  xmlname="map228" arname="map228" picture="1" width="35" height="26" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="2" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+	<map id="229" name="闹洞房" filename="map229" filename_client="Map/map229"  xmlname="map229" arname="map229" picture="1" width="26" height="17" function="3" isolate="0" armytype="1" checklevel="20" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+        <Relive>
+            <item type="4">技能苏醒</item>
+            <item type="1">原地重生</item>
+            <item type="0">回城重生</item>
+        </Relive>
+        <Pk>
+            <item type="1"/>
+            <item type="2"/>
+            <item type="3"/>
+            <item type="4"/>
+            <item type="5"/>
+            <item type="6"/>
+            <item type="7"/>
+            <item type="8"/>
+        </Pk>
+    </map>
+	<map id="230" name="矿洞(VIP)" filename="map230" filename_client="Map/map230"  xmlname="map230" arname="map230" picture="1" width="52" height="35" function="3" isolate="0" armytype="1" checklevel="20" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="231" name="封魔洞一层" filename="map231" filename_client="Map/map231"  xmlname="map231" arname="map231" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="1" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="232" name="封魔洞二层" filename="map232" filename_client="Map/map232"  xmlname="map232" arname="map232" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="2" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="233" name="封魔洞三层" filename="map233" filename_client="Map/map233"  xmlname="map233" arname="map233" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="3" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="234" name="封魔洞四层" filename="map234" filename_client="Map/map234"  xmlname="map234" arname="map234" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="4" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="235" name="封魔洞五层" filename="map235" filename_client="Map/map235"  xmlname="map235" arname="map235" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="5" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="236" name="封魔洞六层" filename="map236" filename_client="Map/map236"  xmlname="map236" arname="map236" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="6" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="237" name="封魔洞七层" filename="map237" filename_client="Map/map237"  xmlname="map237" arname="map237" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="7" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="238" name="封魔洞八层" filename="map238" filename_client="Map/map238"  xmlname="map238" arname="map238" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="8" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="239" name="封魔洞九层" filename="map239" filename_client="Map/map239"  xmlname="map239" arname="map239" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="9" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="240" name="封魔洞十层" filename="map240" filename_client="Map/map240"  xmlname="map240" arname="map240" picture="1" width="69" height="52" function="59" isolate="0" armytype="1" checklevel="80" checkworldlevel="10" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="241" name="经验副本(65级)" filename="map241" filename_client="Map/map241"  xmlname="map241" arname="map241" picture="1" width="43" height="26" function="3" isolate="0" armytype="1" checklevel="65" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="242" name="经验副本(80级)" filename="map242" filename_client="Map/map242"  xmlname="map242" arname="map242" picture="1" width="43" height="26" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="243" name="经验副本(90级)" filename="map243" filename_client="Map/map243"  xmlname="map243" arname="map243" picture="1" width="43" height="26" function="3" isolate="0" armytype="1" checklevel="90" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="244" name="经验副本(100级)" filename="map244" filename_client="Map/map244"  xmlname="map244" arname="map244" picture="1" width="43" height="26" function="3" isolate="0" armytype="1" checklevel="100" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="245" name="经验副本(110级)" filename="map245" filename_client="Map/map245"  xmlname="map245" arname="map245" picture="1" width="43" height="26" function="3" isolate="0" armytype="1" checklevel="110" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+        <map id="246" name="神石副本" filename="map246" filename_client="Map/map246"  xmlname="map246" arname="map246" picture="1" width="60" height="43" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+        <map id="247" name="龙珠副本" filename="map247" filename_client="Map/map247"  xmlname="map247" arname="map247" picture="1" width="60" height="43" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+        <map id="248" name="羽毛副本" filename="map248" filename_client="Map/map248"  xmlname="map248" arname="map248" picture="1" width="60" height="43" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+        <map id="249" name="护盾副本" filename="map249" filename_client="Map/map249"  xmlname="map249" arname="map249" picture="1" width="60" height="43" function="3" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="250" name="神秘暗殿一层" filename="map250" filename_client="Map/map250"  xmlname="map250" arname="map250" picture="1" width="120" height="77" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="251" name="神秘暗殿二层" filename="map251" filename_client="Map/map251"  xmlname="map251" arname="map251" picture="1" width="120" height="77" function="59" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+         <map id="252" name="闯天关" filename="map252" filename_client="Map/map252"  xmlname="map252" arname="map252" picture="1" width="43" height="26" function="7" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="253" name="恶魔神殿一层" filename="map253" filename_client="Map/map253"  xmlname="map253" arname="map253" picture="1" width="111" height="69" function="59" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="254" name="恶魔神殿二层" filename="map254" filename_client="Map/map254"  xmlname="map254" arname="map254" picture="1" width="60" height="86" function="59" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="255" name="恶魔神殿三层" filename="map255" filename_client="Map/map255"  xmlname="map255" arname="map255" picture="1" width="60" height="52" function="59" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+
+</mapinfo>

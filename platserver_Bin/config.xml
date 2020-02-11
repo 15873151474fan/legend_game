@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!--所有各种服务器参数,这里只放每个区都不同的配置-->
+<Zebra>
+	<global>
+		<!--MySQL database connection[mysql://user:passwd@host:port/dbName]-->
+		<!-- 如果要编码mysql连接字符串请使用工具，配置如下面的例子
+		<mysql encode="yes">lmOf.1kySwS0a09j11xyCdI1ySujl1hnCvT0hDitT0hjzv00gzSv00gDSw91tS9fE1</mysql>
+		-->
+		<mysql>mysql://root:316180@111.229.167.100:3306/LoginServer</mysql>
+		<zone_mysql>mysql://root:316180@111.229.167.100:3306/LoginServer</zone_mysql>
+		<superserver port="10001">localhost</superserver>
+		<!-- Use the specified local network device. -->
+		<ifname>eth0</ifname>
+	</global>
+	<NameServer>
+		<mysql>mysql://root:316180@111.229.167.100:3306/NameServer</mysql>
+		<superport>7005</superport>
+		<stateport>8008</stateport>
+		<logfilename>/tmp/nameserver.log</logfilename>
+	</NameServer>
+	<FLServer>
+		<mysql>mysql://root:316180@111.229.167.100:3306/LoginServer</mysql>
+		<logfilename>/tmp/loginserver.log</logfilename>
+		<sdkport>7004</sdkport>
+	</FLServer>
+</Zebra>

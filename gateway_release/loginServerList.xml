@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<Zebra>
+	<GatewayServerList>
+		<url_gatewaylist>http://111.229.167.100:18000/11/22/33?ip=FGCQ_Gate_01</url_gatewaylist>
+	</GatewayServerList>
+</Zebra>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--起始IP  截止IP  省ID     市ID   -->
+<LoginKey>
+	<key channel="0"  	name="默认" key="d101ca11255b72237350c1d25e5dbaae2798e301" />
+	<key channel="1"  	name="中青宝" key="d101ca11255b72237350c1d25e5dbaae2798e301" />
+	<key channel="802"  name="新浪" key="d101ca11255b72237350c1d25e5dbaae2798e301" />
+</LoginKey>

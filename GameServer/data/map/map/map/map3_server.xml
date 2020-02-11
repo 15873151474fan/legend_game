@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="100" width="1" height="1" x="3" y="29" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+		<rect id="1" width="7" height="6" x="5" y="22" />
+		<rect id="2" width="20" height="7" x="23" y="14" />
+		<rect id="3" width="9" height="7" x="11" y="16" />
+	</NpcRect>
+	<Npc>
+		<npc id="116" name="NPC名字" x="1" y="25" num="1" angle="0" />
+		<npc id="117" name="NPC名字" x="21" y="14" num="1" angle="0" />
+		<npc id="118" name="NPC名字" x="31" y="23" num="1" angle="0" />
+		<npc id="119" name="NPC名字" x="47" y="15" num="1" angle="0" />
+		<npc id="268" name="NPC名字" x="36" y="15" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="16" y="16" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="15" y="13" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="9" y="18" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="3" y="22" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="6" y="21" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="6" y="24" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="33" y="24" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="13" y="12" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="43" y="20" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="45" y="15" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="28" y="13" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="25" y="13" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="38" y="14" num="1" angle="0" />
+		<npc id="10011" name="怪物名字" x="5" y="22" num="15" interval="1">
+			<rect id="1" />
+		</npc>
+		<npc id="10012" name="怪物名字" x="23" y="14" num="40" interval="1">
+			<rect id="2" />
+		</npc>
+		<npc id="10011" name="怪物名字" x="11" y="16" num="25" interval="1">
+			<rect id="3" />
+		</npc>
+	</Npc>
+	<Way>
+		<WayPoint mapid="2" zoneid="4" enable="1">
+			<point x="2" y="30" />
+		</WayPoint>
+		<WayPoint mapid="15" zoneid="3" enable="1">
+			<point x="50" y="14" />
+		</WayPoint>
+	</Way>
+</Map>

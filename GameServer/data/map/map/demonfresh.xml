@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 奇异兽刷新配置文件，根据怪物等级，死亡后会有概率刷新奇异兽，单位：万 -->
+<DemonFresh>
+    <levelrank id="1" minlevel="6" maxlevel="10" npcid="0">
+		<demon id="41001" rate="3000" />
+		<demon id="41003" rate="3000" />
+		<demon id="41004" rate="4000" />
+	</levelrank>
+	<levelrank id="2" minlevel="11" maxlevel="20" npcid="0">
+        <demon id="41001" rate="1700" />
+        <demon id="41002" rate="1700" />
+        <demon id="41003" rate="1700" />
+        <demon id="41004" rate="2200" />
+		<demon id="41005" rate="1700" />
+		<demon id="41006" rate="1000" />
+    </levelrank>
+	<levelrank id="3" minlevel="21" maxlevel="30" npcid="0">
+        <demon id="41001" rate="1700" />
+        <demon id="41002" rate="1700" />
+        <demon id="41003" rate="1700" />
+        <demon id="41004" rate="2200" />
+		<demon id="41005" rate="1700" />
+		<demon id="41006" rate="1000" />
+    </levelrank>
+	<levelrank id="4" minlevel="31" maxlevel="40" npcid="0">
+        <demon id="41001" rate="1500" />
+        <demon id="41002" rate="1300" />
+        <demon id="41003" rate="1300" />
+        <demon id="41004" rate="1300" />
+		<demon id="41005" rate="1200" />
+		<demon id="41006" rate="1200" />
+		<demon id="41111" rate="1100" />
+		<demon id="41115" rate="1100" />
+    </levelrank>
+	<levelrank id="5" minlevel="41" maxlevel="50" npcid="0">
+        <demon id="41001" rate="1000" />
+        <demon id="41002" rate="1000" />
+        <demon id="41003" rate="1000" />
+        <demon id="41004" rate="1000" />
+		<demon id="41005" rate="1000" />
+		<demon id="41006" rate="1000" />
+		<demon id="41111" rate="800" />
+		<demon id="41112" rate="800" />
+		<demon id="41113" rate="800" />
+		<demon id="41114" rate="800" />
+		<demon id="41115" rate="800" />
+    </levelrank>
+	<levelrank id="6" minlevel="51" maxlevel="60" npcid="0">
+        <demon id="41001" rate="1000" />
+        <demon id="41002" rate="1000" />
+        <demon id="41003" rate="1000" />
+        <demon id="41004" rate="1000" />
+		<demon id="41005" rate="1000" />
+		<demon id="41006" rate="1000" />
+		<demon id="41111" rate="950" />
+		<demon id="41112" rate="700" />
+		<demon id="41113" rate="700" />
+		<demon id="41114" rate="700" />
+		<demon id="41115" rate="950" />
+    </levelrank>
+	<levelrank id="7" minlevel="61" maxlevel="70" npcid="0">
+        <demon id="41001" rate="1000" />
+        <demon id="41002" rate="1000" />
+        <demon id="41003" rate="1000" />
+        <demon id="41004" rate="1000" />
+		<demon id="41005" rate="900" />
+		<demon id="41006" rate="900" />
+		<demon id="41111" rate="950" />
+		<demon id="41112" rate="850" />
+		<demon id="41113" rate="800" />
+		<demon id="41114" rate="850" />
+		<demon id="41115" rate="750" />
+    </levelrank>
+	<levelrank id="8" minlevel="71" maxlevel="80" npcid="0">
+        <demon id="41001" rate="877" />
+        <demon id="41002" rate="877" />
+        <demon id="41003" rate="877" />
+        <demon id="41004" rate="877" />
+		<demon id="41005" rate="789" />
+		<demon id="41006" rate="789" />
+		<demon id="41111" rate="833" />
+		<demon id="41112" rate="745" />
+		<demon id="41113" rate="701" />
+		<demon id="41114" rate="745" />
+		<demon id="41115" rate="658" />
+		<demon id="41121" rate="616" />
+		<demon id="41122" rate="616" />				
+    </levelrank>
+	<levelrank id="9" minlevel="81" maxlevel="150" npcid="0">
+        <demon id="41001" rate="787" />
+        <demon id="41002" rate="787" />
+        <demon id="41003" rate="787" />
+        <demon id="41004" rate="787" />
+		<demon id="41005" rate="708" />
+		<demon id="41006" rate="708" />
+		<demon id="41111" rate="748" />
+		<demon id="41112" rate="669" />
+		<demon id="41113" rate="629" />
+		<demon id="41114" rate="670" />
+		<demon id="41115" rate="590" />
+		<demon id="41121" rate="552" />
+		<demon id="41122" rate="552" />
+		<demon id="41123" rate="513" />
+		<demon id="41124" rate="513" />
+    </levelrank>
+<!-- 欢乐谷 -->
+	<levelrank id="10" minlevel="0" maxlevel="0" npcid="25001">
+		<demon id="41001" rate="10000" />
+	</levelrank>
+	<levelrank id="11" minlevel="0" maxlevel="0" npcid="25002">
+		<demon id="41002" rate="10000" />
+	</levelrank>
+	<levelrank id="12" minlevel="0" maxlevel="0" npcid="25003">
+		<demon id="41003" rate="10000" />
+	</levelrank>
+	<levelrank id="13" minlevel="0" maxlevel="0" npcid="25004">
+		<demon id="41004" rate="10000" />
+	</levelrank>
+	<levelrank id="14" minlevel="0" maxlevel="0" npcid="25005">
+		<demon id="41005" rate="10000" />
+	</levelrank>
+	<levelrank id="15" minlevel="0" maxlevel="0" npcid="25006">
+		<demon id="41006" rate="10000" />
+	</levelrank>
+	<levelrank id="16" minlevel="0" maxlevel="0" npcid="25007">
+		<demon id="41111" rate="10000" />
+	</levelrank>
+	<levelrank id="17" minlevel="0" maxlevel="0" npcid="25008">
+		<demon id="41112" rate="10000" />
+	</levelrank>
+	<levelrank id="18" minlevel="0" maxlevel="0" npcid="25009">
+		<demon id="41113" rate="10000" />
+	</levelrank>
+	<levelrank id="19" minlevel="0" maxlevel="0" npcid="25010">
+		<demon id="41114" rate="10000" />
+	</levelrank>
+	<levelrank id="20" minlevel="0" maxlevel="0" npcid="25011">
+		<demon id="41115" rate="10000" />
+	</levelrank>
+	<levelrank id="21" minlevel="0" maxlevel="0" npcid="25012">
+		<demon id="41625" rate="10000" />
+	</levelrank>
+	<levelrank id="22" minlevel="0" maxlevel="0" npcid="25013">
+		<demon id="41626" rate="10000" />
+	</levelrank>
+	<levelrank id="23" minlevel="0" maxlevel="0" npcid="25014">
+		<demon id="41627" rate="10000" />
+	</levelrank>
+	<levelrank id="24" minlevel="0" maxlevel="0" npcid="25015">
+		<demon id="41628" rate="10000" />
+	</levelrank>
+	<levelrank id="25" minlevel="0" maxlevel="0" npcid="25016">
+		<demon id="41629" rate="10000" />
+	</levelrank>
+	<levelrank id="26" minlevel="0" maxlevel="0" npcid="25017">
+		<demon id="41630" rate="10000" />
+	</levelrank>
+	<levelrank id="27" minlevel="0" maxlevel="0" npcid="25018">
+		<demon id="41631" rate="10000" />
+	</levelrank>
+	<levelrank id="28" minlevel="0" maxlevel="0" npcid="25019">
+		<demon id="41633" rate="10000" />
+	</levelrank>
+	<levelrank id="29" minlevel="0" maxlevel="0" npcid="25020">
+		<demon id="41634" rate="10000" />
+	</levelrank>
+	<levelrank id="30" minlevel="0" maxlevel="0" npcid="25021">
+		<demon id="41638" rate="10000" />
+	</levelrank>
+	<levelrank id="31" minlevel="0" maxlevel="0" npcid="25022">
+		<demon id="41639" rate="10000" />
+	</levelrank>
+	<levelrank id="32" minlevel="0" maxlevel="0" npcid="25023">
+		<demon id="41641" rate="10000" />
+	</levelrank>
+	<levelrank id="33" minlevel="0" maxlevel="0" npcid="25024">
+		<demon id="41121" rate="10000" />
+	</levelrank>
+	<levelrank id="34" minlevel="0" maxlevel="0" npcid="25025">
+		<demon id="41122" rate="10000" />
+	</levelrank>
+	<levelrank id="35" minlevel="0" maxlevel="0" npcid="25026">
+		<demon id="41671" rate="10000" />
+	</levelrank>
+	<levelrank id="36" minlevel="0" maxlevel="0" npcid="25027">
+		<demon id="41672" rate="10000" />
+	</levelrank>
+	<levelrank id="37" minlevel="0" maxlevel="0" npcid="25028">
+		<demon id="41673" rate="10000" />
+	</levelrank>
+	<levelrank id="38" minlevel="0" maxlevel="0" npcid="25029">
+		<demon id="41127" rate="10000" />
+	</levelrank>
+	<levelrank id="39" minlevel="0" maxlevel="0" npcid="25030">
+		<demon id="41128" rate="10000" />
+	</levelrank>
+	<levelrank id="40" minlevel="0" maxlevel="0" npcid="25031">
+		<demon id="41126" rate="10000" />
+	</levelrank>
+	<levelrank id="41" minlevel="0" maxlevel="0" npcid="25032">
+		<demon id="41674" rate="10000" />
+	</levelrank>
+	<levelrank id="42" minlevel="0" maxlevel="0" npcid="25033">
+		<demon id="41675" rate="10000" />
+	</levelrank>
+	<levelrank id="43" minlevel="0" maxlevel="0" npcid="25034">
+		<demon id="41676" rate="10000" />
+	</levelrank>
+	<levelrank id="44" minlevel="0" maxlevel="0" npcid="25035">
+		<demon id="41677" rate="10000" />
+	</levelrank>
+	<levelrank id="45" minlevel="0" maxlevel="0" npcid="25036">
+		<demon id="41678" rate="10000" />
+	</levelrank>
+	<levelrank id="46" minlevel="0" maxlevel="0" npcid="25037">
+		<demon id="41655" rate="10000" />
+	</levelrank>
+	<levelrank id="47" minlevel="0" maxlevel="0" npcid="25038">
+		<demon id="41651" rate="10000" />
+	</levelrank>
+	<levelrank id="48" minlevel="0" maxlevel="0" npcid="25039">
+		<demon id="41656" rate="10000" />
+	</levelrank>
+</DemonFresh>

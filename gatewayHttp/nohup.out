@@ -1,0 +1,64 @@
+[I 181027 23:22:55 async_mixin:47] WorkerThread created: thread_0
+[I 181027 23:22:55 async_mixin:47] WorkerThread created: thread_1
+[I 181027 23:22:55 async_mixin:47] WorkerThread created: thread_2
+[I 181027 23:22:55 async_mixin:47] WorkerThread created: thread_3
+[I 181027 23:22:55 async_mixin:47] WorkerThread created: thread_4
+[I 181027 23:22:56 async_mixin:47] WorkerThread created: thread_5
+[I 181027 23:22:56 async_mixin:47] WorkerThread created: thread_6
+[I 181027 23:22:56 async_mixin:47] WorkerThread created: thread_7
+[I 181027 23:22:56 async_mixin:47] WorkerThread created: thread_8
+[I 181027 23:22:56 async_mixin:47] WorkerThread created: thread_9
+[I 181027 23:22:56 zqgate:188] listening on 18000
+Traceback (most recent call last):
+  File "/root/pythonServer/gateway_http/zqgate.py", line 265, in <module>
+    main()
+  File "/root/pythonServer/gateway_http/zqgate.py", line 262, in main
+    start()
+  File "/root/pythonServer/gateway_http/zqgate.py", line 189, in start
+    application.listen(options.port)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.4.2-py2.7-linux-x86_64.egg/tornado/web.py", line 1850, in listen
+    server.listen(port, address)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.4.2-py2.7-linux-x86_64.egg/tornado/tcpserver.py", line 126, in listen
+    sockets = bind_sockets(port, address=address)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.4.2-py2.7-linux-x86_64.egg/tornado/netutil.py", line 194, in bind_sockets
+    sock.bind(sockaddr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_0
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_1
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_2
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_3
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_4
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_5
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_6
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_7
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_8
+[I 191224 19:05:41 async_mixin:47] WorkerThread created: thread_9
+[I 191224 19:05:41 gate:185] listening on 18000
+[I 191224 19:06:22 gate:90] GET uri: /11/22/33?ip=FGCQ_Gate_01, argument: ({'ip': ['FGCQ_Gate_01']})
+[D 191224 19:06:22 async_mysql:28] query_hash:(select id,url_zone,url_user,redis_server_id from gateways WHERE ip = 'FGCQ_Gate_01')
+[I 191224 19:06:22 web:1971] 200 GET /11/22/33?ip=FGCQ_Gate_01 (121.43.197.240) 39.59ms
+Traceback (most recent call last):
+  File "/data/gatewayHttp/gate.py", line 6, in <module>
+    import tornado.web
+ImportError: No module named tornado.web
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_0
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_1
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_2
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_3
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_4
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_5
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_6
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_7
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_8
+[I 191224 19:31:19 async_mixin:47] WorkerThread created: thread_9
+[I 191224 19:31:19 gate:185] listening on 18000
+[I 191224 19:32:05 gate:90] GET uri: /11/22/33?ip=FGCQ_Gate_01, argument: ({'ip': ['FGCQ_Gate_01']})
+[D 191224 19:32:05 async_mysql:28] query_hash:(select id,url_zone,url_user,redis_server_id from gateways WHERE ip = 'FGCQ_Gate_01')
+[I 191224 19:32:05 web:1971] 200 GET /11/22/33?ip=FGCQ_Gate_01 (121.43.197.240) 16.39ms
+[W 191226 10:32:35 web:1971] 404 GET / (47.96.254.10) 0.31ms
+[W 200109 13:56:41 web:1971] 404 GET / (47.97.16.6) 0.33ms
+[I 200109 22:44:16 gate:90] GET uri: /11/22/33?ip=FGCQ_Gate_01, argument: ({'ip': ['FGCQ_Gate_01']})
+[D 200109 22:44:16 async_mysql:28] query_hash:(select id,url_zone,url_user,redis_server_id from gateways WHERE ip = 'FGCQ_Gate_01')
+[I 200109 22:44:16 web:1971] 200 GET /11/22/33?ip=FGCQ_Gate_01 (121.43.197.240) 72.90ms

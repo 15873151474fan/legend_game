@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!--所有各种服务器参数,这里只放每个区都不同的配置-->
+<Zebra>
+	<global>
+		<ifname>eth0</ifname>
+		<superserver port="10001">localhost</superserver>
+	</global>
+	<GatewayServer>
+		<!--外挂加速时，值要大于这个值就会被踢下线 -->
+		<diff_time_sec_kick>300</diff_time_sec_kick>
+		<!--外挂加速时，值要小于这个值才会被踢下线 -->
+		<diff_time_sec_reset>600</diff_time_sec_reset>
+		<!--加速踢下线前如果延时大于xx,则开始封号 -->
+		<kick_forbid_start_sec>300</kick_forbid_start_sec>
+		<!--加速被踢后封号xx秒 -->
+		<kick_forbid_sec>300</kick_forbid_sec>
+		<!--多开封号 -->
+		<error_open>1</error_open>
+		<!--新手村多线功能 -->
+		<newmap_list>0</newmap_list>
+		<!--防沉迷验证 -->
+		<underage_verify>0</underage_verify>
+		<!--HUP 信号释放内存 -->
+        	<reset_memory>true</reset_memory>
+		<forbid_role_create_desc>11111</forbid_role_create_desc>
+		<forbid_role_create_desc>11111</forbid_role_create_desc>
+		<logfilename>/tmp/gatewayserver.log</logfilename>
+	</GatewayServer>
+</Zebra>

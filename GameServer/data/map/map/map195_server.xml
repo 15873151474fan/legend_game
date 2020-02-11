@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="100" width="2" height="2" x="6" y="16" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+	</NpcRect>
+	<Npc>
+		<npc id="301" name="NPC名字" x="24" y="21" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="18" y="22" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="14" y="16" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="17" y="13" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="12" y="18" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="26" y="12" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="27" y="16" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="18" y="17" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="23" y="9" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="18" y="9" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="11" y="11" num="1" angle="0" />
+		<npc id="301" name="NPC名字" x="21" y="16" num="1" angle="0" />
+	</Npc>
+	<Way>
+		<WayPoint mapid="2" zoneid="100" enable="1">
+			<point x="1" y="16" />
+			<point x="1" y="17" />
+			<point x="1" y="18" />
+			<point x="2" y="16" />
+			<point x="2" y="17" />
+			<point x="2" y="18" />
+			<point x="3" y="16" />
+			<point x="3" y="17" />
+			<point x="3" y="18" />
+			<point x="4" y="16" />
+			<point x="4" y="17" />
+			<point x="4" y="18" />
+		</WayPoint>
+	</Way>
+</Map>

@@ -1,0 +1,259 @@
+----sample
+----[[
+--RoleTaskInfoXXXX = 
+--{
+--	desctext = [[任务描述]]
+--	accepttext = [[接任务文本]]
+--	finishtext = [[交任务文本]]
+--	prompttext = [[不可交任务文本]]
+--	tip = [[任务提示]]
+--
+--	--每天可以完成次数
+--	maxdaynum = 1
+--
+--	--子任务数量
+--	subtasknum = 2
+--
+--	subtask1 = 
+--	{
+--		desctext = [[子任务描述]]
+--		accepttext = [[子接任务文本]]
+--		prompttext = [[不可交任务文本]]
+--		finishtext = [[子交任务文本]]
+--		tip = [[任务提示]]
+--		tracebegin = [[任务追踪接取]]
+--		traceend = [[任务追踪完成]]
+--
+--		--任务计数完成后，是否自动完成子任务
+--		autofinish = false,
+--	
+--		--需要的道具
+--		needitem = {
+--		},
+--
+--		--接受时检查:任务条目显示时检查
+--		onacceptcheck = {
+--			{s_checkRoleLevel,{minLevel,maxLevel}},
+--			{s_checkPretask,{taskId}},
+--		},
+--
+--		--接受时检查1:任务接取时检查，会同时检查onacceptcheck
+--		onacceptcheck1 = {
+--			{s_checkRoleLevel,{minLevel,maxLevel}},
+--			{s_checkPretask,{taskId}},
+--		},
+--
+--		--接受时事件
+--		onaccept = {
+--			{s_actionSfx,{"$1",sfxid}},
+--			{s_actionNpcPlayAnimation,{npcid,animation}}
+--			{s_actionTimer,{delta,callback}}
+--		},
+--
+--		--任务
+--		task = {
+--			{s_taskTalk,{npcid}, s_taskTalk_onDelete, {npcid}},
+--		},
+--
+--		--任务计数变化到n时事件,n为1,2,3......
+--		onoperate_n = 
+--		{
+--			{s_actionSysInfo, {"<helptips helpid=3/>", 64}},
+--		},
+--
+--		--完成检查:任务完成条目显示时检查
+--		onfinishcheck = {
+--			{s_checkRoleLevel,{minLevel,maxLevel}},
+--			{s_checkPretask,{taskId}},
+--		},
+--
+--		--完成检查1:任务完成时检查，会同时检查onfinishcheck
+--		onfinishcheck1 = {
+--			{s_checkRoleLevel,{minLevel,maxLevel}},
+--			{s_checkPretask,{taskId}},
+--		},
+--
+--		--完成时事件
+--		onfinish = {
+--			{s_actionSfx,{"$1",sfxid}},
+--			{s_actionTimer,{delta,callback}}
+--		},
+--	},
+--
+--	subtask2 = 
+--	{
+--		desc = [[任务描述]]
+--
+--		--条件
+--		condition = {
+--			{RoleLevel,minLevel,maxLevel},
+--			{Pretask,taskId},
+--		},
+--
+--		--答题需要的其他参数：事件需要调用的各种参数
+--		QAInfo = {
+--			{},
+--			{},
+--		},
+--
+--		--事件
+--		task = {
+--			{s_taskQA},
+--		},
+--
+--		--奖励
+--		award = {
+--			{Money,num},
+--			{MoneyTicket,num},
+--		},
+--	},
+--
+--	--奖励
+--	awarditem = {
+--		{Money,num},
+--		{MoneyTicket,num},
+--	},
+--
+--	--选择奖励
+--	selectitem = {
+--	},
+--
+--	--奖励描述
+--	awarddesc = {
+--	},
+--
+--	--任务完成操作
+--	onfinish = {
+--		{AddRoleTask,taskId},
+--	},
+--}
+--
+----返回任务检索时的描述
+--function RoleTaskInfoXXXX:GetTaskIntroText(uid)
+--end
+--
+----返回任务追踪时的描述
+--function RoleTaskInfoXXXX:GetTaskTraceText(uid)
+--end
+--
+----返回任务每日完成信息
+--function RoleTaskInfoXXXX:GetTaskDailyInfo(uid, outvec)
+--end
+--
+----任务次数改变时调用的操作
+--function RoleTaskInfoXXXX:OnTaskDailyChanged(uid)
+--end
+--
+----返回子任务接受时的描述
+--function RoleTaskInfoXXXX:GetSubTaskAcceptText(uid, taskid, subtaskid)
+--end
+--
+----返回子任务的描述
+--function RoleTaskInfoXXXX:GetSubTaskDescText(uid, taskid, subtaskid)
+--end
+--
+----返回子任务的没有完成时的描述
+--function RoleTaskInfoXXXX:GetSubTaskPromptText(uid, taskid, subtaskid)
+--end
+--
+----返回子任务的完成时的描述
+--function RoleTaskInfoXXXX:GetSubTaskFinishText(uid, taskid, subtaskid)
+--end
+--
+----返回子任务的提示
+--function RoleTaskInfoXXXX:GetSubTaskTip(uid, taskid, subtaskid)
+--end
+--
+----返回任务的经验
+--function RoleTaskInfoXXXX:GetTaskExp(uid)
+--end
+--
+----任务奖励
+--function RoleTaskInfoXXXX:TaskReward(uid, taskid, subtaskid)
+--end
+--
+---任务接取时的操作：按照环数计算奖励什么的
+--function RoleTaskInfoXXXX:OnAcceptTask(uid)
+--end
+--
+---任务完成时的操作
+--function RoleTaskInfoXXXX:OnFinishTask(uid)
+--end
+--
+---任务接取接口是否可见时的操作
+--function RoleTaskInfoXXXX:OnAcceptCheck(uid, taskid, subtaskid)
+--end
+--
+---任务完成接口是否可见的操作
+--function RoleTaskInfoXXXX:OnFinishCheck(uid, taskid, subtaskid)
+--end
+--
+---任务删除时的操作
+--function RoleTaskInfoXXXX:OnDeleteTask(uid)
+--end
+--
+--]]--
+--
+--
+--
+
+
+
+
+
+
+
+--RoleTaskInfo3001 =
+--{
+--	desctext = parseToDesc([[body(第一个任务, desctext)]]),
+--	accepttext = parseToTalk([[body(第一个任务,accepttext)]]),
+--	prompttext = parseToTalk([[body(第一个任务,prompttext)]]),
+--	finishtext = parseToTalk([[body(第一个任务,finishtext)]]),
+--
+--	subtasknum = 3,
+--	subtask1 = 
+--	{
+--		desctext = ([[<p><newline/><n font="3" color="GXColorYellow">[随机]七宗罪</n><newline/><image pack="INTERFACE_PACK" infoname="INTERFACE_40_4_P"/><newline/><n font="3" color="GXColorYellow">任务进程：</n><newline/><n>这里填写具体要做什么事情</n><newline/><newline/><n font="3" color="GXColorYellow">任务描述：</n><n></n><newline/><newline/><n font="3" color="GXColorYellow">任务描述：</n><newline/></p>]]),
+--		accepttext = parseToTalk([[body(第一个任务,第一个子任务，accepttext)]]),
+--		prompttext = parseToTalk([[body(第一个任务,第一个子任务，prompttext)]]),
+--		finishtext = parseToTalk([[body(第一个任务,第一个子任务，finishtext)]]),
+--
+--		task = {s_taskLevelUp, {60045, 60045, 2}},
+--
+--		onfinish = 
+--		{
+--			{s_actionDeleteItemByBaseID,{49001,1,"RoleTaskInfo3001"}},
+--		},
+--	},
+--
+--	subtask2 = 
+--	{
+--		desctext = parseToDesc([[body(第一个任务, 第er个子任务，desctext)]]),
+--		accepttext = parseToTalk([[body(第一个任务,第er个子任务，accepttext)]]),
+--		prompttext = parseToTalk([[body(第一个任务,第er个子任务，prompttext)]]),
+--		finishtext = parseToTalk([[body(第一个任务,第er个子任务，finishtext)]]),
+--
+--		task = {s_taskTalk, {60045, 60046}},
+--
+--		onfinish = 
+--		{
+--			{s_actionDeleteItemByBaseID,{49001,1,"RoleTaskInfo3001"}},
+--		},
+--	},
+--
+--	subtask3 = 
+--	{
+--		desctext = parseToDesc([[body(第一个任务, 第3个子任务，desctext)]]),
+--		accepttext = parseToTalk([[body(第一个任务,第3个子任务，accepttext)]]),
+--		prompttext = parseToTalk([[body(第一个任务,第3个子任务，prompttext)]]),
+--		finishtext = parseToTalk([[body(第一个任务,第3个子任务，finishtext)]]),
+--
+--		task = {s_taskLevelUp, {60045, 60045, 3}},
+--
+--		onfinish = 
+--		{
+--			{s_actionDeleteItemByBaseID,{49001,1,"RoleTaskInfo3001"}},
+--		},
+--	},
+--}
+--

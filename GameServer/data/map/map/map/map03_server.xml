@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="1" width="2" height="2" x="4" y="38" type="3" />
+		<zonedef id="2" width="2" height="2" x="3" y="14" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+	</NpcRect>
+	<Npc>
+		<npc id="122" name="NPC名字" x="44" y="11" num="1" angle="0" />
+		<npc id="123" name="NPC名字" x="51" y="9" num="1" angle="0" />
+		<npc id="121" name="NPC名字" x="44" y="34" num="1" angle="0" />
+		<npc id="104" name="NPC名字" x="16" y="25" num="1" angle="0" />
+		<npc id="101" name="NPC名字" x="33" y="15" num="1" angle="0" />
+		<npc id="104" name="NPC名字" x="29" y="18" num="1" angle="0" />
+		<npc id="104" name="NPC名字" x="52" y="27" num="1" angle="0" />
+		<npc id="101" name="NPC名字" x="57" y="31" num="1" angle="0" />
+		<npc id="101" name="NPC名字" x="66" y="18" num="1" angle="0" />
+		<npc id="104" name="NPC名字" x="72" y="21" num="1" angle="0" />
+		<npc id="101" name="NPC名字" x="74" y="24" num="1" angle="0" />
+		<npc id="104" name="NPC名字" x="43" y="41" num="1" angle="0" />
+		<npc id="101" name="NPC名字" x="24" y="24" num="1" angle="0" />
+	</Npc>
+	<Way>
+		<WayPoint mapid="2" zoneid="1" enable="1">
+			<point x="2" y="37" />
+			<point x="2" y="38" />
+			<point x="2" y="39" />
+			<point x="3" y="37" />
+			<point x="3" y="38" />
+			<point x="3" y="39" />
+			<point x="4" y="37" />
+			<point x="4" y="38" />
+			<point x="4" y="39" />
+			<point x="5" y="37" />
+			<point x="5" y="38" />
+			<point x="5" y="39" />
+			<point x="6" y="37" />
+			<point x="6" y="38" />
+			<point x="6" y="39" />
+			<point x="7" y="37" />
+			<point x="7" y="38" />
+			<point x="7" y="39" />
+		</WayPoint>
+		<WayPoint mapid="4" zoneid="1" enable="1">
+			<point x="1" y="14" />
+			<point x="1" y="15" />
+			<point x="2" y="14" />
+			<point x="2" y="15" />
+			<point x="3" y="14" />
+			<point x="3" y="15" />
+			<point x="4" y="14" />
+			<point x="4" y="15" />
+			<point x="5" y="14" />
+			<point x="5" y="15" />
+			<point x="6" y="14" />
+			<point x="6" y="15" />
+		</WayPoint>
+	</Way>
+</Map>

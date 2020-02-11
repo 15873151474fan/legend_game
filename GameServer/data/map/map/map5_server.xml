@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="3" width="1" height="1" x="89" y="52" type="3" />
+		<zonedef id="100" width="1" height="1" x="90" y="52" type="3" />
+		<zonedef id="2" width="1" height="1" x="7" y="10" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+		<rect id="1" width="12" height="8" x="67" y="39" />
+		<rect id="2" width="13" height="8" x="41" y="28" />
+		<rect id="3" width="13" height="9" x="20" y="16" />
+		<rect id="4" width="8" height="7" x="5" y="22" />
+		<rect id="5" width="7" height="9" x="54" y="27" />
+		<rect id="6" width="7" height="9" x="60" y="40" />
+	</NpcRect>
+	<Npc>
+		<npc id="131" name="NPC名字" x="86" y="47" num="1" angle="0" />
+		<npc id="133" name="NPC名字" x="40" y="25" num="1" angle="0" />
+		<npc id="132" name="NPC名字" x="64" y="37" num="1" angle="0" />
+		<npc id="10031" name="怪物名字" x="67" y="39" num="40" interval="1">
+			<rect id="1" />
+		</npc>
+		<npc id="10032" name="怪物名字" x="41" y="28" num="40" interval="1">
+			<rect id="2" />
+		</npc>
+		<npc id="10033" name="怪物名字" x="20" y="16" num="40" interval="1">
+			<rect id="3" />
+		</npc>
+		<npc id="10031" name="怪物名字" x="5" y="22" num="10" interval="1">
+			<rect id="4" />
+		</npc>
+		<npc id="10032" name="怪物名字" x="54" y="27" num="15" interval="1">
+			<rect id="5" />
+		</npc>
+		<npc id="10031" name="怪物名字" x="60" y="40" num="15" interval="1">
+			<rect id="6" />
+		</npc>
+	</Npc>
+	<Way>
+		<WayPoint mapid="2" zoneid="100" enable="1">
+			<point x="96" y="54" />
+		</WayPoint>
+		<WayPoint mapid="22" zoneid="5" enable="1">
+			<point x="3" y="9" />
+		</WayPoint>
+	</Way>
+</Map>

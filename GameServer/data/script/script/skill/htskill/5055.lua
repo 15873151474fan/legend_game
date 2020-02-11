@@ -1,0 +1,52 @@
+--hxw 11/19改成被动技能了
+--金刚咒()
+--function OnUseSkill_5055(level,etype1,eid1,etype2,eid2,posx,posy)
+	--if s_getValue(etype1,eid1,VALUE_TYPE_PROFESSION) ~= Profession_Freeman then
+        --s_debug("5055 err");
+		--return USE_SKILL_ERROR
+	--end
+
+    --local damage  = GetAttackValue(etype1,eid1);
+	--local percent = {80,100,120,150}
+	--local victim  = {}
+    --local num    = 0;
+
+	------是否可PK
+    --if s_checkPK(5014,etype1,eid1,etype2,eid2) == VALUE_FAIL then
+        --if s_getbufflevel(etype2,eid2,1301) ~= 0 then
+            --s_removebuff(etype2,eid2,1301)
+        --else
+            --s_addbuff(etype2,eid2,1301,level,30,percent[level])
+        --end
+        --num = num+1
+    --end
+	----9屏取敌15个，根据距离循环判断是否在技能范围内，然后结算伤害和人数，最后根据人数是否达到技能上限来判断填出循环
+	--local list = s_getNineEntry(etype2,eid2,15)
+	--for i = 1,table.getn(list), 2 do
+		----if (list[i] ~= etype1 or list[i+1] ~= eid1)  then
+                --local entry_x = s_getValue(list[i],list[i+1],VALUE_TYPE_POSX)
+                --local entry_y = s_getValue(list[i],list[i+1],VALUE_TYPE_POSY)
+                --local att_x   = s_getValue(etype2,eid2,VALUE_TYPE_POSX);
+                --local att_y   = s_getValue(etype2,eid2,VALUE_TYPE_POSY);
+                --local dst = math.sqrt((entry_x- att_x)^2 + (entry_y-att_y)^2)
+                --if dst < 2 then
+                    --if s_checkPK(5055,etype1,eid1,list[i],list[i+1]) == VALUE_FAIL then
+                        --if s_getbufflevel(list[i],list[i+1],1301) ~= 0 then
+                            --s_removebuff(list[i],list[i+1],1301)
+                        --else
+                            --s_addbuff(list[i],list[i+1],1301,level,30,percent[level])
+                        --end
+                        --num = num+1
+                    --end
+                    --if num == 9 then
+                        --break
+                    --end
+                --end
+		----end
+	--end
+    --ShowAttack(5055,etype1,eid1,etype2,eid2)
+	--if etype1 == SCENE_ENTRY_PLAYER then
+	--	s_addValue(etype1,eid1,VALUE_TYPE_SKILL_5055,1)
+	--end
+
+--end

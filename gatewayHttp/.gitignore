@@ -1,0 +1,11 @@
+*.pyc
+.*.swp
+._*
+logs
+pids
+settings.py
+*.swp
+.DS_Store
+.gradle
+build
+

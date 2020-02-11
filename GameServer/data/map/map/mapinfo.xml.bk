@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xiao (xiao) -->
+<!-- id:地图编号
+		 name:地图名字
+		 filename:地图文件名
+		 width:地图宽度
+		 height:地图高度
+		 backtocity:在本地图死亡后回到的地图编号
+		 foreignerbackto:在外国地图死亡后回到的地图编号
+		 function:地图功能类型（二进制），1表示潜水地图（必须用氧气瓶才可以进入），2表示不能骑马，4表示不能使用卷轴，32表示团战场，64表示是个人战场，128表示是PVE副本
+		 1279     MapFunction_Dive                = 1<<0,  /**< 1 潜水 */
+		1280     MapFunction_NoRide              = 1<<1,  /**< 2 不能骑马 */
+		1281     MapFunction_NoScroll            = 1<<2,  /**< 4 不能使用卷轴 */
+		1282     MapFunction_NoGuard             = 1<<3,  /**< 8 不允许携带镖车 */
+		1283     MapFunction_City                = 1<<4,  /**< 16 城市 */
+		1284     MapFunction_NoArmyEquip         = 1<<10, /**< 1024 不能驾驶军装备进入*/
+		1285     MapFunction_NoCorpsEquip        = 1<<11, /**< 2048 不能驾驶团装备进入*/
+		1286     MapFunction_NoTeamCancel        = 1<<12, /**< 4096 不允许退队 */
+		1287     MapFunction_NoPull              = 1<<13, /**< 8192 不能拉人 */
+		1288     MapFunction_NoCountryName       = 1<<14, /**< 16392 不显示国家 */
+		1289     MapFunction_NoPeace             = 1<<15, /**< 32784 不受世界和平影响 */
+		 commonuserbackto:无国家人在外国地图死后回到的城市
+		 backtodare:国战目的地
+		 isolate:独立场景类型，0表示非独立场景， 〉0表示独立场景
+	//复活方式 type=下列枚举,描述为按钮显示文本,
+		enum
+		{
+			ReliveHome=0,		/**< 回城康复 */
+			ReliveMoney=1,		/**< 原地康复 */
+			ReliveHealth=2,		/**< 原地健康康复 */
+			ReliveCopyMap=3,	/**< 副本定点复活 */
+			ReliveMax			/**< 最大值*/
+		};
+	//pk模式
+		enum
+		{
+			PKMODE_NORMAL=1,	/**<和平模式*/
+			PKMODE_ENTIRE=2,	/**<全体模式*/
+			PKMODE_GOODNESS=3,	/**<善恶模式*/
+			PKMODE_COUNTRY=4,	/**<国家模式*/
+			PKMODE_TEAM=5,		/**<组队模式*/
+			PKMODE_CORPS=6,		/**<团队模式*/
+			PKMODm本模式*/
+			PKMODE_MAX			/**<最大值*/
+		}; -->
+<!--
+			MATYPE_COUNTRY=1,	/**<国家地图*/
+			MATYPE_MIDDLE=2,	/**<中立地图*/
+			MATYPE_COPY=4,		/**<副本地图*/
+			MATYPE_COPY=8,		/**<需预加载的副本地图*/
+
+			 CountryType_LCountry= 4,    /**< 所在左相邻国家 */
+			CountryType_RCountry= 5,    /**< 所在右相邻国家 */
+			CountryType_MCountry= 6,    /**< 所在国家中立 */
+			CountryType_Normal  = 7,    /**< 普通国家 */
+		-->
+<!-- checklevel 角色等级限制，checkworldlevel 人类进程限制 checkusabletiledpoint 体力值限制 -->
+<!-- 小黑友情提醒：为避免超框，地图名称不能超过6个汉字！ -->
+<!-- 翅膀友情提醒：地图id和名称都不能有重复的情况存在，否则会导致服务器启动失败！ -->
+<mapinfo>
+	<map id="1" name="星之岛" filename="map02" filename_client="Map/map02"  xmlname="map02" arname="map02" picture="1" width="85" height="60" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="2" name="燃烧平原" filename="ranshaopingyuan" filename_client="Map/ranshaopingyuan"  xmlname="ranshaopingyuan" arname="ranshaopingyuan" picture="1" width="100" height="85" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="3" name="遗忘沙漠" filename="yiwangshamo" filename_client="Map/yiwangshamo"  xmlname="yiwangshamo" arname="yiwangshamo" picture="1" width="125" height="152" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="4" name="光明城" filename="guangmingcheng" filename_client="Map/guangmingcheng"  xmlname="guangmingcheng" arname="guangmingcheng" picture="1" width="235" height="280" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="5" name="军乐城" filename="junyuecheng" filename_client="Map/junyuecheng"  xmlname="junyuecheng" arname="junyuecheng" picture="1" width="300" height="260" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="6" name="新手村" filename="xinshoucun" filename_client="Map/xinshoucun" xmlname="xinshoucun" arname="xinshoucun" picture="1" width="115" height="110" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="7" name="矿洞" filename="kuangdong" filename_client="Map/kuangdong"  xmlname="kuangdong" arname="kuangdong" picture="1" width="170" height="155" function="16" isolate="0" armytype="1" checklevel="10" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="8" name="国战测试" filename="guozhan" filename_client="Map/guozhan"  xmlname="guozhan" arname="guozhan" picture="1" width="170" height="155" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="9" name="混战测试" filename="hunzhan" filename_client="Map/hunzhan"  xmlname="hunzhan" arname="hunzhan" picture="1" width="170" height="155" function="16" isolate="0" armytype="1" checklevel="10" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="10" name="星之岛副本" filename="xinzhidaofb" filename_client="Map/xinzhidaofb"  xmlname="xinzhidaofb" arname="xinzhidaofb" picture="1" width="100" height="100" function="16" isolate="0" armytype="1" checklevel="10" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="11" name="对冲场景" filename="duichong" filename_client="Map/duichong"  xmlname="duichong" arname="duichong" picture="1" width="125" height="123" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="12" name="新国战场景" filename="guozhannew" filename_client="Map/guozhannew"  xmlname="guozhannew" arname="guozhannew" picture="1" width="280" height="280" function="16" isolate="0" armytype="1" checklevel="10" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="51" name="2D场景东郊" filename="dongjiao" filename_client="Map/dongjiao"  xmlname="dongjiao" arname="dongjiao" picture="1" width="280" height="280" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="2" mapmode="1">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="101" name="团基地" filename="tuanjidi" filename_client="Map/tuanjidi"  xmlname="tuanjidi" arname="tuanjidi" picture="1" width="125" height="123" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="8" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="120" name="探险者地宫一" filename="txzdigong1" filename_client="Map/txzdigong1" xmlname="txzdigong1" arname="txzdigong" picture="1" width="125" height="123" function="16" isolate="0" armytype="1" checklevel="60" checkworldlevel="0" checkusabletiledpoint="0" maptype="4" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="121" name="探险者地宫二" filename="txzdigong2" filename_client="Map/txzdigong2" xmlname="txzdigong2" arname="txzdigong" picture="1" width="125" height="123" function="16" isolate="0" armytype="1" checklevel="80" checkworldlevel="0" checkusabletiledpoint="0" maptype="4" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="122" name="探险者地宫三" filename="txzdigong3" filename_client="Map/txzdigong3" xmlname="txzdigong3" arname="txzdigong" picture="1" width="125" height="123" function="16" isolate="0" armytype="1" checklevel="100" checkworldlevel="0" checkusabletiledpoint="0" maptype="4" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="123" name="探险者地宫四" filename="txzdigong4" filename_client="Map/txzdigong4" xmlname="txzdigong4" arname="txzdigong" picture="1" width="125" height="123" function="16" isolate="0" armytype="1" checklevel="120" checkworldlevel="0" checkusabletiledpoint="0" maptype="4" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="124" name="探险者地宫五" filename="txzdigong5" filename_client="Map/txzdigong5" xmlname="txzdigong5" arname="txzdigong" picture="1" width="125" height="123" function="16" isolate="0" armytype="1" checklevel="140" checkworldlevel="0" checkusabletiledpoint="0" maptype="4" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="125" name="探险者地宫六" filename="txzdigong6" filename_client="Map/txzdigong6" xmlname="txzdigong6" arname="txzdigong" picture="1" width="125" height="123" function="16" isolate="0" armytype="1" checklevel="160" checkworldlevel="0" checkusabletiledpoint="0" maptype="4" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="126" name="探险者地宫七" filename="txzdigong7" filename_client="Map/txzdigong7" xmlname="txzdigong7" arname="txzdigong" picture="1" width="125" height="123" function="16" isolate="0" armytype="1" checklevel="180" checkworldlevel="0" checkusabletiledpoint="0" maptype="4" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="200" name="测试用图" filename="ceshiyongtu" filename_client="Map/ceshiyongtu"  xmlname="ceshiyongtu" arname="ceshiyongtu" picture="1" width="125" height="152" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+	<map id="201" name="BOSS副本" filename="bossfb" filename_client="Map/bossfb" xmlname="bossfb" arname="bossfb" picture="1" width="115" height="110" function="16" isolate="0" armytype="1" checklevel="0" checkworldlevel="0" checkusabletiledpoint="0" maptype="1" mapmode="0">
+		<Relive>
+			<item type="4">技能苏醒</item>
+			<item type="1">原地重生</item>
+			<item type="0">回城重生</item>
+		</Relive>
+		<Pk>
+			<item type="1"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="4"/>
+			<item type="5"/>
+			<item type="6"/>
+			<item type="7"/>
+			<item type="8"/>
+		</Pk>
+	</map>
+</mapinfo>

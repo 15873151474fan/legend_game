@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Ping>
+	<!--电信ping-->
+	<NetType type="2">
+		<!--探测ping-->
+		<ip>192.168.5.7</ip>
+		<ip>192.168.5.8</ip>
+	</NetType>
+	<!--网通ping-->
+	<NetType type="3">
+		<ip>192.168.5.9</ip>
+		<ip>192.168.5.10</ip>
+	</NetType>
+</Ping>
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IpFilter>
+	<ForbidAccid>
+		<forbid accid="169000006" account="4012@ztgame.com" desc="5173温州"/>
+	</ForbidAccid>
+	<Accept>
+		<accept ip="183.62.141.46" desc="中青宝"/>
+		<accept ip="119.145.5.18" desc="中青宝"/>
+		<accept ip="180.168.126.117" desc="中青宝"/>
+		<accept ip="222.89.227.165" desc="七七"/>
+		<accept ip="172.17.184.116" desc="王海军"/>
+		<accept ip="172.17.184.76" desc="刘琪"/>
+		<accept ip="172.17.184.104" desc="余娜娜"/>
+		<accept ip="172.17.184.128" desc="杨明哲"/>
+		<accept ip="172.17.184.147" desc="杨明哲"/>
+		<accept ip="172.17.184.156" desc=""/>
+		<accept ip="172.17.184.119" desc="牛一杰"/>
+		<accept ip="172.17.184.63" desc="罗正"/>
+		<accept ip="172.17.184.64" desc="牛一杰"/>
+		<accept ip="172.17.184.65" desc="牛一杰"/>
+		<accept ip="172.17.184.66" desc="牛一杰"/>
+		<accept ip="172.17.184.67" desc="牛一杰"/>
+		<accept ip="172.17.184.68" desc="牛一杰"/>
+		<accept ip="172.17.184.69" desc="牛一杰"/>
+		<accept ip="172.17.184.70" desc="牛一杰"/>
+		<accept ip="172.17.184.71" desc="牛一杰"/>
+		<accept ip="172.17.184.72" desc="牛一杰"/>
+	</Accept>
+	<Reject>
+		<accept ip="172.17.184.152" times="299" desc="七七"/>
+		<reject ip="116.29.219.82" times="380" desc="广东省韶关市"/>
+		<reject ip="61.146.242.0" times="380" desc="广东省汕头"/>
+		<reject ip="112.3.211.0" times="380" desc="广东省汕头"/>
+		<reject ip="113.106.27.0" times="380" desc="广东中山头"/>
+		<reject ip="125.83.0.0" times="280" desc="重庆"/>
+		<reject ip="14.107.114.0" times="390" desc="重庆"/>
+		<reject ip="61.146.0.0" times="280" desc="重庆"/>
+		<reject ip="122.225.242.0" times="1501" desc="5173,不要超过5000，否则会自动封号"/>
+		<reject ip="122.225.243.0" times="1501" desc="5173"/>
+		<reject ip="122.227.23.0" times="1501" desc="5173"/>
+		<reject ip="122.227.58.0" times="1501" desc="5173"/>
+		<reject ip="115.210.210.0" times="1501" desc="5173"/>
+		<reject ip="115.210.45.0" times="1501" desc="5173"/>
+		<reject ip="115.210.66.0" times="1501" desc="5173"/>
+		<reject ip="115.210.0.0" times="1501" desc="5173"/>
+		<reject ip="183.8.64.0" times="500001" desc="梅州封号"/>
+		<reject ip="183.8.65.0" times="500001" desc="梅州封号"/>
+		<reject ip="183.8.66.0" times="500001" desc="梅州封号"/>
+		<reject ip="183.8.67.0" times="500001" desc="梅州封号"/>
+		<reject ip="183.8.68.0" times="500001" desc="梅州封号"/>
+		<reject ip="183.8.69.0" times="500001" desc="梅州封号"/>
+		<reject ip="183.8.70.0" times="1501" desc="梅州封号"/>
+		<reject ip="183.8.70.163" times="1501" desc="梅州封号"/>
+		<reject ip="183.8.71.0" times="500001" desc="梅州封号"/>
+		<reject ip="222.70.190.13" times="1501" desc="5173上海"/>
+		<reject ip="14.107.68.109" times="1501" desc="5173重庆"/>
+		<reject ip="115.223.157.253" times="1501" desc="5173温州"/>
+	</Reject>
+	<Daohao>
+		<daohao accid="1690000061" account="4012@ztgame.com" desc="5173温州"/>
+	</Daohao>
+	<LoopMac>
+		<loop mac="2289989509496321" desc="5173温州"/>
+	</LoopMac>
+</IpFilter>
+			

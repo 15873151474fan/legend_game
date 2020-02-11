@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<FontLibrary>
+		<Infomation fontFilename="STCAIYUN.TTF" fontSize="32"/>
+		<!--Infomation fontFilename="SIMYOU.TTF" fontSize="32"/>
+		<Infomation fontFilename="SIMLI.TTF" fontSize="32"/>
+		<Infomation fontFilename="FZYTK.TTF" fontSize="32"/>
+		<Infomation fontFilename="STHUPO.TTF" fontSize="32"/>
+        <Infomation fontFilename="STXIHEI.TTF" fontSize="32"/>
+		<Infomation fontFilename="simsun.ttc" fontSize="32"/-->
+	</FontLibrary>
+</Config>

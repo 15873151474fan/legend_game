@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xiao (xiao) -->
+<!--id:国家编号,name:国家名称,mapID:该国家主城(新手出生等);国家名称不能有特殊字符"-"
+	function:0表示可以注册，1表示不可以注册,2表示自建国.-->
+<CountryInfo>
+	<country id="2" name="天之国" shortname="天" mapID="1" function="0" modelname="10174"/>
+	<country id="3" name="火之国" shortname="火" mapID="1" function="0" modelname="10170"/>
+	<country id="4" name="水之国" shortname="水" mapID="1" function="0" modelname="10170"/>
+	<country id="5" name="沙之国" shortname="沙" mapID="1" function="0" modelname="10170"/>
+	<!--country id="6" name="风之国" shortname="风" mapID="1" function="0" modelname="10170"/>
+	<country id="7" name="花之国" shortname="花" mapID="1" function="0" modelname="10170"/-->
+	<country id="13" name="中立区" shortname="中" mapID="1" function="1" />
+</CountryInfo>

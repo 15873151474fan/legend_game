@@ -1,0 +1,8 @@
+--传送石(在c++层处理了，这暂时用不了)
+--function OnUseItemEvent_10055(uid,thisid)
+    --return VALUE_FAIL
+    ----if s_deleteItemByThisID(uid,thisid,1,"OnUseItemEvent_10055") ~= VALUE_OK then
+        ----return VALUE_FAIL
+    ----end
+    ----return VALUE_OK
+--end

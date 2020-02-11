@@ -1,0 +1,2286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xiao (xiao) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by james (james) -->
+
+<AI>
+	<!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+	<Group id="996" name="帮人打架">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="997" name="自动清除CDNPC">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="998" name="自动治疗NPC">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="999" name="自动打怪NPC">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+	<Group id="100" name="不动不攻击">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="101" name="移动不攻击">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="102" name="被动御敌">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"     level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="103" name="主动御敌">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+		<!-- Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/-->
+		<Transit state="AS_MV_ENEMY"        event="AE_NEAR_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="104" name="被动御敌不移动">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_HAVE_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="105" name="主动御敌不移动">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"            event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"		level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="106" name="见人就跑">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_HAVE_ENEMY"       level="2"  out="AS_RUN_AWAY"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_RUN_AWAY"		event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_RUN_AWAY"		event="AE_NONE" 	        level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="119" name="静止不动守卫NPC,攻击外国人">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"		level="3"  out="AS_SEARCH"/>
+		<Transit state="AS_WAIT"			event="AE_HAVE_ENEMY"		level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+        <Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+        <Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+        <Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="120" name="巡逻NPC">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_NONE"				level="1"  out="AS_MV_HOME"/>
+
+		<Transit state="AS_MV_HOME"			event="AE_DEATH"			level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME"			event="AE_ARRIVED_HOME"		level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"          event="AE_NONE"            level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="121" name="巡逻守卫-攻击外国人">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="122" name="带建造度功能NPC">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="123" name="团魔甲-移动不攻击">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+        <Transit state="AS_WAIT"            event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_RANDOM"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"          event="AE_NONE"            level="1"  out="AS_NONE"/>
+    </Group>
+
+	<Group id="1005" name="团魔甲-军团">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"			event="AE_NONE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1015" name="团魔甲-采矿车">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+
+	<Group id="1000" name="跟随不攻击的镖车">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_DEATH"			event="AE_NONE"				level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"    event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"			event="AE_NONE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1001" name="影分身">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_RANDOM"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+        <Transit state="AS_MV_ENEMY"        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_ENEMY"        event="AE_AWAY_HOME"		level="3"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_MV_ENEMY"        event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_MV_ENEMY"        event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+        <Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"			event="AE_NONE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1002" name="磁力场">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"			event="AE_HAVE_ENEMY"		level="2"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1003" name="照明弹">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"			event="AE_HAVE_ENEMY"		level="2"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1004" name="捕鼠夹">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"			event="AE_HAVE_ENEMY"		level="2"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+    </Group>
+
+	<Group id="1006" name="闪电炮塔">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"			event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NONE"				level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1007" name="主动御敌,可以被同伴召唤">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM"      	event="AE_CHECK_NEW"		level="4"  out="AS_RESP_NEW"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_RESP_NEW"		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_RESP_NEW"		event="AE_LOSE_NEW"			level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_RESP_NEW"		event="AE_NEAR_NEW"			level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1008" name="主动御敌,识别隐身">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1009" name="主动御敌,会逃走">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM"		event="AE_CHECK_NEW"        level="4"  out="AS_RESP_NEW"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_CHECK_NEW"        level="4"  out="AS_RESP_NEW"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_RESP_NEW" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_RESP_NEW" 		event="AE_NEAR_NEW"         level="1"  out="AS_NONE"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1010" name="遥控车">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"			event="AE_NONE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1011" name="无敌替身">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"			event="AE_NONE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1012" name="不动，攻击附近玩家">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"      	    level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NONE"				level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1013" name="主动御敌,自动消失">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"			event="AE_NONE"           	level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1014" name="不掉落,开始不攻击">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"			event="AE_NONE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1016" name="老鼠">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_RANDOM"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM"		event="AE_HAVE_ENEMY"		level="2"  out="AS_ATTACK"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"			event="AE_HAVE_ENEMY"		level="2"  out="AS_ATTACK"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_ATTACK"			event="AE_NONE"				level="1"  out="AS_DEATH"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+        <Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+        <Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1017" name="军团BOSS">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="3"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="2"  out="AS_MV_HOME"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"          event="AE_NONE"            level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1018" name="军团植物">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"     level="3"  out="AS_SEARCH"/>
+		<Transit state="AS_WAIT"            event="AE_HAVE_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"          event="AE_NONE"            level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1019" name="占领NPC">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1020" name="场景小动物">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1021" name="要塞守卫怪物">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"          event="AE_NONE"            level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1022" name="要塞守卫炮塔">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"			event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NONE"				level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1023" name="碉堡">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1024" name="被动御敌,可以被同伴召唤">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM"      	event="AE_CHECK_NEW"		level="4"  out="AS_RESP_NEW"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_RESP_NEW"		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_RESP_NEW"		event="AE_LOSE_NEW"			level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_RESP_NEW"		event="AE_NEAR_NEW"			level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1025" name="被动御敌,识别隐身">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1026" name="被动御敌,会逃走">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM"		event="AE_CHECK_NEW"        level="4"  out="AS_RESP_NEW"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_CHECK_NEW"        level="4"  out="AS_RESP_NEW"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_RESP_NEW" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_RESP_NEW" 		event="AE_NEAR_NEW"         level="1"  out="AS_NONE"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1027" name="捕兽夹">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"			event="AE_HAVE_ENEMY"       level="2"  out="AS_ATTACK"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_NONE"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1028" name="边境守卫者">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_HAVE_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+
+		<Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1029" name="团基地舞者">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1030" name="外城守卫">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_HAVE_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1031" name="内城守卫">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_HAVE_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1032" name="小海兽安古瑞">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1033" name="天象祭坛">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"		event="AE_NONE"				level="1"  out="AS_RECYCLE"/>
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1034" name="霸者雕像">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1035" name="国战碉堡">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1036" name="破损的天象祭坛">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1037" name="毁灭神迹">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1038" name="囚车">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1039" name="音乐盒">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1040" name="高级地宫怪物">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"            event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_MV_RANDOM"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM"       event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM"       event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM"       event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+		<Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_MV_ENEMY"        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY"        event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY"        event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+		<!-- Transit state="AS_MV_ENEMY"        event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/-->
+		<Transit state="AS_MV_ENEMY"        event="AE_NEAR_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+		<Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1041" name="戎装公主">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1042" name="团称号守护">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1043" name="副本魔甲">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1044" name="竞技场NPC">
+		<Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_HAVE_ENEMY"		level="2"  out="AS_SELECT_WEAPON" />
+		<Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM"       event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM"       event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY"        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY"        event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1045" name="帝都战战略NPC">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_HAVE_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+        <Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_WAIT"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+        <Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+        <Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+        <Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1046" name="帝都马车（自动寻路回家）">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+
+        <Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_WAIT"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+    <Group id="1047" name="帝都战碉堡">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+        <Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+        <Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+    </Group>
+	<Group id="1048" name="飞跃大峡谷副本飞艇">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH"			event="AE_HAVE_ENEMY"		level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK"			event="AE_NONE"				level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1049" name="飞跃大峡谷副本NPC">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"			event="AE_DEATH"			level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_SEARCH_TIMER"		level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH"			event="AE_HAVE_ENEMY"		level="2"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+    <Group id="1050" name="宠物游乐园宠物">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+        <Transit state="AS_WAIT"            event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_RANDOM"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+        <Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+        <Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+    </Group>
+	<Group id="1051" name="团拓展特勤机甲,被动御敌不移动">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"			event="AE_HAVE_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+    <Group id="1052" name="无双擂台赛雕像1">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+    </Group>
+    <Group id="1053" name="无双擂台赛雕像2">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+    </Group>
+    <Group id="1054" name="无双擂台赛雕像3">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+    </Group>
+    <Group id="1055" name="国战岩浆">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_HAVE_ENEMY"       level="1"  out="AS_ATTACK"/>
+		<Transit state="AS_SEARCH"			event="AE_LOSE_ENEMY"       level="3"  out="AS_WAIT"/>
+
+        <Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+    </Group>
+    <Group id="1056" name="国战城门">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+    </Group>
+	<Group id="1057" name="宫殿战宫女">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_RANDOM"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_HAVE_ENEMY"       level="2"  out="AS_ATTACK"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_HAVE_ENEMY"       level="2"  out="AS_ATTACK"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_DEATH"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1058" name="宫殿战士兵A">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_WAIT"            event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_HOME"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+        <Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_WAIT"/>
+
+        <Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_HOME"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+        <Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+		<Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+    </Group>
+    <Group id="1059" name="宫殿战士兵B">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+        <Transit state="AS_WAIT"            event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_RANDOM"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_MV_ENEMY"        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_ENEMY"        event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+        <Transit state="AS_MV_ENEMY"        event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_MV_ENEMY"        event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+        <Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_WAIT"/>
+
+        <Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_HOME"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+        <Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+    </Group>
+	<Group id="1060" name="复活旗帜A">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_WAIT"/>
+
+		<Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+
+		<Transit state="AS_RELIVE_WAIT"		event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+        <Transit state="AS_RELIVE"          event="AE_LIVE"             level="3"  out="AS_NONE"/>
+		<Transit state="AS_RELIVE" 			event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE_WAIT"/>
+	</Group>
+	<Group id="1061" name="团藏宝库NPC">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+	</Group>
+    <Group id="1062" name="自动寻路NPC">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"            event="AE_NONE"				level="1"  out="AS_NONE"/>
+
+        <Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="1"  out="AS_WAIT"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+        <Transit state="AS_RECYCLE"         event="AE_NONE"             level="1"  out="AS_NONE"/>
+    </Group>
+    <Group id="1063" name="自动寻路并攻击外国人">
+        <Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_HOME"/>
+
+        <Transit state="AS_MV_HOME"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_HAVE_ENEMY"       level="3"  out="AS_SELECT_WEAPON"/>
+        <Transit state="AS_MV_HOME"         event="AE_ARRIVED_HOME"     level="2"  out="AS_SEARCH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_HOME"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_DEATH"           event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+        <Transit state="AS_DEAD_ITEM_WAIT"  event="AE_DEAD_ITEM_TIMER"  level="1"  out="AS_DEAD_ITEM"/>
+        <Transit state="AS_DEAD_ITEM"       event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+        <Transit state="AS_DEAD_BONE_WAIT"  event="AE_DEAD_BONE_TIMER"  level="1"  out="AS_DEAD_BONE"/>
+        <Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RECYCLE"/>
+
+        <Transit state="AS_RECYCLE"          event="AE_NONE"            level="1"  out="AS_NONE"/>
+    </Group>
+	<Group id="1064" name="宠物">
+		<Transit state="AS_NONE"            event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+        <Transit state="AS_NONE"            event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+        <Transit state="AS_WAIT"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_WAIT"            event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_WAIT"            event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_MV_RANDOM"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+        <Transit state="AS_MV_RANDOM"       event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+        <Transit state="AS_SEARCH"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SEARCH"          event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+        <Transit state="AS_SELECT_WEAPON"   event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+        <Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+        <Transit state="AS_MV_ENEMY"        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_MV_ENEMY"        event="AE_AWAY_HOME"		level="3"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_MV_ENEMY"        event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_MV_ENEMY"        event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+        <Transit state="AS_ATTACK_WAIT"     event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_HOME"        level="4"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+        <Transit state="AS_ATTACK_WAIT"     event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+        <Transit state="AS_ATTACK"          event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+        <Transit state="AS_ATTACK"          event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RECYCLE"/>
+
+		<Transit state="AS_RECYCLE"			event="AE_NONE"           	level="1"  out="AS_NONE"/>
+	</Group>
+	<Group id="1065" name="移动指定坐标互殴NPC">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_WAIT"      		event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_HOME" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_HOME" 		event="AE_ARRIVED_HOME"	    level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_AWAY_HOME"		level="3"  out="AS_MV_HOME"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+		<!-- Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/-->
+		<Transit state="AS_MV_ENEMY"        event="AE_NEAR_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="1"  out="AS_ATTACK"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1066" name="给周围玩家加经验">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1067" name="给周围玩家加积分">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"           event="AE_NONE"                level="1"  out="AS_MV_RANDOM"/>
+		 <Transit state="AS_MV_RANDOM"           event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		 <Transit state="AS_MV_RANDOM"           event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+	</Group>
+
+	<Group id="1068" name="佣兵">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_MV_RANDOM"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_WAIT"      		event="AE_NONE"				level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_MV_RANDOM" 		event="AE_DEATH" 	        level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+		<Transit state="AS_MV_RANDOM" 		event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_SEARCH" 	        event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SEARCH" 	        event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+		<Transit state="AS_SELECT_WEAPON"	event="AE_DEATH"     	    level="9"  out="AS_DEATH"/>
+		<Transit state="AS_SELECT_WEAPON" 	event="AE_LOSE_ENEMY"       level="3"  out="AS_SEARCH"/>
+		<Transit state="AS_SELECT_WEAPON"	event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+		<Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+		<Transit state="AS_MV_ENEMY" 		event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_LOSE_ENEMY"       level="2"  out="AS_SEARCH"/>
+		<Transit state="AS_MV_ENEMY" 		event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_ATTACK_TIMER"	    level="3"  out="AS_ATTACK"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+		<Transit state="AS_ATTACK_WAIT" 	event="AE_LOSE_ENEMY"	    level="1"  out="AS_SEARCH"/>
+
+		<Transit state="AS_ATTACK" 			event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+		<Transit state="AS_ATTACK" 			event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"       event="AE_NONE"             level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"          event="AE_LIVE"             level="1"  out="AS_NONE"/>
+	</Group>
+
+	 <Group id="1069" name="静止不动">
+                <Transit state="AS_NONE"                event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+                <Transit state="AS_NONE"                event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+                <Transit state="AS_WAIT"                event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+
+                <Transit state="AS_DEATH"                   event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+                <Transit state="AS_DEAD_ITEM_WAIT"      event="AE_DEAD_ITEM_TIMER"      level="1"  out="AS_DEAD_ITEM"/>
+                <Transit state="AS_DEAD_ITEM"           event="AE_NONE"                 level="1"  out="AS_DEAD_BONE_WAIT"/>
+                <Transit state="AS_DEAD_BONE_WAIT"      event="AE_DEAD_BONE_TIMER"      level="1"  out="AS_DEAD_BONE"/>
+                <Transit state="AS_DEAD_BONE"           event="AE_NONE"                 level="1"  out="AS_RELIVE_WAIT"/>
+                <Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"     level="1"  out="AS_RELIVE"/>
+                <Transit state="AS_RELIVE"              event="AE_LIVE"                 level="1"  out="AS_NONE"/>
+        </Group>
+	<Group id="1070" name="给周围玩家加积分">
+		<Transit state="AS_NONE"      		event="AE_LIVE"      	    level="1"  out="AS_WAIT"/>
+		<Transit state="AS_NONE"      		event="AE_DEATH"      	    level="2"  out="AS_DEATH"/>
+
+		<Transit state="AS_WAIT"      		event="AE_DEATH"      	    level="9"  out="AS_DEATH"/>
+
+		<Transit state="AS_DEATH"		    event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+		<Transit state="AS_DEAD_ITEM_WAIT"	event="AE_DEAD_ITEM_TIMER" 	level="1"  out="AS_DEAD_ITEM"/>
+		<Transit state="AS_DEAD_ITEM"		event="AE_NONE"      	  	level="1"  out="AS_DEAD_BONE_WAIT"/>
+		<Transit state="AS_DEAD_BONE_WAIT"	event="AE_DEAD_BONE_TIMER"	level="1"  out="AS_DEAD_BONE"/>
+		<Transit state="AS_DEAD_BONE"   	event="AE_NONE"           	level="1"  out="AS_RELIVE_WAIT"/>
+		<Transit state="AS_RELIVE_WAIT"     event="AE_RELIVE_TIMER"    	level="1"  out="AS_RELIVE"/>
+		<Transit state="AS_RELIVE"      	event="AE_LIVE"           	level="1"  out="AS_NONE"/>
+
+	</Group>
+
+	        <Group id="108" name="主动御敌">
+                <Transit state="AS_NONE"                event="AE_LIVE"             level="1"  out="AS_WAIT"/>
+                <Transit state="AS_NONE"                event="AE_DEATH"            level="2"  out="AS_DEATH"/>
+
+                <Transit state="AS_WAIT"                event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+                <Transit state="AS_WAIT"                event="AE_AWAY_HOME"        level="3"  out="AS_MV_HOME"/>
+                <Transit state="AS_WAIT"                event="AE_ARRIVED_HOME"     level="2"  out="AS_MV_RANDOM"/>
+                <Transit state="AS_WAIT"                event="AE_NONE"                         level="1"  out="AS_MV_RANDOM"/>
+
+                <Transit state="AS_MV_HOME"             event="AE_DEATH"                level="9"  out="AS_DEATH"/>
+                <Transit state="AS_MV_HOME"             event="AE_ARRIVED_HOME"     level="1"  out="AS_MV_RANDOM"/>
+
+                <Transit state="AS_MV_RANDOM"           event="AE_DEATH"                level="9"  out="AS_DEATH"/>
+                <Transit state="AS_MV_RANDOM"           event="AE_AWAY_HOME"            level="3"  out="AS_MV_HOME"/>
+                <Transit state="AS_MV_RANDOM"           event="AE_HAVE_ENEMY"       level="2"  out="AS_SELECT_WEAPON"/>
+                <Transit state="AS_MV_RANDOM"           event="AE_SEARCH_TIMER"     level="1"  out="AS_SEARCH"/>
+
+                <Transit state="AS_SEARCH"              event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+                <Transit state="AS_SEARCH"              event="AE_NONE"             level="1"  out="AS_MV_RANDOM"/>
+
+                <Transit state="AS_SELECT_WEAPON"       event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+                <Transit state="AS_SELECT_WEAPON"       event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+                <Transit state="AS_SELECT_WEAPON"       event="AE_NEAR_ENEMY"       level="2"  out="AS_ATTACK_WAIT"/>
+                <Transit state="AS_SELECT_WEAPON"   event="AE_AWAY_ENEMY"       level="1"  out="AS_MV_ENEMY"/>
+
+                <Transit state="AS_MV_ENEMY"            event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+                <Transit state="AS_MV_ENEMY"            event="AE_AWAY_HOME"            level="3"  out="AS_MV_HOME"/>
+                <Transit state="AS_MV_ENEMY"            event="AE_LOSE_ENEMY"       level="2"  out="AS_MV_RANDOM"/>
+                <!-- Transit state="AS_MV_ENEMY"                event="AE_NEAR_ENEMY"       level="1"  out="AS_ATTACK_WAIT"/-->
+                <Transit state="AS_MV_ENEMY"        event="AE_NEAR_ENEMY"       level="1"  out="AS_SELECT_WEAPON"/>
+
+                <Transit state="AS_ATTACK_WAIT"         event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+                <Transit state="AS_ATTACK_WAIT"         event="AE_LOSE_ENEMY"       level="3"  out="AS_MV_RANDOM"/>
+                <Transit state="AS_ATTACK_WAIT"         event="AE_AWAY_ENEMY"       level="2"  out="AS_MV_ENEMY"/>
+                <Transit state="AS_ATTACK_WAIT"         event="AE_ATTACK_TIMER"     level="1"  out="AS_ATTACK"/>
+
+                <Transit state="AS_ATTACK"                      event="AE_DEATH"            level="9"  out="AS_DEATH"/>
+                <Transit state="AS_ATTACK"                      event="AE_NONE"             level="1"  out="AS_ATTACK_WAIT"/>
+
+                <Transit state="AS_DEATH"                   event="AE_NONE"             level="1"  out="AS_DEAD_ITEM_WAIT"/>
+                <Transit state="AS_DEAD_ITEM_WAIT"      event="AE_DEAD_ITEM_TIMER"      level="1"  out="AS_DEAD_ITEM"/>
+                <Transit state="AS_DEAD_ITEM"           event="AE_NONE"                 level="1"  out="AS_DEAD_BONE_WAIT"/>
+                <Transit state="AS_DEAD_BONE_WAIT"      event="AE_DEAD_BONE_TIMER"      level="1"  out="AS_DEAD_BONE"/>
+                <Transit state="AS_DEAD_BONE"           event="AE_NONE"                 level="1"  out="AS_RECYCLE"/>
+                <Transit state="AS_RECYCLE"             event="AE_NONE"                 level="1"  out="AS_NONE"/>
+        </Group>
+</AI>

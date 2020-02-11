@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by xiao (xiao) -->
+<!--
+bat:测试模块名称
+gm:测试模块需要跑得GM指令
+desc:功能描述
+timer:执行频率0表示立即执行,1表示1秒执行一条,其它暂不支持
+author:作者,技术支持^_^,欢迎添加并且留下大名哦
+-->
+<GmBat>
+	<bat name="zhanshi" desc="战士" timer="1" author="刘维强">
+		<gm str="fetch id=26001 iv=1-1"/>
+		<gm str="fetch id=20001 iv=1-1"/>
+		<gm str="fetch id=20101 iv=1-1"/>
+		<gm str="fetch id=1001 iv=1-1,4-1,10-10,16-10000"/>
+		<gm str="fetch id=1001 iv=1-1,4-1,10-50,16-10000"/>
+		<gm str="fetch id=1001 iv=1-1,4-1,10-200,16-10000"/>
+		<gm str="fetch id=1001 iv=1-1,4-1,10-1000,16-10000"/>
+		<gm str="fetch id=1001 iv=1-1,4-1,10-5000,16-10000"/>
+	</bat>
+	<bat name="tegong" desc="特工" timer="1" author="刘维强">
+		<gm str="fetch id=26002 iv=1-1"/>
+		<gm str="fetch id=20002 iv=1-1"/>
+		<gm str="fetch id=20102 iv=1-1"/>
+		<gm str="fetch id=2001 iv=1-1,4-1,11-10,16-10000"/>
+		<gm str="fetch id=2001 iv=1-1,4-1,11-50,16-10000"/>
+		<gm str="fetch id=2001 iv=1-1,4-1,11-200,16-10000"/>
+		<gm str="fetch id=2001 iv=1-1,4-1,11-1000,16-10000"/>
+		<gm str="fetch id=2001 iv=1-1,4-1,11-5000,16-10000"/>
+	</bat>
+	<bat name="qiangshou" desc="枪手" timer="1" author="刘维强">
+		<gm str="fetch id=26003 iv=1-1"/>
+		<gm str="fetch id=20003 iv=1-1"/>
+		<gm str="fetch id=20103 iv=1-1"/>
+		<gm str="fetch id=3001 iv=1-1,4-1,10-10,16-10000"/>
+		<gm str="fetch id=3001 iv=1-1,4-1,10-50,16-10000"/>
+		<gm str="fetch id=3001 iv=1-1,4-1,10-200,16-10000"/>
+		<gm str="fetch id=3001 iv=1-1,4-1,10-1000,16-10000"/>
+		<gm str="fetch id=3001 iv=1-1,4-1,10-5000,16-10000"/>
+	</bat>
+	<bat name="baopo" desc="爆破" timer="1" author="刘维强">
+		<gm str="fetch id=26004 iv=1-1"/>
+		<gm str="fetch id=20004 iv=1-1"/>
+		<gm str="fetch id=20104 iv=1-1"/>
+		<gm str="fetch id=4001 iv=1-1,4-1,11-10,16-10000"/>
+		<gm str="fetch id=4001 iv=1-1,4-1,11-50,16-10000"/>
+		<gm str="fetch id=4001 iv=1-1,4-1,11-200,16-10000"/>
+		<gm str="fetch id=4001 iv=1-1,4-1,11-1000,16-10000"/>
+		<gm str="fetch id=4001 iv=1-1,4-1,11-5000,16-10000"/>
+	</bat>
+	<bat name="xingzhe" desc="行者" timer="1" author="刘维强">
+		<gm str="fetch id=26005 iv=1-1"/>
+		<gm str="fetch id=20005 iv=1-1"/>
+		<gm str="fetch id=20105 iv=1-1"/>
+		<gm str="fetch id=5001 iv=1-1,4-1,10-10,16-10000"/>
+		<gm str="fetch id=5001 iv=1-1,4-1,10-50,16-10000"/>
+		<gm str="fetch id=5001 iv=1-1,4-1,10-200,16-10000"/>
+		<gm str="fetch id=5001 iv=1-1,4-1,10-1000,16-10000"/>
+		<gm str="fetch id=5001 iv=1-1,4-1,10-5000,16-10000"/>
+	</bat>
+	<bat name="yisheng" desc="医生" timer="1" author="刘维强">
+		<gm str="fetch id=26006 iv=1-1"/>
+		<gm str="fetch id=20006 iv=1-1"/>
+		<gm str="fetch id=20105 iv=1-1"/>
+		<gm str="fetch id=6001 iv=1-1,4-1,11-10,16-10000"/>
+		<gm str="fetch id=6001 iv=1-1,4-1,11-50,16-10000"/>
+		<gm str="fetch id=6001 iv=1-1,4-1,11-200,16-10000"/>
+		<gm str="fetch id=6001 iv=1-1,4-1,11-1000,16-10000"/>
+		<gm str="fetch id=6001 iv=1-1,4-1,11-5000,16-10000"/>
+	</bat>
+	<bat name="armyequip" desc="军团装备打造" timer="1" author="刘维强">
+		<gm str="fetch id=21601"/>
+		<gm str="fetch id=21602"/>
+		<gm str="fetch id=21603"/>
+		<gm str="fetch id=27115 num=40"/>
+		<gm str="fetch id=27115 iv=2-2 num=40"/>
+	</bat>
+	<bat name="bluep" desc="完美蓝装" timer="1" author="gejingguo">
+		<gm str="fetch id=11100 iv=6-2,7-1 judge=1"/>
+		<gm str="fetch id=12100 iv=6-2,7-1 judge=1 num=2"/>
+		<gm str="fetch id=13100 iv=6-2,7-1 judge=1 num=2"/>
+		<gm str="fetch id=14100 iv=6-2,7-1 judge=1"/>
+		<gm str="fetch id=15100 iv=6-2,7-1 judge=1"/>
+		<gm str="fetch id=16100 iv=6-2,7-1 judge=1"/>
+		<gm str="fetch id=17100 iv=6-2,7-1 judge=1 num=2"/>
+		<gm str="fetch id=18100 iv=6-2,7-1 judge=1"/>
+		<gm str="fetch id=19100 iv=6-2,7-1 judge=1"/>
+	</bat>
+	<bat name="yellowp" desc="完美黄装" timer="1" author="gejingguo">
+        <gm str="fetch id=11100 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=12100 iv=6-2,7-2 judge=1 num=2"/>
+        <gm str="fetch id=13100 iv=6-2,7-2 judge=1 num=2"/>
+        <gm str="fetch id=14100 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=15100 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=16100 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=17100 iv=6-2,7-2 judge=1 num=2"/>
+        <gm str="fetch id=18100 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=19100 iv=6-2,7-2 judge=1"/>
+    </bat>
+	<bat name="greenp" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11100 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12100 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13100 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14100 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15100 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16100 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17100 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18100 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19100 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp1" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11101 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12101 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13101 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14101 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15101 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16101 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17101 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18101 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19101 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp2" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11102 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12102 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13102 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14102 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15102 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16102 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17102 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18102 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19102 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp3" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11103 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12103 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13103 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14103 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15103 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16103 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17103 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18103 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19103 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp4" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11104 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12104 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13104 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14104 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15104 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16104 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17104 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18104 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19104 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp5" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19105 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp6" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11106 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12106 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13106 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14106 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15106 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16106 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17106 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18106 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19106 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp7" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11107 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12107 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13107 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14107 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15107 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16107 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17107 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18107 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19107 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp8" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11108 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12108 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13108 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14108 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15108 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16108 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17108 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18108 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19108 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp9" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11109 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12109 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13109 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14109 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15109 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16109 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17109 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18109 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19109 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenp10" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11110 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12110 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13110 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14110 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15110 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16110 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17110 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18110 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19110 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="bluem" desc="完美蓝装" timer="1" author="gejingguo">
+        <gm str="fetch id=11200 iv=6-2,7-1 judge=1"/>
+        <gm str="fetch id=12200 iv=6-2,7-1 judge=1 num=2"/>
+        <gm str="fetch id=13200 iv=6-2,7-1 judge=1 num=2"/>
+        <gm str="fetch id=14200 iv=6-2,7-1 judge=1"/>
+        <gm str="fetch id=15200 iv=6-2,7-1 judge=1"/>
+        <gm str="fetch id=16200 iv=6-2,7-1 judge=1"/>
+        <gm str="fetch id=17200 iv=6-2,7-1 judge=1 num=2"/>
+        <gm str="fetch id=18200 iv=6-2,7-1 judge=1"/>
+        <gm str="fetch id=19200 iv=6-2,7-1 judge=1"/>
+    </bat>
+    <bat name="yellowm" desc="完美黄装" timer="1" author="gejingguo">
+        <gm str="fetch id=11200 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=12200 iv=6-2,7-2 judge=1 num=2"/>
+        <gm str="fetch id=13200 iv=6-2,7-2 judge=1 num=2"/>
+        <gm str="fetch id=14200 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=15200 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=16200 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=17200 iv=6-2,7-2 judge=1 num=2"/>
+        <gm str="fetch id=18200 iv=6-2,7-2 judge=1"/>
+        <gm str="fetch id=19200 iv=6-2,7-2 judge=1"/>
+    </bat>
+    <bat name="greenm" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11200 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12200 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13200 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14200 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15200 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16200 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17200 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18200 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19200 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm1" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11201 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12201 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13201 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14201 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15201 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16201 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17201 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18201 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19201 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm2" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11202 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12202 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13202 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14202 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15202 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16202 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17202 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18202 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19202 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm3" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11203 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12203 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13203 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14203 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15203 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16203 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17203 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18203 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19203 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm4" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11204 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12204 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13204 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14204 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15204 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16204 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17204 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18204 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19204 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm5" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11205 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12205 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13205 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14205 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15205 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16205 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17205 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18205 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19205 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm6" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11206 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12206 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13206 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14206 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15206 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16206 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17206 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18206 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19206 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm7" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11207 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12207 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13207 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14207 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15207 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16207 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17207 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18207 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19207 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm8" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11208 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12208 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13208 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14208 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15208 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16208 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17208 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18208 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19208 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm9" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11209 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12209 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13209 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14209 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15209 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16209 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17209 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18209 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19209 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="greenm10" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=11210 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12210 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13210 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14210 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15210 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16210 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17210 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18210 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19210 iv=6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="star5" desc="完美绿装5星" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=1005 iv=2-5,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3005 iv=2-5,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14105 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=2-5,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=2-5,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15105 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18105 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=2-5,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19105 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11105 iv=2-5,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="star10" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=1005 iv=2-10,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3005 iv=2-10,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14105 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=2-10,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=2-10,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15105 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18105 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=2-10,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19105 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11105 iv=2-10,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="star11" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=1005 iv=2-11,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3005 iv=2-11,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14105 iv=2-11,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=2-11,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=2-11,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15105 iv=2-11,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=2-11,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18105 iv=2-11,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=2-11,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19105 iv=2-11,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11105 iv=2-11,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="star12" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=1005 iv=2-12,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3005 iv=2-12,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14105 iv=2-12,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=2-12,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=2-12,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15105 iv=2-12,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=2-12,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18105 iv=2-12,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=2-12,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19105 iv=2-12,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11105 iv=2-12,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="star13" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=1005 iv=2-13,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3005 iv=2-13,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14105 iv=2-13,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=2-13,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=2-13,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15105 iv=2-13,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=2-13,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18105 iv=2-13,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=2-13,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19105 iv=2-13,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11105 iv=2-13,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="star14" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=1005 iv=2-14,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3005 iv=2-14,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14105 iv=2-14,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=2-14,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=2-14,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15105 iv=2-14,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=2-14,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18105 iv=2-14,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=2-14,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19105 iv=2-14,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11105 iv=2-14,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="star15" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=1005 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3005 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14105 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=2-15,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=2-15,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15105 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18105 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=2-15,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19105 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11105 iv=2-15,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="qiu" desc="测试专用" timer="1" author="gejingguo">
+        <gm str="setlevel"/>
+        <gm str="skill id=5"/>
+        <gm str="fetch id=50012 judge=1"/>
+        <gm str="fetch id=20113 "/>
+        <gm str="fetch id=20114 "/>
+        <gm str="fetch id=20115 "/>
+        <gm str="fetch id=20116 "/>
+        <gm str="fetch id=20117 "/>
+        <gm str="fetch id=20118 "/>
+        <gm str="fetch id=11105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=14105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=15105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=18105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=19105 iv=6-2,7-3 judge=1"/>
+        <gm str="fetch id=1005 judge=1 iv=7-3,6-2,2-10"/>
+        <gm str="fetch id=2005 judge=1 iv=7-3,6-2,2-10"/>
+        <gm str="fetch id=3005 judge=1 iv=7-3,6-2,2-10"/>
+        <gm str="fetch id=4005 judge=1 iv=7-3,6-2,2-10"/>
+        <gm str="fetch id=5005 judge=1 iv=7-3,6-2,2-10"/>
+        <gm str="fetch id=6005 judge=1 iv=7-3,6-2,2-10"/>
+	</bat>
+	<bat name="all" desc="测试专用" timer="1" author="gejingguo">
+		<gm str="fetch id=1004 iv=4-1"/>
+		<gm str="fetch id=2004 iv=4-1"/>
+		<gm str="fetch id=3004 iv=4-1"/>
+		<gm str="fetch id=4004 iv=4-1"/>
+		<gm str="fetch id=5004 iv=4-1"/>
+		<gm str="fetch id=6004 iv=4-1"/>
+		<gm str="fetch id=31197 iv=4-1"/>
+		<gm str="fetch id=11104 iv=4-1"/>
+		<gm str="fetch id=1"/>
+		<gm str="fetch id=5"/>
+		<gm str="fetch id=12104 iv=4-1"/>
+		<gm str="fetch id=13104 iv=4-1"/>
+		<gm str="fetch id=14104 iv=4-1"/>
+		<gm str="fetch id=15104 iv=4-1"/>
+		<gm str="fetch id=16104 iv=4-1"/>
+		<gm str="fetch id=17104 iv=4-1"/>
+		<gm str="fetch id=18104 iv=4-1"/>
+		<gm str="fetch id=19104 iv=4-1"/>
+		<gm str="fetch id=20501"/>
+		<gm str="fetch id=20505"/>
+		<gm str="fetch id=21234"/>
+		<gm str="fetch id=22004"/>
+		<gm str="fetch id=23005"/>
+		<gm str="fetch id=29007"/>
+		<gm str="fetch id=20101"/>
+		<gm str="fetch id=20113"/>
+		<gm str="fetch id=27202"/>
+		<gm str="fetch id=26104"/>
+		<gm str="fetch id=27112"/>
+		<gm str="fetch id=29003"/>
+		<gm str="fetch id=29032"/>
+		<gm str="fetch id=31005"/>
+		<gm str="fetch id=43007"/>
+		<gm str="fetch id=26126"/>
+		<gm str="fetch id=26010"/>
+		<gm str="fetch id=31122"/>
+		<gm str="fetch id=29037"/>
+		<gm str="fetch id=27101"/>
+		<gm str="fetch id=26101"/>
+		<gm str="fetch id=26110"/>
+		<gm str="fetch id=29031"/>
+		<gm str="fetch id=27117"/>
+		<gm str="fetch id=41004"/>
+		<gm str="fetch id=43002"/>
+		<gm str="fetch id=29027"/>
+		<gm str="fetch id=29053"/>
+		<gm str="fetch id=43091"/>
+		<gm str="fetch id=31145"/>
+		<gm str="fetch id=29019"/>
+		<gm str="fetch id=49001"/>
+		<gm str="fetch id=27120"/>
+		<gm str="fetch id=44001 iv=4-1"/>
+		<gm str="fetch id=44021"/>
+		<gm str="fetch id=29130"/>
+		<gm str="fetch id=27306"/>
+		<gm str="fetch id=27401"/>
+		<gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=51001	"/>
+	</bat>
+	<bat name="weaponxingzhe" desc="测试专用" timer="1" author="gejingguo">
+		<gm str="fetch id=5001 iv=4-1"/>
+		<gm str="fetch id=5002 iv=4-1"/>
+		<gm str="fetch id=5003 iv=4-1"/>
+		<gm str="fetch id=5004 iv=4-1"/>
+		<gm str="fetch id=5005 iv=4-1"/>
+		<gm str="fetch id=5006 iv=4-1"/>
+	</bat>
+	<bat name="weaponzhanshi" desc="测试专用" timer="1" author="gejingguo">
+		<gm str="fetch id=1001 iv=4-1"/>
+		<gm str="fetch id=1002 iv=4-1"/>
+		<gm str="fetch id=1003 iv=4-1"/>
+		<gm str="fetch id=1004 iv=4-1"/>
+		<gm str="fetch id=1005 iv=4-1"/>
+		<gm str="fetch id=1006 iv=4-1"/>
+	</bat>
+	<bat name="weapontegong" desc="测试专用" timer="1" author="gejingguo">
+		<gm str="fetch id=2001 iv=4-1"/>
+		<gm str="fetch id=2002 iv=4-1"/>
+		<gm str="fetch id=2003 iv=4-1"/>
+		<gm str="fetch id=2004 iv=4-1"/>
+		<gm str="fetch id=2005 iv=4-1"/>
+		<gm str="fetch id=2006 iv=4-1"/>
+	</bat>
+	<bat name="weaponqiangshou" desc="测试专用" timer="1" author="gejingguo">
+		<gm str="fetch id=3001 iv=4-1"/>
+		<gm str="fetch id=3002 iv=4-1"/>
+		<gm str="fetch id=3003 iv=4-1"/>
+		<gm str="fetch id=3004 iv=4-1"/>
+		<gm str="fetch id=3005 iv=4-1"/>
+		<gm str="fetch id=3006 iv=4-1"/>
+	</bat>
+	<bat name="weaponbaopo" desc="测试专用" timer="1" author="gejingguo">
+		<gm str="fetch id=4001 iv=4-1"/>
+		<gm str="fetch id=4002 iv=4-1"/>
+		<gm str="fetch id=4003 iv=4-1"/>
+		<gm str="fetch id=4004 iv=4-1"/>
+		<gm str="fetch id=4005 iv=4-1"/>
+		<gm str="fetch id=4006 iv=4-1"/>
+	</bat>
+	<bat name="weaponyisheng" desc="测试专用" timer="1" author="gejingguo">
+		<gm str="fetch id=6001 iv=4-1"/>
+		<gm str="fetch id=6002 iv=4-1"/>
+		<gm str="fetch id=6003 iv=4-1"/>
+		<gm str="fetch id=6004 iv=4-1"/>
+		<gm str="fetch id=6005 iv=4-1"/>
+		<gm str="fetch id=6006 iv=4-1"/>
+	</bat>
+	<bat name="bball" desc="测试专用" timer="1" author="gejingguo">
+	    <gm str="fetch id=41001"/>
+		<gm str="fetch id=41002"/>
+		<gm str="fetch id=41003"/>
+		<gm str="fetch id=41004"/>
+		<gm str="fetch id=41005"/>
+	</bat>
+	<bat name="queren" desc="测试专用" timer="1" author="gejingguo">
+	    <gm str="fetch id=23051"/>
+		<gm str="fetch id=23055"/>
+		<gm str="fetch id=26113"/>
+		<gm str="fetch id=26114"/>
+		<gm str="fetch id=26115"/>
+		<gm str="fetch id=26116"/>
+		<gm str="fetch id=26117"/>
+		<gm str="fetch id=26118"/>
+		<gm str="fetch id=26119"/>
+		<gm str="fetch id=26120"/>
+		<gm str="fetch id=29045"/>
+		<gm str="fetch id=47001"/>
+		<gm str="fetch id=47002"/>
+		<gm str="fetch id=47003"/>
+		<gm str="fetch id=47007"/>
+		<gm str="fetch id=47008"/>
+		<gm str="fetch id=47010"/>
+		<gm str="fetch id=47011"/>
+		<gm str="fetch id=47012"/>
+		<gm str="fetch id=47013"/>
+		<gm str="fetch id=47014"/>
+		<gm str="fetch id=47015"/>
+		<gm str="fetch id=47016"/>
+		<gm str="fetch id=47017"/>
+	</bat>
+	<bat name="allwuqi" desc="测试专用" timer="1" author="gejingguo">
+	    <gm str="fetch id=1000 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=1001 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=1002 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=1003 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=1004 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=1005 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=2000 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=2001 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=2002 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=2003 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=2004 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=2005 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=3000 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=3001 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=3002 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=3003 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=3004 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=3005 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=4000 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=4001 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=4002 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=4003 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=4004 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=4005 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=5000 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=5001 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=5002 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=5003 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=5004 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=5005 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=6000 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=6001 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=6002 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=6003 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=6004 iv=7-3,6-2,2-10 judge=1"/>
+		<gm str="fetch id=6005 iv=7-3,6-2,2-10 judge=1"/>
+	</bat>
+	<bat name="star6" desc="完美绿装5星" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=2005 iv=2-5,6-2,7-3 judge=1"/>
+		<gm str="fetch id=4005 iv=2-5,6-2,7-3 judge=1"/>
+		<gm str="fetch id=5005 iv=2-5,6-2,7-3 judge=1"/>
+		<gm str="fetch id=6005 iv=2-5,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14205 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12205 iv=2-5,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13205 iv=2-5,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15205 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16205 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18205 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17205 iv=2-5,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19205 iv=2-5,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11205 iv=2-5,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="star11" desc="完美绿装" timer="1" author="gejingguo">
+		<gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=2005 iv=2-10,6-2,7-3 judge=1"/>
+		<gm str="fetch id=4005 iv=2-10,6-2,7-3 judge=1"/>
+		<gm str="fetch id=5005 iv=2-10,6-2,7-3 judge=1"/>
+		<gm str="fetch id=6005 iv=2-10,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14205 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12205 iv=2-10,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13205 iv=2-10,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15205 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16205 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18205 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17205 iv=2-10,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19205 iv=2-10,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11205 iv=2-10,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="star16" desc="完美绿装" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=2005 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=4005 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=5005 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=6005 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14205 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12205 iv=2-15,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13205 iv=2-15,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15205 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16205 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18205 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17205 iv=2-15,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19205 iv=2-15,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11205 iv=2-15,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="gomap" desc="跑地图" timer="3" author="whj">
+        <gm str="goto map=1"/>
+        <gm str="goto 100,100"/>
+        <gm str="goto 100,200"/>
+        <gm str="goto 100,300"/>
+        <gm str="goto map=2"/>
+        <gm str="goto 100,100"/>
+        <gm str="goto 100,200"/>
+        <gm str="goto 100,300"/>
+        <gm str="goto map=3"/>
+        <gm str="goto 100,100"/>
+        <gm str="goto 100,200"/>
+        <gm str="goto 100,300"/>
+        <gm str="goto map=4"/>
+        <gm str="goto 100,100"/>
+        <gm str="goto 100,200"/>
+        <gm str="goto 100,300"/>
+        <gm str="goto map=5"/>
+        <gm str="goto 100,100"/>
+        <gm str="goto 100,200"/>
+        <gm str="goto 100,300"/>
+    </bat>
+	<bat name="gomap5" desc="军乐城地图" timer="6" author="lq">
+        <gm str="goto map=5"/>
+        <gm str="goto 133,145"/>
+        <gm str="goto 369,155"/>
+        <gm str="goto 632,121"/>
+		<gm str="goto 78,353"/>
+        <gm str="goto 439,340"/>
+        <gm str="goto 575,321"/>
+		<gm str="goto 34,619"/>
+        <gm str="goto 356,597"/>
+        <gm str="goto 582,613"/>
+    </bat>
+	<bat name="star5break" desc="完美绿装5星" timer="1" author="gejingguo">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=1005 iv=2-5,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3005 iv=2-5,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14105 iv=2-5,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12105 iv=2-5,3-1,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13105 iv=2-5,3-1,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15105 iv=2-5,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16105 iv=2-5,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18105 iv=2-5,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17105 iv=2-5,3-1,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19105 iv=2-5,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11105 iv=2-5,3-1,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="yy4zn" desc="多玩活动奖励" timer="1" author="wuwenbin">
+		<gm str="fetch id=1107 iv=2-15,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=2107 iv=2-15,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3107 iv=2-15,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=4107 iv=2-15,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=5107 iv=2-15,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=6107 iv=2-15,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=27206"/>
+		<gm str="fetch id=27216"/>
+		<gm str="fetch id=27226"/>
+		<gm str="fetch id=27236"/>
+		<gm str="fetch id=27246"/>
+		<gm str="fetch id=32206"/>
+    </bat>
+	<bat name="7kong" desc="7孔" timer="1" author="wuwenbin">
+		<gm str="fetch id=27110 iv=2-1"/>
+		<gm str="fetch id=27110 iv=2-2"/>
+		<gm str="fetch id=27110 iv=2-3"/>
+		<gm str="fetch id=27110 iv=2-4"/>
+		<gm str="fetch id=27110 iv=2-5"/>
+		<gm str="fetch id=27110 iv=2-6"/>
+		<gm str="fetch id=27110 iv=2-7"/>
+		<gm str="fetch id=27110 iv=2-7"/>
+		<gm str="fetch id=27201 num=20"/>
+		<gm str="fetch id=27211 num=20"/>
+		<gm str="fetch id=27221 num=20"/>
+		<gm str="fetch id=27231 num=20"/>
+		<gm str="fetch id=27241 num=20"/>
+    </bat>
+	<bat name="aoyun" desc="奥运幻化" timer="1" author="wuwenbin">
+		<gm str="fetch id=1804 iv=6-2,7-3 judge=1"/>
+		<gm str="fetch id=2804 iv=6-2,7-3 judge=1"/>
+		<gm str="fetch id=3804 iv=6-2,7-3 judge=1"/>
+		<gm str="fetch id=4804 iv=6-2,7-3 judge=1"/>
+		<gm str="fetch id=5804 iv=6-2,7-3 judge=1"/>
+		<gm str="fetch id=6804 iv=6-2,7-3 judge=1"/>
+		<gm str="fetch id=20273"/>
+		<gm str="fetch id=20274"/>
+		<gm str="fetch id=20275"/>
+		<gm str="fetch id=20276"/>
+		<gm str="fetch id=29542"/>
+		<gm str="fetch id=29543"/>
+    </bat>
+	<bat name="nvshen" desc="女神的垂青" timer="1" author="wuwenbin">
+		<gm str="fetch id=35200"/>
+		<gm str="fetch id=35201"/>
+		<gm str="fetch id=35202"/>
+		<gm str="fetch id=35203"/>
+		<gm str="fetch id=35204"/>
+		<gm str="fetch id=35205"/>
+		<gm str="fetch id=35206"/>
+		<gm str="fetch id=35207"/>
+		<gm str="fetch id=35208"/>
+		<gm str="fetch id=35209"/>
+		<gm str="fetch id=35210"/>
+    </bat>
+	<bat name="goldboy" desc="黄金圣衣男" timer="1" author="wuwenbin">
+		<gm str="fetch id=20244"/>
+		<gm str="fetch id=20245"/>
+		<gm str="fetch id=20246"/>
+		<gm str="fetch id=20247"/>
+		<gm str="fetch id=20248"/>
+		<gm str="fetch id=20249"/>
+		<gm str="fetch id=20250"/>
+		<gm str="fetch id=20251"/>
+		<gm str="fetch id=20252"/>
+		<gm str="fetch id=20253"/>
+		<gm str="fetch id=20254"/>
+		<gm str="fetch id=20255"/>
+    </bat>
+	<bat name="goldgirl" desc="黄金圣衣女" timer="1" author="wuwenbin">
+		<gm str="fetch id=20256"/>
+		<gm str="fetch id=20257"/>
+		<gm str="fetch id=20258"/>
+		<gm str="fetch id=20259"/>
+		<gm str="fetch id=20260"/>
+		<gm str="fetch id=20261"/>
+		<gm str="fetch id=20262"/>
+		<gm str="fetch id=20263"/>
+		<gm str="fetch id=20264"/>
+		<gm str="fetch id=20265"/>
+		<gm str="fetch id=20266"/>
+		<gm str="fetch id=20267"/>
+    </bat>
+	<bat name="ns1" desc="女神垂青测试" timer="1" author="wuwenbin">
+		<gm str="fetch id=35200 num=1"/>
+		<gm str="fetch id=29066 num=5 iv=1-1,7-3"/>
+		<gm str="fetch id=31145 num=4 iv=1-1,7-3"/>
+		<gm str="fetch id=35200 num=2 iv=1-1"/>
+		<gm str="fetch id=26020 num=30 iv=1-1,3-604800"/>
+		<gm str="fetch id=35202 num=4 iv=1-1"/>
+		<gm str="fetch id=35200 num=3 iv=1-1"/>
+		<gm str="fetch id=15 num=1 iv=1-1"/>
+		<gm str="fetch id=35210 num=1 iv=1-1"/>
+    </bat>
+	<bat name="rmb" desc="增加很多钱" timer="1" author="wuwenbin">
+		<gm str="getmoney num=100000000 tpye=1"/>
+		<gm str="getmoney num=100000000 tpye=3"/>
+		<gm str="getmoney num=100000000 tpye=5"/>
+		<gm str="getmoney num=100000000 tpye=8"/>
+	</bat>
+	<bat name="star8" desc="完美绿装8星" timer="1" author="wuwenbin">
+        <gm str="fetch id=50012 judge=1"/>
+		<gm str="fetch id=1006 iv=2-8,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3006 iv=2-8,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14106 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12106 iv=2-8,3-1,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13106 iv=2-8,3-1,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15106 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16106 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18106 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17106 iv=2-8,3-1,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19106 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11106 iv=2-8,3-1,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="80equip" desc="完美绿装8星" timer="1" author="wuqingfeng">
+        <gm str="fetch id=50036 judge=1"/>
+		<gm str="fetch id=1008 iv=2-8,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3008 iv=2-8,3-1,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14108 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=12108 iv=2-8,3-1,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=13108 iv=2-8,3-1,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=15108 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=16108 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=18108 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=17108 iv=2-8,3-1,6-2,7-3 judge=1 num=2"/>
+        <gm str="fetch id=19108 iv=2-8,3-1,6-2,7-3 judge=1"/>
+        <gm str="fetch id=11108 iv=2-8,3-1,6-2,7-3 judge=1"/>
+    </bat>
+	<bat name="110equip" desc="110级装备" timer="1" author="wuwenbin">
+		<gm str="fetch id=1010 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=2010 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3010 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=4010 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=5010 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=6010 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=11110 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=11210 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=12110 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=12210 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=13110 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=13210 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14110 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14210 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=15110 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=15210 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=16110 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=16210 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=17110 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=17210 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=18110 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=18210 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=19110 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=19210 iv=2-15,6-2,7-3 judge=1"/>
+	</bat>
+	<bat name="yaosai" desc="要塞怪物" timer="1" author="wuwenbin">
+		<gm str="summon id=22600 num=1"/>
+		<gm str="summon id=22601 num=1"/>
+		<gm str="summon id=22602 num=1"/>
+		<gm str="summon id=22603 num=1"/>
+		<gm str="summon id=22607 num=1"/>
+		<gm str="summon id=22608 num=1"/>
+		<gm str="summon id=22604 num=1"/>
+		<gm str="summon id=22605 num=1"/>
+		<gm str="summon id=22606 num=1"/>
+		<gm str="summon id=22609 num=1"/>
+		<gm str="summon id=22611 num=1"/>
+		<gm str="summon id=22610 num=1"/>
+		<gm str="summon id=22612 num=1"/>
+		<gm str="summon id=22613 num=1"/>
+		<gm str="summon id=22614 num=1"/>
+		<gm str="summon id=22615 num=1"/>
+		<gm str="summon id=22616 num=1"/>
+		<gm str="summon id=22617 num=1"/>
+		<gm str="summon id=22618 num=1"/>
+		<gm str="summon id=22619 num=1"/>
+		<gm str="summon id=22621 num=1"/>
+		<gm str="summon id=22620 num=1"/>
+		<gm str="summon id=22623 num=1"/>
+		<gm str="summon id=22624 num=1"/>
+		<gm str="summon id=22625 num=1"/>
+		<gm str="summon id=22626 num=1"/>
+		<gm str="summon id=22627 num=1"/>
+		<gm str="summon id=22628 num=1"/>
+		<gm str="summon id=22629 num=1"/>
+		<gm str="summon id=22630 num=1"/>
+		<gm str="summon id=22631 num=1"/>
+		<gm str="summon id=22633 num=1"/>
+		<gm str="summon id=22634 num=1"/>
+		<gm str="summon id=22635 num=1"/>
+		<gm str="summon id=22636 num=1"/>
+		<gm str="summon id=22637 num=1"/>
+	</bat>
+	<bat name="yaosaiclear" desc="要塞怪物" timer="1" author="wuwenbin">
+		<gm str="summon id=22600 clear=1"/>
+		<gm str="summon id=22601 clear=1"/>
+		<gm str="summon id=22602 clear=1"/>
+		<gm str="summon id=22603 clear=1"/>
+		<gm str="summon id=22607 clear=1"/>
+		<gm str="summon id=22608 clear=1"/>
+		<gm str="summon id=22604 clear=1"/>
+		<gm str="summon id=22605 clear=1"/>
+		<gm str="summon id=22606 clear=1"/>
+		<gm str="summon id=22609 clear=1"/>
+		<gm str="summon id=22611 clear=1"/>
+		<gm str="summon id=22610 clear=1"/>
+		<gm str="summon id=22612 clear=1"/>
+		<gm str="summon id=22613 clear=1"/>
+		<gm str="summon id=22614 clear=1"/>
+		<gm str="summon id=22615 clear=1"/>
+		<gm str="summon id=22616 clear=1"/>
+		<gm str="summon id=22617 clear=1"/>
+		<gm str="summon id=22618 clear=1"/>
+		<gm str="summon id=22619 clear=1"/>
+		<gm str="summon id=22621 clear=1"/>
+		<gm str="summon id=22620 clear=1"/>
+		<gm str="summon id=22623 clear=1"/>
+		<gm str="summon id=22624 clear=1"/>
+		<gm str="summon id=22625 clear=1"/>
+		<gm str="summon id=22626 clear=1"/>
+		<gm str="summon id=22627 clear=1"/>
+		<gm str="summon id=22628 clear=1"/>
+		<gm str="summon id=22629 clear=1"/>
+		<gm str="summon id=22630 clear=1"/>
+		<gm str="summon id=22631 clear=1"/>
+		<gm str="summon id=22633 clear=1"/>
+		<gm str="summon id=22634 clear=1"/>
+		<gm str="summon id=22635 clear=1"/>
+		<gm str="summon id=22636 clear=1"/>
+		<gm str="summon id=22637 clear=1"/>
+	</bat>
+	<bat name="taiguo" desc="泰国演示" timer="1" author="wuwenbin">
+		<gm str="setlevel level=100"/>
+		<gm str="fetch id=1009 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=2009 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=3009 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=4009 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=5009 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=6009 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=11109 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=11209 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=12109 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=12209 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=13109 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=13209 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14109 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=14209 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=15109 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=15209 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=16109 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=16209 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=17109 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=17209 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=18109 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=18209 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=19109 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=19209 iv=2-15,6-2,7-3 judge=1"/>
+		<gm str="fetch id=50020 judge=1"/>
+		<gm str="getmoney"/>
+	</bat>
+	<bat name="ys2" desc="要塞怪物" timer="1" author="wuwenbin">
+		<gm str="summon id=24500"/>
+		<gm str="summon id=24501"/>
+		<gm str="summon id=24502"/>
+		<gm str="summon id=24503"/>
+		<gm str="summon id=24504"/>
+		<gm str="summon id=24505"/>
+		<gm str="summon id=24506"/>
+		<gm str="summon id=24507"/>
+		<gm str="summon id=24508"/>
+		<gm str="summon id=24509"/>
+		<gm str="summon id=24510"/>
+		<gm str="summon id=24511"/>
+		<gm str="summon id=24512"/>
+		<gm str="summon id=24513"/>
+		<gm str="summon id=24514"/>
+		<gm str="summon id=24515"/>
+		<gm str="summon id=24516"/>
+	</bat>
+	<bat name="ys2c" desc="要塞怪物" timer="1" author="wuwenbin">
+		<gm str="summon id=24500 clear=1"/>
+		<gm str="summon id=24501 clear=1"/>
+		<gm str="summon id=24502 clear=1"/>
+		<gm str="summon id=24503 clear=1"/>
+		<gm str="summon id=24504 clear=1"/>
+		<gm str="summon id=24505 clear=1"/>
+		<gm str="summon id=24506 clear=1"/>
+		<gm str="summon id=24507 clear=1"/>
+		<gm str="summon id=24508 clear=1"/>
+		<gm str="summon id=24509 clear=1"/>
+		<gm str="summon id=24510 clear=1"/>
+		<gm str="summon id=24511 clear=1"/>
+		<gm str="summon id=24512 clear=1"/>
+		<gm str="summon id=24513 clear=1"/>
+		<gm str="summon id=24514 clear=1"/>
+		<gm str="summon id=24515 clear=1"/>
+		<gm str="summon id=24516 clear=1"/>
+	</bat>
+	<bat name="ysitem" desc="要塞怪物" timer="1" author="wuwenbin">
+		<gm str="fetch id=31570 num=20"/>
+		<gm str="fetch id=31571 num=20"/>
+		<gm str="fetch id=31572 num=20"/>
+		<gm str="fetch id=31573 num=20"/>
+	</bat>
+	<bat name="ysgw" desc="要塞怪物" timer="1" author="wuwenbin">
+		<gm str="summon id=24518"/>
+		<gm str="summon id=24537"/>
+		<gm str="summon id=24556"/>
+		<gm str="summon id=24575"/>
+		<gm str="summon id=24594"/>
+		<gm str="summon id=24613"/>
+		<gm str="summon id=24632"/>
+		<gm str="summon id=24651"/>
+		<gm str="summon id=24670"/>
+	</bat>
+</GmBat>

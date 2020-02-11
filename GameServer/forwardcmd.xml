@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ForwardCmd>
+	<scene>
+			<cmd name="PROPERTY_USERCMD" id="18">
+				<param name="stReqeustFlyKungMagicUserCmd_CS" id="39"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestCompreScoreScriptUserCmd_CS" id="201"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRedPacketScriptUserCmd_CS" id="134"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stClanBossOpScriptUserCmd_CS" id="209"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stPowerRewardScriptUserCmd_CS" id="208"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestInputPolishedEquipUserCmd" id="221"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestLockEquipEquipUserCmd" id="234"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestPolishedAttrEquipUserCmd" id="222"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestSavePolishedAttrEquipUserCmd" id="223"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestKeepPolishedAttrEquipUserCmd" id="224"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestNotKeepPolishedAttrEquipUserCmd" id="225"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestExchangePolishedAttrEquipUserCmd" id="226"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestClearBindPolishedAttrEquipUserCmd" id="227"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestHorsePolishedAttrEquipUserCmd" id="228"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestHorseSavePolishedAttrEquipUserCmd" id="229"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestHorseKeepPolishedAttrEquipUserCmd" id="230"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestHorseNotKeepPolishedAttrEquipUserCmd" id="231"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestHorseExchangePolishedAttrEquipUserCmd" id="232"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestHorseClearBindPolishedAttrEquipUserCmd" id="233"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stFashionPutEquipUserCmd" id="236"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stHaloUpEquipUserCmd" id="120"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stsellHaloItemScriptUserCmd" id="242"/>
+			</cmd>	
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestHaloRefineEquipUserCmd" id="121"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestHaloinfoEquipUserCmd" id="122"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRequestHaloallEquipUserCmd" id="123"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stLinQuPutDailyAwardEquipUserCmd" id="238"/>
+			</cmd>
+			<cmd name="ClientCommand_EquipUserCmd" id="50">
+				<param name="stRevEquipDailyInfoEquipUserCmd" id="240"/>
+			</cmd>
+			<cmd name="ClientCommand_RequestUserCmd" id="58">
+				<param name="stRequestGetYinYangGinsengRequestUserCmd" id="207"/>
+			</cmd>
+			<cmd name="ClientCommand_RequestUserCmd" id="58">
+				<param name="stReturnAwardYinYangGinsengRequestUserCmd" id="208"/>
+			</cmd>
+			<cmd name="ClientCommand_RequestUserCmd" id="58">
+				<param name="stReqBlessDayAmountRequestUserCmd" id="221"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stPrivateTalkScriptUserCmd_CS" id="131"/>
+			</cmd>
+			<cmd name="ClientCommand_SocailAcitonUserCmd" id="90">
+				<param name="stRequstMinerSocialActionUserCmd" id="4"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestWorldExamRegExamScriptUserCmd_C" id="210"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestAnswerWorldExamScriptUserCmd_C" id="212"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestFinishWorldExamScriptUserCmd_C" id="214"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestRegClanExamScriptUserCmd_C" id="216"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="StRequestAnswerClanExamScriptUserCmd_C" id="218"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestFinishClanExamScriptUserCmd_C" id="220"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestWorldExamWeekInfoScriptUserCmd_C" id="222"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestClanExamWeekInfoScriptUserCmd_C" id="224"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestExamDailyAwardScriptUserCmd_C" id="226"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestFlowerLeaderScriptUserCmd" id="46"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestFashionScriptUserCmd" id="233"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stFashionInfoScriptUserCmd" id="234"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stFashionOneInfoScriptUserCmd_CS" id="235"/>
+			</cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stRequestNaziritismAirShipUserCmd_C" id="21"/>
+			</cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stRequestJoinSealMagicMapAirShipUserCmd_C" id="28"/>
+			</cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stRequestJoinShenMiMapAirShipUserCmd_C" id="29"/>
+			</cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stRequestJoinIsLandAirShipUserCmd" id="30"/>
+            </cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stSendOneYuanDayAirShipUserCmd_C" id="32"/>
+			</cmd>
+			<cmd name="ClientCommand_TradeUserCmd" id="17">
+				<param name="stWeiXinBindCodeTradeUserCmd_CS" id="66"/>
+			</cmd>
+			<cmd name="ClientCommand_TradeUserCmd" id="17">
+				<param name="stCommerceSellItemTradeUserCmd_CS" id="129"/>
+			</cmd>
+            <cmd name="ClientCommand_ArmyEquipUserCmd" id ="59">
+                <param name="stReqServerSportPayArmyEquipUserCmd" id="57"/>
+			</cmd>
+			<cmd name="ClientCommand_TradeUserCmd" id="17">
+				<param name="stCommerceAddFavoritesTradeUserCmd_CS" id="156"/>
+			</cmd>
+			<cmd name="ClientCommand_TradeUserCmd" id="17">
+				<param name="stCommerceBuyItemTradeUserCmd_CS" id="149"/>
+			</cmd>	
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stIntoClanBaseScriptUserCmd" id="133"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stFindFriendInfoQuestUserCmd_CS" id="9"/>
+			</cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stGotoClanPracticeAirShipUserCmd_C" id="22"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestClanDailyTaskDataScriptUserCmd_C" id="229"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stRequestClanDailyTaskScriptUserCmd_CS" id="228"/>
+			</cmd>
+			<cmd name="ClientCommand_DemonUserCmd" id="86">
+				<param name="stRefreshClanGXDemonUserCmd_CS" id="164"/>
+			</cmd>
+			<cmd name="ClientCommand_ChatUserCmd" id="14">
+				<param name="stReqClanShopChatUserCmd_C" id="215"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stVisitMasterInfoScriptUserCmd_CS" id="230"/>
+			</cmd>
+			<cmd name="ClientCommand_DemonUserCmd" id="86">
+				<param name="stModifyPowerLimitClanGXDemonUserCmd_CS" id="165"/>
+			</cmd>
+			<cmd name="ClientCommand_ScriptUserCmd" id="48">
+				<param name="stGetGuideScriptUserCmd_CS" id="231"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stReturnLotusRemainTimeQuestUserCmd_CS" id="12"/>
+			</cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stWineAwardNumAirShipUserCmd" id="24"/>
+			</cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stWineExchangeItemAirShipUserCmd" id="25"/>
+			</cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stWineCancelStateAirShipUserCmd" id="26"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stSyncTitleRemainTimeQuestUserCmd_CS" id="30"/>
+			</cmd>
+			<cmd name="ClientCommand_RoleUserCmd" id="88">
+				<param name="stClanWarAcceptPKRoleUserCmd_C" id="12"/>
+			</cmd>
+			<cmd name="ClientCommand_AirShipUserCmd" id="96">
+				<param name="stRequestWineStateAirShipUserCmd" id="27"/>
+			</cmd>
+            <cmd name="ClientCommand_ArmyEquipUserCmd" id ="59">
+                <param name="stOneDiscountRechargeArmyEquipUserCmd_CS" id="58"/>
+			</cmd>
+            <cmd name="ClientCommand_ArmyEquipUserCmd" id ="59">
+                <param name="stRefreshNewYearStatusArmyEquipUserCmd_CS" id="63"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stSendLuckyChanceInfoQuestUserCmd_CS" id="34"/>
+			</cmd>
+            <cmd name="ClientCommand_ArmyEquipUserCmd" id ="59">
+                <param name="stRequestRechargeExchangeArmyEquipUserCmd_C" id="59"/>
+			</cmd>
+            <cmd name="ClientCommand_ArmyEquipUserCmd" id ="59">
+                <param name="stRequestRechargeCodeArmyEquipUserCmd_C" id="61"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stRequestIntoHLSYCopyQuestUserCmd_CS" id="35"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stCheckSelfQuestUserCmd" id="41"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stUpdateHLSYBossPosInfoQuestUserCmd_CS" id="43"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stOneKeyFinishTowerCopyQuestUserCmd_CS" id="46"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="86">
+				<param name="stCheckClanBossStateDemonUserCmd" id="167"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stRequestOfflineinfoQuestUserCmd_CS" id="47"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="98">
+				<param name="stRequestForecastInfoAwardUserCmd" id="16"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="98">
+				<param name="stRequesComeBackAwardUserCmd" id="21"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="98">
+				<param name="stReqBuyComeBackAwardUserCmd" id="23"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stChangeBroNameQuestUserCmd" id="45"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stSyncHLSYCopyReliveQuestUserCmd_CS" id="53"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="98">
+				<param name="stRequestComeBackInfoAwardUserCmd" id="24"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="98">
+				<param name="stRequestDeleteTitleRedPointAwardUserCmd" id="14"/>
+            </cmd>
+			<cmd name="TASK_USERCMD" id="98">
+				<param name="stRequestDeleteRedPointAwardUserCmd" id="15"/>
+            </cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stRequsetUserAtkShopInfoQuestUserCmd_CS" id="54"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stSyncDailyShareAwardQuestUserCmd_CS" id="56"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="3">
+				<param name="stReturnHolyEquipInfoPropertyUserCmd" id="133"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="3">
+				<param name="stReturnRingEquipInfoPropertyUserCmd" id="135"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="3">
+				<param name="stReturnRingEquipActivePropertyUserCmd" id="136"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="3">
+				<param name="stReturnHolyEquipInfoPropertyUserCmd" id="134"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stBuyPickerCopyUserCmd" id="65"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stsendchooselevelCopyUserCmd" id="98"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stsendtensuccessCopyUserCmd" id="99"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="streturnTreasureendCopyUserCmd" id="100"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="streturnPowerOpenCopyUserCmd" id="101"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stPickerNumCopyUserCmd" id="66"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stSellMineralStoneCopyUserCmd" id="67"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="streqMineralNumCopyUserCmd" id="68"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stSellAllMineralCopyUserCmd" id="69"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stGetMineralStoneCopyUserCmd" id="70"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stGetExpStoneNumCopyUserCmd" id="72"/>
+			</cmd>	
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="streqExpStoneNumCopyUserCmd" id="74"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="48">
+                <param name="stRequestGotoMineralMapScriptUserCmd_CS" id="142"/>
+            </cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stGetUseStoneNumCopyUserCmd" id="75"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="4">
+				<param name="stWingUpBuyTypeDataUserCmd" id="95"/>
+			</cmd>	
+			<cmd name="TASK_USERCMD" id="4">
+				<param name="stHaloUpDataUserCmd_S" id="96"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="4">
+				<param name="stHaloEquipDataUserCmd" id="97"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="4">
+				<param name="stHaloInfoDataUserCmd_S" id="98"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stGotoMaterailCopyUserCmd" id="83"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="streqMaterialRewardInfoCopyUserCmd" id="86"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stsendmaterialsuccessCopyUserCmd" id="87"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stsendmaterialInfoCopyUserCmd" id="88"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="streqmaterialsuccessCopyUserCmd" id="89"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="streqEquipBuyNumCopyUserCmd" id="90"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="streqEquipTimeCopyUserCmd" id="91"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stRequestOneKeyDailyCopyUserCmd" id="50"/>
+            </cmd>
+			<cmd name="TASK_USERCMD" id="48">
+				<param name="stClickFenMoTaskScriptUserCmd_CS" id="238"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="48">
+				<param name="stRequestFenMoDailyTaskDataScriptUserCmd_C" id="239"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="48">
+				<param name="stClickTuBiaoTaskScriptUserCmd_CS" id="241"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="48">
+				<param name="stEquipComposeScriptUserCmd" id="243"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stGotoExpCopyUserCmd" id="77"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stLinQuExpCopyUserCmd" id="78"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stSummonNpcInCopyUserCmd" id="79"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stExpInfoDataCopyUserCmd" id="80"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stsendEmpSuccessCopyUserCmd" id="97"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="streqExpRewardInfoCopyUserCmd" id="85"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stReqChuanGuangInfoCopyUserCmd" id="92"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stLinquBoxCopyUserCmd" id="93"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stSaoDanCopyUserCmd" id="94"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="55">
+				<param name="stBeginChallengeCopyUserCmd" id="96"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stCheckSuperWeaponQuestUserCmd" id="64"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stBreakSuperWeaponQuestUserCmd" id="65"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stRequestActiveChuanShiQuestUserCmd" id="57"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="3">
+				<param name="stRequestRefreshNpcPropertyUserCmd" id="138"/>
+			</cmd>
+            <cmd name="ClientCommand_DemonUserCmd" id="86">
+                <param name="stRequestClanDepotLogDemonUserCmd_CS" id="58"/>
+            </cmd>
+            <cmd name="TASK_USERCMD" id="24">
+                <param name="stReqHolyRingQuestUserCmd" id="71"/>
+            </cmd>
+            <cmd name="TASK_USERCMD" id="24">
+                <param name="stReqClickRingQuestUserCmd" id="73"/>
+            </cmd>
+            <cmd name="TASK_USERCMD" id="24">
+                <param name="stReqUpgradeHolyRingQuestUserCmd" id="72"/>
+            </cmd>
+            <cmd name="TASK_USERCMD" id="24">
+                <param name="stReturnInfoRingStatusQuestUserCmd_S" id="70"/>
+            </cmd>
+            <cmd name="TASK_USERCMD" id="58">
+                <param name="stBlessRequestUserCmd" id="219"/>
+            </cmd>
+            <cmd name="TASK_USERCMD" id="55">
+                <param name="stReqInfoForceWallCopyUserCmd" id="52"/>
+            </cmd>
+            <cmd name="ClientCommand_AirShipUserCmd" id="96">
+                <param name="stSendOneYuanDayAirShipUserCmd_S" id="31"/>
+            </cmd>
+            <cmd name="ClientCommand_ArmyEquipUserCmd" id="59">
+                <param name="stSendPhaseRewardOpenArmyEquipUserCmd_S" id="29"/>
+            </cmd>
+            <cmd name="ClientCommand_DemonUserCmd" id="86">
+                <param name="stRetClanDepotLogDemonUserCmd_CS" id="59"/>
+            </cmd>
+            <cmd name="ClientCommand_PropertyUserCmd" id="3">
+                <param name="stLimitTimeGiftTipPropertyUserCmd" id="140"/>
+			</cmd>
+			<cmd name="ClientCommand_PropertyUserCmd" id="3">
+				<param name="stWeiXinBindCodePropertyUserCmd_CS" id="141"/>
+			</cmd>
+			<cmd name="ClientCommand_PropertyUserCmd" id="3">
+				<param name="stOpenBackpackTimePropertyUserCmd_CS" id="142"/>
+			</cmd>
+			<cmd name="ClientCommand_ArmyEquipUserCmd" id="59">
+				<param name="stGongChengTimeArmyEquipUserCmd_S" id="66"/>
+			</cmd>
+	</scene>
+	<session>
+			<cmd name="ClientCommand_DemonUserCmd" id="86">
+				<param name="stReqeustSkillLevelUpDemonUserCmd" id="160"/>
+			</cmd>
+			<cmd name="ClientCommand_DemonUserCmd" id="86">
+				<param name="stReqSkillInfoDemonUserCmd" id="161"/>
+			</cmd>
+			<cmd name="ClientCommand_TradeUserCmd" id="17">
+				<param name="stCommerceRequestItemTradeUserCmd_C" id="151"/>
+			</cmd>
+			<cmd name="ClientCommand_TradeUserCmd" id="17">
+				<param name="stCommerceTypeNumTradeUserCmd_CS" id="157"/>
+			</cmd>
+			<cmd name="ClientCommand_TradeUserCmd" id="17">
+				<param name="stCommerceMySellItemsTradeUserCmd_CS" id="154"/>
+			</cmd>
+			<cmd name="ClientCommand_TradeUserCmd" id="17">
+				<param name="stCommerceRequestFavoritesTradeUserCmd_CS" id="155"/>
+			</cmd>
+			<cmd name="ClientCommand_DemonUserCmd" id="86">
+				<param name="stGiveMoneyByActiveDemonUserCmd_CS" id="163"/>
+			</cmd>
+			<cmd name="ClientCommand_DemonUserCmd" id="86">
+				<param name="stCheckClanMoreInfoDemonUserCmd" id="166"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stRequestBroChoiceQuestUserCmd" id="15"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stReturnBroFailQuestUserCmd" id="18"/>
+			</cmd>
+			<cmd name="ClientCommand_RoleUserCmd" id="88">
+				<param name="stClanWarOpRoleUserCmd_C" id="8"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stRequestPositionChoiceQuestUserCmd" id="17"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stRequestNameVoteQuestUserCmd" id="20"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stReturnVoteQuestUserCmd" id="21"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stPositionNameQuestUserCmd" id="24"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stCheckVoteQuestUserCmd" id="26"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stRequestDisMissQuestUserCmd" id="40"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="24">
+				<param name="stChangeBroSelfNameQuestUserCmd" id="44"/>
+			</cmd>
+			<cmd name="TASK_USERCMD" id="3">
+				<param name="stJinYanPropertyUserCmd" id="139"/>
+			</cmd>
+	</session>
+	<record>
+	</record>
+	<super>
+	</super>
+	<forbid>
+
+<cmd name="PROPERTY_USERCMD" id="18">
+	<param name="stRefreshFlagBattleScoreMagicUserCmd" id="30"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="18">
+	<param name="stPlayerJumpMagicUserCmd" id="5"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="18">
+	<param name="stInviteJumpToMeMagicUserCmd" id="19"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="18">
+	<param name="strebirthLevelUpMagicUserCmd" id="41"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="3">
+	<param name="stRuneInlayPropertyUserCmd" id="123"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="3">
+	<param name="stCorpsPackPropertyUserCmd" id="32"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="3">
+	<param name="stUseReliveItemPropertyUserCmd" id="54"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="3">
+	<param name="stReturnHolyEquipInfoPropertyUserCmd" id="133"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="3">
+	<param name="stSetWorldLevelFlagPropertyUserCmd" id="103"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="3">
+	<param name="stCorpsLinePackPropertyUserCmd" id="117"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stAcceptChatGroupChannelChatUserCmd" id="7"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stRemoveMemberFlockChatUserCmd" id="29"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stLeaveChatGroupChannelChatUserCmd" id="9"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stInviteChatGroupChannelClientChatUserCmd" id="5"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stRequestCreateChatGroupChannelChatUserCmd" id="4"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stChangeFlockPostChatUserCmd" id="34"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stPrivateChannelChatUserCmd" id="15"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stPrivateInputChatUserCmd" id="16"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stSmileChatUserCmd" id="20"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stRequestUrlItemInfoChatUserCmd" id="21"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stDestroyFlockChatUserCmd" id="30"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stChatWithGmChatUserCmd20080520" id="66"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stChangeFlockNameChatUserCmd" id="25"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stChangeFlockDeclareChatUserCmd" id="35"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stChangeFlockPrivilegeChatUserCmd" id="38"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stReportWaiGuaChatUserCmd" id="105"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stRequestPassFlowerChatUserCmd" id="81"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stChangeZoneChatUserCmd" id="48"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stSysCommonChatUserCmd" id="55"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stClearSpeakerChatUserCmd" id="74"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stRequestQiangPresentChatUserCmd" id="200"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stRequestSupportKtvChatUserCmd" id="204"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stRequestStartKtvChatUserCmd" id="207"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="14">
+	<param name="stRequestNumberChatUserCmd" id="214"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stEndOfInitDataDataUserCmd" id="6"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stSetHpSpDataUserCmd" id="4"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stEndOfIntoSceneDataUserCmd" id="12"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stRequestJoinGrouponDataUserCmd" id="75"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stRequestMapShowInfoDataUserCmd" id="16"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stSetGrouponBuyNumDataUserCmd" id="79"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stGetDstPosDataUserCmd" id="51"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stRequestTeamSetHpSpDataUserCmd" id="52"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stRequestUserPositionDataUserCmd" id="53"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stReturnUserPositionDataUserCmd" id="54"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stReturnLargeMapEnemyUserPosDataUserCmd" id="66"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="4">
+	<param name="stRetSceneTeamInfoDataUserCmd" id="70"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="49">
+	<param name="stSystemSettingsSysSettingUserCmd" id="1"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="6">
+	<param name="stCurrentPosMoveUserCmd" id="5"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="6">
+	<param name="stUserMoveStopMoveUserCmd_CS" id="25"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="6">
+	<param name="stUserMoveUpPosListMoveUserCmd_C" id="21"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="6">
+	<param name="stUserMoveUpDirMoveUserCmd_C" id="23"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="35">
+	<param name="stSendMailUserCmd" id="1"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="35">
+	<param name="stTurnBackMailUserCmd" id="8"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="35">
+	<param name="stRefreshNewMailcountMailUserCmd" id="10"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="35">
+	<param name="stEmptyUselessMailMailUserCmd" id="12"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="35">
+	<param name="stCreateMailUserCmd" id="22"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="35">
+	<param name="stAddItemMailUserCmd" id="23"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stBeginShopTradeUserCmd_CS" id="31"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stCommerceOnLineTradeUserCmd" id="153"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stCommerceSellItemExTradeUserCmd_CS" id="150"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stRemoveItemShopTradeUserCmd_CS" id="35"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stCloseShopTradeUserCmd_CS" id="37"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stRequestDemonTradeUserCmd" id="51"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stCommitDemonTradeUserCmd" id="54"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stCancelDemonTradeUserCmd" id="55"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stReqAddMoneyDemonTradeUserCmd" id="62"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stRequestMoneyActionHistoryTradeUserCmd" id="85"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stWeiXinBindCodeTradeUserCmd_CS" id="66"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stBuyNewUserCardTradeUserCmd" id="84"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stCommerceBuyItemExTradeUserCmd_CS" id="130"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="17">
+	<param name="stCommerceErrorFavTradeUserCmd" id="131"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestCreateRelationUserCmd" id="1"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestDestroyRelationUserCmd" id="2"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestRemoveRelationUserCmd" id="6"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestArrestPlayerRelationUserCmd" id="66"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stDonateMoneyRelationUserCmd" id="24"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestExcusePlayerRelationUserCmd" id="65"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stChangeLeaderRelationUserCmd" id="14"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stBillboardRelationUserCmd" id="15"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stAskAckCorpsFriendRelationUserCmd" id="90"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stSetFunctionRelationUserCmd" id="18"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestDonationRelationUserCmd" id="23"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestCreateCompanionRelationUserCmd" id="28"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stSetModeTeamRelationUserCmd" id="43"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stSetEnemyCountryRelationUserCmd" id="64"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestQuietPlayerRelationUserCmd" id="67"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stArmyLevelUpRelationUserCmd" id="105"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stCorpsBuildLevelRelationUserCmd" id="104"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stCorpsJunXunExpRelationUserCmd" id="112"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestOrderMineRelationUserCmd" id="129"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stSendFriendFlowerRelationUserCmd" id="140"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stSendFriendMarryRelationUserCmd" id="159"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stCorpsWageTransferRelationUserCmd" id="206"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stRequestCallTargetRelationUserCmd" id="227"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="21">
+	<param name="stSyncCallTargetColdTimeRelationUserCmd" id="229"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="59">
+	<param name="stRebuildArmyEquipUserCmd" id="3"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="59">
+	<param name="stReturnUseArmyEquipUserCmd" id="53"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="59">
+	<param name="stRequestReturnArmyEquipUserCmd" id="49"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="59">
+	<param name="stChangeDriverArmyEquipUserCmd" id="42"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="59">
+	<param name="stSendEquipSceneArmyEquipUserCmd" id="40"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="59">
+	<param name="stRequestChangeDriverArmyEquipUserCmd" id="41"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="59">
+	<param name="stRequestListArmyEquipUserCmd" id="47"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="59">
+	<param name="stRequestUseArmyEquipUserCmd" id="51"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="24">
+	<param name="stOneKeyFinishTowerCopyQuestUserCmd_CS" id="46"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="24">
+	<param name="stSyncHLSYCopyReliveQuestUserCmd_CS" id="53"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="26">
+	<param name="stReliveSkillMagicSkillUserCmd" id="9"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="26">
+	<param name="stAutoExploitSkillUserCmd" id="20"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="31">
+	<param name="stQueryGoldUserCmd" id="1"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="31">
+	<param name="stReturnQueryGoldUserCmd" id="2"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stSaleAuctionUserCmd" id="1"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stBidAuctionUserCmd" id="2"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stQueryAuctionUserCmd" id="5"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stGetListAuctionUserCmd" id="7"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stCancelSaleAuctionUserCmd" id="6"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stSaleDemonAuctionUserCmd" id="12"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stAddAuctionUserCmd" id="8"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stBuyDemonAuctionUserCmd" id="13"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stCancelDemonAuctionUserCmd" id="17"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stQueryDemonAuctionUserCmd" id="16"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stAddDemonAuctionUserCmd" id="19"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stGetDemonListAuctionUserCmd" id="18"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="36">
+	<param name="stGetQuickSellAuctionUserCmd" id="20"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stRequestWeakUpHeartBoxScriptUserCmd" id="40"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stRequestUserTaskScriptUserCmd" id="42"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stSendRoleTaskToUserScriptUserCmd" id="43"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stRequestFinishClanExamScriptUserCmd_C" id="220"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stNotifyTaskDeputeDoneScriptUserCmd" id="107"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stCheckNameScriptUserCmd_CS" id="64"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stRequestRegClanExamScriptUserCmd_C" id="216"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="StRequestAnswerClanExamScriptUserCmd_C" id="218"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stRequestClanExamWeekInfoScriptUserCmd_C" id="224"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stRequestClanDailyTaskScriptUserCmd_CS" id="228"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="48">
+	<param name="stRequestClanDailyTaskDataScriptUserCmd_C" id="229"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="75">
+	<param name="stNotifyCorpsSkillCorpsUserCmd" id="25"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stHoleEquipUserCmd" id="4"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestWingSpiritRecastEquipUserCmd" id="48"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stChangeEquipActiveAttrEquipUserCmd" id="7"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stItemConverterEquipUserCmd" id="2"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stItemProductMakeEquipUserCmd" id="10"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stUpgradeEquipUserCmd" id="3"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stInlayEquipUserCmd" id="5"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stStoneComposeEquipUserCmd" id="6"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stChangeEquipHoleColorEquipUserCmd" id="8"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stClearEquipHoleStoneEquipUserCmd" id="11"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestHorseInheritEquipUserCmd" id="209"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stSingleAlchemyMeltEquipUserCmd" id="102"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stComposeEquipSoulEquipUserCmd" id="27"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRebuildLifeStoreInstrumentEquipUserCmd" id="13"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stDealSwallowSoulMakeEquipUserCmd" id="99"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestBluePropertyJudgeEquipUserCmd" id="105"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestHorseSoulBatchComposeEquipUserCmd" id="56"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stGetItemEquipUserCmd" id="18"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stHorseEquipUpgradeEquipUserCmd" id="31"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stChangeEquipFiveEquipUserCmd" id="22"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestStarStoneSmeltEquipUserCmd" id="87"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stHorseEquipComposeEquipUserCmd" id="28"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestShenbingBuildEquipUserCmd" id="106"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stSuiteEquipComposeEquipUserCmd" id="29"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stHorseEquipRefineEquipUserCmd" id="30"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestQuickComposeEquipUserCmd" id="57"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestHorseSoulComposeEquipUserCmd" id="41"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestHorseComposeEquipUserCmd" id="42"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stWingRefineEquipUserCmd" id="45"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stWingUpgradeEquipUserCmd" id="46"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stHorseEquipSmeltingEquipUserCmd" id="76"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stItemLifeSkillMakeEquipUserCmd" id="92"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stStoneAdvancedEquipUserCmd" id="112"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="50">
+	<param name="stRequestHorseSkinInheritEquipUserCmd" id="210"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="74">
+	<param name="stRequestGetAwardLuckyCardLotteryUserCmd" id="7"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="74">
+	<param name="stRequestRedeemLotteryUserCmd" id="11"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="74">
+	<param name="stRequestHistoryLotteryUserCmd" id="8"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="74">
+	<param name="stReturnRedeemLotteryUserCmd" id="12"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="55">
+	<param name="stChatCopyRoomInfoCopyUserCmd" id="17"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="55">
+	<param name="stKickCopySceneRoomCopyUserCmd" id="12"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="55">
+	<param name="stCorpsPlantTipCopyUserCmd" id="21"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="55">
+	<param name="stReqCopyUserPositionCopyUserCmd" id="22"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stSysSimulationFightUserInfoRequestUserCmd" id="85"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestRechoiceLoveRoleTaskRequestUserCmd" id="58"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestRefreshCorpExerciseRequestUserCmd" id="122"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stSysSimulationUserInfoRequestUserCmd" id="84"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stSetCurrentHorseRequestUserCmd" id="17"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestVipLevelDialogRequestUserCmd" id="168"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestGiveUpLoveRoleTaskRequestUserCmd" id="59"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestCountryWageTransferRequestUserCmd" id="67"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stCountryWageGrantRequestUserCmd" id="70"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestSimulationCopyOpenRequestUserCmd" id="86"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stReturnSimulationCopyOpenRequestUserCmd" id="87"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestSimulationCopyIntoRequestUserCmd" id="88"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stResultRefreshCorpExerciseRequestUserCmd" id="124"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stReturnWeekGoldBoxRequestUserCmd" id="130"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestBuyWeekGoldBoxRequestUserCmd" id="131"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stReduceWeekGoldBoxRequestUserCmd" id="134"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stWeaponLevelupRequestUserCmd" id="142"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stLeaveFightTeamRequestUserCmd" id="144"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestGetYinYangGinsengRequestUserCmd" id="207"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stGiveFlowerChallengeAreaRequestUserCmd" id="150"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRegistChallengeFightTeamRequestUserCmd" id="151"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stReturnGiveFlowerChallengeAreaRequestUserCmd" id="157"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stWeeklyTaskInterfaceRequestUserCmd" id="166"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestBlessWeeklyTaskRequestUserCmd" id="167"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestCloseDegreeRequestUserCmd" id="170"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stReturnVoteFightTeamRemoveMoneyRequestUserCmd" id="171"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stRequestVoteEmperorRequestUserCmd" id="190"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stWorldFightDeclarationRequestUserCmd" id="192"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stMoneyRewardRequestUserCmd" id="197"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="58">
+	<param name="stReturnExaminationInfoRequestUserCmd" id="209"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="64">
+	<param name="stAckInputMsgBoxUserCmd" id="4"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="64">
+	<param name="stAckBookMsgBoxUserCmd" id="6"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stGmStartKingBattleControlUserCmd" id="32"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stRequestPeerUserControlUserCmd" id="1"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stPeerUserControlUserCmd" id="2"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stRequestInitDataControlUserCmd" id="6"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stNotifyLoginipControlUserCmd" id="13"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stGetUserLevelDistributeControlUserCmd" id="15"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSendArmyequipToUserControlUserCmd" id="25"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetUserVarControlUserCmd" id="62"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSubUserVarControlUserCmd" id="64"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stMoneyChangeControlUserCmd" id="17"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stReturnChannelControlUserCmd" id="19"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stAddExpControlUserCmd" id="41"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stFirstIpUserControlUserCmd" id="21"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stOrderListPresentControlUserCmd" id="34"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSendFirstIpMoneyControlUserCmd" id="22"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stCreateCodeLotteryControlUserCmd" id="42"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetPassFlowerControlUserCmd" id="28"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetVipLevelControlUserCmd" id="23"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stLoopTestControlUserCmd" id="26"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetQiangControlUserCmd" id="29"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetShutDownPresentControlUserCmd" id="36"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetCharBaseBitmaskControlUserCmd" id="30"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSendMoneyControlUserCmd" id="33"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stGetShutDownPresentControlUserCmd" id="35"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetUnionCountryControlUserCmd" id="54"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetFunctionDisableControlUserCmd" id="37"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetLotteryBaseNumControlUserCmd" id="40"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stShutdownPresentControlUserCmd" id="43"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stCheckCanUseItemControlUserCmd" id="52"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stSetShaiZiWinnerControlUserCmd" id="57"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stCallLuaFunUserControlUserCmd" id="61"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stIncUserVarControlUserCmd" id="63"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stFinishUserTaskControlUserCmd" id="65"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="66">
+	<param name="stChangeCountryWarStopControlUserCmd" id="68"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="87">
+	<param name="stRequestBuySceneRecordBuyCommissionUserCmd" id="2"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="87">
+	<param name="stRequestListBuyCommissionUserCmd" id="10"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="87">
+	<param name="stRequestSellSceneRecordBuyCommissionUserCmd" id="5"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="87">
+	<param name="stRequestSellBuyCommissionUserCmd" id="4"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="87">
+	<param name="stRequestFastSellBuyCommissionUserCmd" id="7"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="87">
+	<param name="stRequestFastSellSceneRecordBuyCommissionUserCmd" id="8"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="87">
+	<param name="stRequestPreBuyCommissionUserCmd" id="15"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="87">
+	<param name="stRequestCanceBuyCommissionUserCmd" id="12"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="87">
+	<param name="stRequestMyListBuyCommissionUserCmd" id="13"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="88">
+	<param name="stRequestSetRoleRentFlagRoleUserCmd" id="3"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="88">
+	<param name="stRequestSetRoleSellFlagRoleUserCmd" id="1"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="88">
+	<param name="stWeiXinGiftRoleUserCmd" id="17"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="88">
+	<param name="stSetRoleSellFlagRoleUserCmd" id="2"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="88">
+	<param name="stSetRoleRentFlagRoleUserCmd" id="4"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="95">
+	<param name="stInviteInviteComposeUserCmd" id="1"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="95">
+	<param name="stAnswerInviteComposeUserCmd" id="2"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="95">
+	<param name="stComposetInviteComposeUserCmd" id="6"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stRequestAutoRecoverItemDemonUserCmd_CS" id="57"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stInviteBreedDemonUserCmd" id="124"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stAdoptOtherBabyDemonUserCmd" id="158"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stRequestDisMissClanDemonUserCmd_CS" id="47"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stAnswerBreedDemonUserCmd" id="125"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stSetCurDemonUserCmd" id="106"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stBreedDemonUserCmd" id="129"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stDemonRequestEggHatchDemonUserCmd" id="156"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stSyncFreeGetDemonTimeDemonUserCmd" id="200"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="86">
+	<param name="stRequestSkillLevelUpDemonUserCmd" id="160"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="98">
+	<param name="stRequestGainLoginAwardUserCmd" id="3"/>
+</cmd>
+<cmd name="PROPERTY_USERCMD" id="98">
+	<param name="stRequestGainLoginAwardUserCmd" id="3"/>
+</cmd>
+
+
+	</forbid>
+</ForwardCmd>

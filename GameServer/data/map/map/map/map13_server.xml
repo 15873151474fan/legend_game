@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="1" width="39" height="20" x="2" y="9" type="4" />
+		<zonedef id="100" width="2" height="3" x="31" y="23" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+	</NpcRect>
+	<Npc>
+	</Npc>
+	<Way>
+		<WayPoint mapid="14" zoneid="4" enable="1">
+			<point x="32" y="24" />
+			<point x="32" y="25" />
+			<point x="33" y="24" />
+			<point x="33" y="25" />
+		</WayPoint>
+	</Way>
+</Map>

@@ -1,0 +1,13 @@
+function OnHoldBuff_6303(level,etype,eid,time,value)
+    s_addValue(etype,eid,VALUE_TYPE_PDAM,57)
+    s_addValue(etype,eid,VALUE_TYPE_PMAXDAM,173)
+    s_addValue(etype,eid,VALUE_TYPE_MDAM,52)
+    s_addValue(etype,eid,VALUE_TYPE_MMAXDAM,157)
+    s_addValue(etype,eid,VALUE_TYPE_TDAM,52)
+    s_addValue(etype,eid,VALUE_TYPE_TMAXDAM,157)
+    s_addValue(etype,eid,VALUE_TYPE_PDEF,14)
+    s_addValue(etype,eid,VALUE_TYPE_PMAXDEF,27)
+    s_addValue(etype,eid,VALUE_TYPE_MDEF,14)
+    s_addValue(etype,eid,VALUE_TYPE_MMAXDEF,27)
+    s_addValue(etype,eid,VALUE_TYPE_LUCKY_VALUE,862)
+end

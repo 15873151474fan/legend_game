@@ -1,0 +1,31 @@
+----玩家主动删除任务
+--function OnDeleteRoleTask(uid,taskid,ringtask)
+--	--日常任务删除相当于完成一次，防止出现刷任务的问题
+--	local tasktype = s_getTaskValue(uid,taskid,TaskValue_Type)
+--	if tasktype == TaskType_Loop then
+--		RoleTaskDataUpdate(uid,taskid)
+--	end	
+--	local minfo = rawget(_G,"RoleTaskInfo" .. taskid)
+--	--删除任务道具
+--	if minfo ~= nil and minfo.needitem ~= nil then
+--		for i=1, #minfo.needitem do
+--			s_deleteItemByBaseID(uid,minfo.needitem[i][1],minfo.needitem[i][3],"删除任务道具")
+--		end
+--	end
+--	--特殊的删除任务处理
+--	if minfo ~= nil and minfo.OnDeleteTask ~= nil then
+--		minfo.OnDeleteTask(minfo,uid)
+--		return
+--	end
+--	--环式任务 删除一环 设置本轮完成
+--	if ringtask == nil or ringtask == 0 then return end 
+--	local subring = s_getVar(uid,ringtask,TvarIndex_SubRing)
+--	if subring ~= taskid then return end
+--	local info = rawget(_G,"RingTaskInfo" .. ringtask)
+--	if info ~= nil and info.OnDeleteTask ~= nil then
+--		info.OnDeleteTask(info,uid)
+--		return
+--	end
+--end
+--
+--

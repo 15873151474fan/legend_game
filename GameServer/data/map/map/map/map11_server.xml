@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="100" width="1" height="2" x="5" y="36" type="3" />
+		<zonedef id="4" width="2" height="2" x="29" y="7" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+		<rect id="1" width="9" height="8" x="12" y="35" />
+		<rect id="2" width="17" height="8" x="56" y="34" />
+		<rect id="3" width="10" height="8" x="64" y="11" />
+		<rect id="4" width="15" height="6" x="43" y="32" />
+		<rect id="5" width="11" height="6" x="33" y="40" />
+		<rect id="6" width="12" height="11" x="51" y="8" />
+		<rect id="7" width="8" height="8" x="20" y="39" />
+		<rect id="8" width="4" height="9" x="69" y="30" />
+		<rect id="9" width="11" height="6" x="39" y="10" />
+		<rect id="10" width="5" height="8" x="73" y="13" />
+	</NpcRect>
+	<Npc>
+		<npc id="197" name="NPC名字" x="10" y="35" num="1" angle="0" />
+		<npc id="198" name="NPC名字" x="29" y="44" num="1" angle="0" />
+		<npc id="199" name="NPC名字" x="64" y="25" num="1" angle="0" />
+		<npc id="10091" name="怪物名字" x="12" y="35" num="30" interval="1">
+			<rect id="1" />
+		</npc>
+		<npc id="10092" name="怪物名字" x="56" y="34" num="35" interval="1">
+			<rect id="2" />
+		</npc>
+		<npc id="10093" name="怪物名字" x="64" y="11" num="30" interval="1">
+			<rect id="3" />
+		</npc>
+		<npc id="10091" name="怪物名字" x="43" y="32" num="10" interval="1">
+			<rect id="4" />
+		</npc>
+		<npc id="10092" name="怪物名字" x="33" y="40" num="10" interval="1">
+			<rect id="5" />
+		</npc>
+		<npc id="10092" name="怪物名字" x="51" y="8" num="35" interval="1">
+			<rect id="6" />
+		</npc>
+		<npc id="10091" name="怪物名字" x="20" y="39" num="15" interval="1">
+			<rect id="7" />
+		</npc>
+		<npc id="10092" name="怪物名字" x="69" y="30" num="10" interval="1">
+			<rect id="8" />
+		</npc>
+		<npc id="10093" name="怪物名字" x="39" y="10" num="15" interval="1">
+			<rect id="9" />
+		</npc>
+		<npc id="10093" name="怪物名字" x="73" y="13" num="15" interval="1">
+			<rect id="10" />
+		</npc>
+	</Npc>
+	<Way>
+		<WayPoint mapid="16" zoneid="3" enable="1">
+			<point x="1" y="36" />
+			<point x="1" y="37" />
+			<point x="2" y="36" />
+			<point x="2" y="37" />
+		</WayPoint>
+		<WayPoint mapid="20" zoneid="3" enable="1">
+			<point x="29" y="4" />
+			<point x="29" y="5" />
+			<point x="30" y="4" />
+			<point x="30" y="5" />
+		</WayPoint>
+	</Way>
+</Map>

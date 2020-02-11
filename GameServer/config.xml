@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--所有各种服务器参数,这里只放每个区都不同的配置-->
+<Zebra>
+	<global>
+		<!--MySQL database connection[mysql://user:passwd@host:port/dbName]-->
+		<!-- 如果要编码mysql连接字符串请使用工具，配置如下面的例子
+		<mysql encode="yes">lmOf.1kySwS0a09j11xyCdI1ySujl1hnCvT0hDitT0hjzv00gzSv00gDSw91tS9fE1</mysql>
+		-->
+		<mysql>mysql://@127.0.0.1:3306/RecordServer_Test</mysql>
+		<!-- Use the specified local network device. -->
+		<!--ifname>eth0</ifname-->
+		<ifname>lo</ifname>
+		<!-- Connected to the specified supserserver, property 'port' default value is 10000. -->
+		<superserver port="10001">localhost</superserver>
+		<!--人类进程(进程1最高等级为60,进程2最高等级为70) -->
+		<world_level>3</world_level>
+		<!--游戏运营区域-->
+		<game_region>1</game_region>
+		<change_game_id_middle>22</change_game_id_middle>
+		<change_zone_id_middle>58</change_zone_id_middle>
+		<tt_password>abde0ac261441a9ea906e663dc512c1c</tt_password>
+
+		<scriptdir>data/script/</scriptdir>
+
+		<mapdir>data/map/</mapdir>
+		<mapinfo>data/map/mapinfo.xml</mapinfo>
+		<aitable>data/map/aitable.xml</aitable>
+		<npcpath>data/map/npcpath.xml</npcpath>
+		<demonfresh>data/map/demonfresh.xml</demonfresh>
+		<gmbatfile>data/map/gmbatfile.xml</gmbatfile>
+		<store>data/map/store.xml</store>
+		<moneyaction>data/map/moneyaction.xml</moneyaction>
+		<loginaward>data/map/loginaward.xml</loginaward>
+		<processfile>data/map/process.dat</processfile>
+		<hzkh>data/map/hkz/HZK16</hzkh>
+		<hzka>data/map/hkz/ASC16</hzka>
+		<phone_city>data/map/phone_city.xml</phone_city>
+		<loginServerListFile>loginServerList.xml</loginServerListFile>
+		<mergezone_time>2015-12-12 00:00:00</mergezone_time>
+		<zone_key>5001:2</zone_key>
+	</global>
+	<SuperServer>
+		<!--MySQL database connection[mysql://user:passwd@host:port/dbName]-->
+		<mysql>mysql://@127.0.0.1:3306/RecordServer_Test</mysql>
+		<logfilename>/tmp/superserver.log</logfilename>
+		<billlogfilename>/tmp/billserver.log</billlogfilename>
+		<logfilelist>/tmp/logfilelist.log</logfilelist>
+	</SuperServer>
+	<RecordServer>
+		<!--MySQL database connection[mysql://user:passwd@host:port/dbName]-->
+		<mysql>mysql://@127.0.0.1:3306/RecordServer_Test</mysql>
+		<logfilename>/tmp/recordserver.log</logfilename>
+		<auctionlogfilename>/tmp/auctionlogfilename.log</auctionlogfilename>
+		<stocklogfilename>/tmp/stocklogfilename.log</stocklogfilename>
+	</RecordServer>
+	<SessionServer>
+		<!--屏蔽客户端功能，二进制，1表示线下交易 -->
+		<function_disable>1</function_disable>
+		<!--MySQL database connection[mysql://user:passwd@host:port/dbName]-->
+		<mysql>mysql://@127.0.0.1:3306/RecordServer_Test</mysql>
+		<logfilename>/tmp/sessionserver.log</logfilename>
+	</SessionServer>
+	<ScenesServer>
+		<!--回写档案频率(单位是秒) -->
+		<writebacktimer>600</writebacktimer>
+		<itemlogfilename>/tmp/itemscenesserver.log</itemlogfilename>
+		<logfilename>/tmp/sceneserver.log</logfilename>
+		<gmcommandlogfilename>/tmp/gmcommandlogfilename.log</gmcommandlogfilename>
+		<buyandselllogfilename>/tmp/buyandsell.log</buyandselllogfilename>
+		<statlogfilename>/tmp/statscenesserver.log</statlogfilename>
+        <reset_memory>true</reset_memory>
+        <store_reload>true</store_reload>
+        <reloadlua>true</reloadlua>
+	</ScenesServer>
+</Zebra>

@@ -1,0 +1,27 @@
+-- FILE: 数表-四特殊物品等级表.xls SHEET: 宝石 KEY: id
+DiamonUpDataBase = {
+[130001]={["id"]=130001,["maxdur"]="太初·神石",["needpoint"]=10,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130002]={["id"]=130002,["maxdur"]="两仪·神石",["needpoint"]=20,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130003]={["id"]=130003,["maxdur"]="三才·神石",["needpoint"]=60,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130004]={["id"]=130004,["maxdur"]="四象·神石",["needpoint"]=120,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130005]={["id"]=130005,["maxdur"]="五行·神石",["needpoint"]=240,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130006]={["id"]=130006,["maxdur"]="六合·神石",["needpoint"]=360,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130007]={["id"]=130007,["maxdur"]="七星·神石",["needpoint"]=540,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130008]={["id"]=130008,["maxdur"]="八荒·神石",["needpoint"]=810,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130009]={["id"]=130009,["maxdur"]="九宫·神石",["needpoint"]=1055,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130010]={["id"]=130010,["maxdur"]="十相·神石",["needpoint"]=1375,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130011]={["id"]=130011,["maxdur"]="传说·神石",["needpoint"]=1790,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130012]={["id"]=130012,["maxdur"]="神话·神石",["needpoint"]=2330,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130013]={["id"]=130013,["maxdur"]="不朽·神石",["needpoint"]=2915,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130014]={["id"]=130014,["maxdur"]="至宝·神石",["needpoint"]=3645,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130015]={["id"]=130015,["maxdur"]="帝王·神石",["needpoint"]=4560,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130016]={["id"]=130016,["maxdur"]="无双·神石",["needpoint"]=5700,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130017]={["id"]=130017,["maxdur"]="主宰·神石",["needpoint"]=7125,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130018]={["id"]=130018,["maxdur"]="至尊·神石",["needpoint"]=8550,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130019]={["id"]=130019,["maxdur"]="最强·神石",["needpoint"]=11115,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130020]={["id"]=130020,["maxdur"]="天界·神石",["needpoint"]=14449,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130021]={["id"]=130021,["maxdur"]="太上·神石",["needpoint"]=18783,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130022]={["id"]=130022,["maxdur"]="创世·神石",["needpoint"]=24417,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+[130023]={["id"]=130023,["maxdur"]="开天·神石",["needpoint"]=31742,["needmoney"]=0,["reward_item1"]=0,["reward_item_num1"]=0,["reward_item2"]=0,["reward_item_num2"]=0,["isopen"]=true},
+}
+DiamonUpDataBase.query = function(id) return DiamonUpDataBase[id] end

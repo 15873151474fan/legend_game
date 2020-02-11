@@ -1,0 +1,28 @@
+-- FILE: 数表-装备洗练.xlsx SHEET: 洗练分数 KEY: index
+WashScoreDataBase = {
+[1]={["index"]=1,["clientindex"]=1001,["score"]=0.18},
+[2]={["index"]=2,["clientindex"]=1002,["score"]=0.18},
+[3]={["index"]=3,["clientindex"]=1003,["score"]=0.5},
+[4]={["index"]=4,["clientindex"]=1005,["score"]=0.5},
+[5]={["index"]=5,["clientindex"]=1007,["score"]=0.5},
+[6]={["index"]=6,["clientindex"]=1009,["score"]=0.30875},
+[7]={["index"]=7,["clientindex"]=1011,["score"]=0.6},
+[8]={["index"]=8,["clientindex"]=1013,["score"]=0.1853},
+[9]={["index"]=9,["clientindex"]=1014,["score"]=4.3225},
+[10]={["index"]=10,["clientindex"]=1017,["score"]=1.29662},
+[11]={["index"]=11,["clientindex"]=1018,["score"]=1.29662},
+[12]={["index"]=12,["clientindex"]=1016,["score"]=0.1853},
+[14]={["index"]=14,["clientindex"]=1019,["score"]=0.5},
+[15]={["index"]=15,["clientindex"]=1020,["score"]=0.06},
+[16]={["index"]=16,["clientindex"]=1021,["score"]=0.95},
+[17]={["index"]=17,["clientindex"]=1022,["score"]=0.3},
+[18]={["index"]=18,["clientindex"]=1024,["score"]=0.511272},
+[19]={["index"]=19,["clientindex"]=1025,["score"]=0.511272},
+[20]={["index"]=20,["clientindex"]=1023,["score"]=0.9468},
+[21]={["index"]=21,["clientindex"]=1027,["score"]=0.3},
+[23]={["index"]=23,["clientindex"]=1029,["score"]=0.3},
+[25]={["index"]=25,["clientindex"]=1030,["score"]=0.5},
+[26]={["index"]=26,["clientindex"]=1015,["score"]=0.2783},
+[27]={["index"]=27,["clientindex"]=1061,["score"]=0.5},
+}
+WashScoreDataBase.query = function(index) return WashScoreDataBase[index] end

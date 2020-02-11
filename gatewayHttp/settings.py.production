@@ -1,0 +1,48 @@
+import sys
+import os
+import netifaces
+APPNAME='zqgate'
+ROOT=os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0,ROOT)
+
+log_base_dir= os.path.join(ROOT,'logs')
+pid_base_dir= os.path.join(ROOT,'pids')
+log_rotating_when='midnight'
+log_backup_count = 100
+tornado_log_prefix=os.path.join(ROOT,"logs/tornado.log")
+main_log_file = os.path.join(ROOT,"logs/app.log")
+
+#listening info
+def get_listening_address():
+    try:
+        listening_address = netifaces.ifaddresses('eth1')[netifaces.AF_INET][0]['addr']
+    except:
+        listening_address = ''
+    return listening_address
+
+game_servers = dict(
+    production=dict(host='127.0.0.1', port=8110),
+    development=dict(host='127.0.0.1', port=19010)
+)
+
+connection_key = 123123
+daemon=False
+webgate=False
+
+database_configs = dict(
+    development = dict(
+        charset = 'utf8',
+        database= 'LoginServer',
+        username= 'app_dev',
+        password= 'mypass',
+        host= '10.18.234.209'
+    ),
+    production = dict(
+        charset = 'utf8',
+        database= 'LoginServer',
+        username= 'root',
+        password= 'password',
+        host= '10.18.234.209'
+    )
+)
+

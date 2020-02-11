@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="100" width="1" height="1" x="19" y="13" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+	</NpcRect>
+	<Npc>
+		<npc id="305" name="NPC名字" x="22" y="14" num="1" angle="0" />
+	</Npc>
+	<Way>
+	</Way>
+</Map>

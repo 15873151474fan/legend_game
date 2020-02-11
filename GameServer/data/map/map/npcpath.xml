@@ -1,0 +1,2031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Path>
+    <map id="1">
+        <npc id="9201" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9202" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9203" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9204" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9205" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9206" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9207" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9208" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9209" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9210" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9211" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="9212" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9213" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9214" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9215" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9216" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9217" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9218" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9219" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9220" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9221" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9222" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9223" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9224" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9225" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9226" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9227" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9228" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9229" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9230" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9231" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+		 <npc id="9232" name="巡逻队长1">
+            <point x="2" y="10" />
+			<point x="4" y="10" />
+            <point x="6" y="10" />
+			<point x="8" y="10" />
+            <point x="10" y="10" />
+			<point x="12" y="10" />
+            <point x="14" y="10" />
+			<point x="16" y="10" />
+			<point x="18" y="10" />
+			<point x="20" y="10" />
+			<point x="22" y="10" />
+			<point x="24" y="10" />
+			<point x="26" y="10" />
+			<point x="28" y="10" />
+			<point x="30" y="10" />
+        </npc>
+        <npc id="8300" name="简单一">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8330" name="简单一">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8360" name="简单一">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8301" name="简单二">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8331" name="简单二">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8361" name="简单二">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8501" name="简单三">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="26" y="16" />
+        </npc>
+		<npc id="8302" name="简单四">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8332" name="简单四">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8362" name="简单四">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8303" name="简单五">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8333" name="简单五">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8363" name="简单五">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8502" name="简单六">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8304" name="简单七">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8334" name="简单七">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8364" name="简单七">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8305" name="简单八">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8335" name="简单八">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8365" name="简单八">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8503" name="简单九">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8306" name="简单十">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8336" name="简单十">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8366" name="简单十">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8307" name="简单十一">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8337" name="简单十一">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8367" name="简单十一">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8504" name="简单十二">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8308" name="简单十三">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8338" name="简单十三">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8368" name="简单十三">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8309" name="简单十四">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8339" name="简单十四">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8369" name="简单十四">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8505" name="简单十五">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8310" name="普通一">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8340" name="普通一">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8370" name="普通一">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8311" name="普通二">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8341" name="普通二">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8371" name="普通二">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8506" name="普通三">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8312" name="普通四">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8342" name="普通四">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8372" name="普通四">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8313" name="普通五">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8343" name="普通五">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8373" name="普通五">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8507" name="普通六">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8314" name="普通七">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8344" name="普通七">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8374" name="普通七">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8315" name="普通八">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8345" name="普通八">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8375" name="普通八">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8508" name="普通九">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8316" name="普通十">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8346" name="普通十">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8376" name="普通十">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8317" name="普通十一">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8347" name="普通十一">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8377" name="普通十一">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8509" name="普通十二">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8318" name="普通十三">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8348" name="普通十三">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8378" name="普通十三">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8319" name="普通十四">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8349" name="普通十四">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8379" name="普通十四">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8510" name="普通十五">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8320" name="困难一">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8350" name="困难一">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8380" name="困难一">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8321" name="困难二">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8351" name="困难二">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8381" name="困难二">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8511" name="困难三">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8322" name="困难四">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8352" name="困难四">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8382" name="困难四">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8323" name="困难五">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8353" name="困难五">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8383" name="困难五">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8512" name="困难六">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8324" name="困难七">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8354" name="困难七">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8384" name="困难七">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8325" name="困难八">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8355" name="困难八">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8385" name="困难八">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8513" name="困难九">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8326" name="困难十">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8356" name="困难十">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8386" name="困难十">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8327" name="困难十一">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8357" name="困难十一">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8387" name="困难十一">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8514" name="困难十二">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="8328" name="困难十三">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8358" name="困难十三">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8388" name="困难十三">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+		<npc id="8329" name="困难十四">
+            <point x="4" y="4" />
+            <point x="8" y="6" />
+            <point x="12" y="8" />
+            <point x="18" y="11" />
+			<point x="25" y="15" />
+			<point x="26" y="16" />
+        </npc>
+        <npc id="8359" name="困难十四">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+        <npc id="8389" name="困难十四">
+            <point x="47" y="26" />
+            <point x="42" y="23" />
+            <point x="37" y="21" />
+            <point x="32" y="18" />
+			<point x="27" y="16" />
+			<point x="21" y="12" />
+        </npc>
+        <npc id="8515" name="困难十五">
+            <point x="46" y="3" />
+            <point x="42" y="5" />
+            <point x="38" y="8" />
+            <point x="33" y="10" />
+			<point x="28" y="13" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="4900" name="婚车">
+            <point x="99" y="47" />
+			<point x="97" y="49" />
+			<point x="95" y="51" />
+			<point x="93" y="52" />
+			<point x="91" y="54" />
+			<point x="89" y="56" />
+			<point x="87" y="56" />
+			<point x="85" y="56" />
+			<point x="83" y="54" />
+			<point x="81" y="54" />
+			<point x="79" y="52" />
+			<point x="77" y="52" />
+			<point x="75" y="50" />
+			<point x="73" y="48" />
+			<point x="71" y="46" />
+			<point x="69" y="44" />
+			<point x="71" y="43" />
+			<point x="73" y="42" />
+			<point x="75" y="41" />
+			<point x="77" y="40" />
+			<point x="79" y="38" />
+			<point x="77" y="37" />
+			<point x="75" y="36" />
+			<point x="73" y="35" />
+			<point x="71" y="33" />
+			<point x="73" y="31" />
+			<point x="75" y="29" />
+			<point x="77" y="27" />
+			<point x="75" y="25" />
+			<point x="73" y="24" />
+			<point x="71" y="23" />
+			<point x="69" y="22" />
+			<point x="67" y="21" />
+			<point x="65" y="19" />
+			<point x="63" y="17" />
+			<point x="61" y="17" />
+			<point x="59" y="17" />
+			<point x="57" y="17" />
+			<point x="55" y="17" />
+			<point x="53" y="17" />
+			<point x="51" y="17" />
+			<point x="49" y="19" />
+			<point x="47" y="21" />
+			<point x="45" y="22" />
+			<point x="43" y="24" />
+			<point x="41" y="26" />
+			<point x="39" y="26" />
+			<point x="37" y="26" />
+			<point x="35" y="24" />
+			<point x="33" y="24" />
+			<point x="31" y="24" />
+			<point x="29" y="24" />
+			<point x="27" y="26" />
+			<point x="25" y="28" />
+			<point x="23" y="30" />
+			<point x="21" y="32" />
+			<point x="19" y="34" />
+			<point x="17" y="36" />
+			<point x="15" y="38" />
+			<point x="13" y="40" />
+			<point x="11" y="42" />
+			<point x="13" y="44" />
+			<point x="15" y="46" />
+			<point x="17" y="48" />
+			<point x="19" y="50" />
+			<point x="21" y="50" />
+			<point x="23" y="52" />
+			<point x="25" y="52" />
+			<point x="27" y="54" />
+			<point x="29" y="54" />
+			<point x="31" y="54" />
+			<point x="33" y="54" />
+			<point x="35" y="56" />
+			<point x="37" y="58" />
+			<point x="37" y="60" />
+			<point x="39" y="62" />
+			<point x="41" y="64" />
+			<point x="43" y="66" />
+			<point x="45" y="68" />
+			<point x="47" y="68" />
+			<point x="49" y="68" />
+			<point x="51" y="68" />
+			<point x="53" y="68" />
+			<point x="55" y="68" />
+			<point x="57" y="68" />
+			<point x="59" y="66" />
+			<point x="61" y="66" />
+			<point x="63" y="64" />
+			<point x="65" y="64" />
+			<point x="67" y="62" />
+			<point x="69" y="60" />
+			<point x="71" y="60" />
+			<point x="73" y="60" />
+			<point x="75" y="58" />
+			<point x="77" y="56" />
+			<point x="79" y="54" />
+			<point x="81" y="54" />
+			<point x="83" y="54" />
+			<point x="85" y="56" />
+			<point x="87" y="56" />
+			<point x="89" y="56" />
+			<point x="91" y="54" />
+			<point x="93" y="52" />
+			<point x="95" y="51" />
+			<point x="97" y="49" />
+			<point x="99" y="47" />
+        </npc>
+		<npc id="4901" name="举牌手">
+			<point x="97" y="49" />
+			<point x="95" y="51" />
+			<point x="93" y="52" />
+			<point x="91" y="54" />
+			<point x="89" y="56" />
+			<point x="87" y="56" />
+			<point x="85" y="56" />
+			<point x="83" y="54" />
+			<point x="81" y="54" />
+			<point x="79" y="52" />
+			<point x="77" y="52" />
+			<point x="75" y="50" />
+			<point x="73" y="48" />
+			<point x="71" y="46" />
+			<point x="69" y="44" />
+			<point x="71" y="43" />
+			<point x="73" y="42" />
+			<point x="75" y="41" />
+			<point x="77" y="40" />
+			<point x="79" y="38" />
+			<point x="77" y="37" />
+			<point x="75" y="36" />
+			<point x="73" y="35" />
+			<point x="71" y="33" />
+			<point x="73" y="31" />
+			<point x="75" y="29" />
+			<point x="77" y="27" />
+			<point x="75" y="25" />
+			<point x="73" y="24" />
+			<point x="71" y="23" />
+			<point x="69" y="22" />
+			<point x="67" y="21" />
+			<point x="65" y="19" />
+			<point x="63" y="17" />
+			<point x="61" y="17" />
+			<point x="59" y="17" />
+			<point x="57" y="17" />
+			<point x="55" y="17" />
+			<point x="53" y="17" />
+			<point x="51" y="17" />
+			<point x="49" y="19" />
+			<point x="47" y="21" />
+			<point x="45" y="22" />
+			<point x="43" y="24" />
+			<point x="41" y="26" />
+			<point x="39" y="26" />
+			<point x="37" y="26" />
+			<point x="35" y="24" />
+			<point x="33" y="24" />
+			<point x="31" y="24" />
+			<point x="29" y="24" />
+			<point x="27" y="26" />
+			<point x="25" y="28" />
+			<point x="23" y="30" />
+			<point x="21" y="32" />
+			<point x="19" y="34" />
+			<point x="17" y="36" />
+			<point x="15" y="38" />
+			<point x="13" y="40" />
+			<point x="11" y="42" />
+			<point x="13" y="44" />
+			<point x="15" y="46" />
+			<point x="17" y="48" />
+			<point x="19" y="50" />
+			<point x="21" y="50" />
+			<point x="23" y="52" />
+			<point x="25" y="52" />
+			<point x="27" y="54" />
+			<point x="29" y="54" />
+			<point x="31" y="54" />
+			<point x="33" y="54" />
+			<point x="35" y="56" />
+			<point x="37" y="58" />
+			<point x="37" y="60" />
+			<point x="39" y="62" />
+			<point x="41" y="64" />
+			<point x="43" y="66" />
+			<point x="45" y="68" />
+			<point x="47" y="68" />
+			<point x="49" y="68" />
+			<point x="51" y="68" />
+			<point x="53" y="68" />
+			<point x="55" y="68" />
+			<point x="57" y="68" />
+			<point x="59" y="66" />
+			<point x="61" y="66" />
+			<point x="63" y="64" />
+			<point x="65" y="64" />
+			<point x="67" y="62" />
+			<point x="69" y="60" />
+			<point x="71" y="60" />
+			<point x="73" y="60" />
+			<point x="75" y="58" />
+			<point x="77" y="56" />
+			<point x="79" y="54" />
+			<point x="81" y="54" />
+			<point x="83" y="54" />
+			<point x="85" y="56" />
+			<point x="87" y="56" />
+			<point x="89" y="56" />
+			<point x="91" y="54" />
+			<point x="93" y="52" />
+			<point x="95" y="51" />
+			<point x="97" y="49" />
+			<point x="99" y="47" />
+			<point x="101" y="45" />
+        </npc>
+		<npc id="4902" name="号手">
+            <point x="101" y="45" />
+            <point x="99" y="47" />
+			<point x="97" y="49" />
+			<point x="95" y="51" />
+			<point x="93" y="52" />
+			<point x="91" y="54" />
+			<point x="89" y="56" />
+			<point x="87" y="56" />
+			<point x="85" y="56" />
+			<point x="83" y="54" />
+			<point x="81" y="54" />
+			<point x="79" y="52" />
+			<point x="77" y="52" />
+			<point x="75" y="50" />
+			<point x="73" y="48" />
+			<point x="71" y="46" />
+			<point x="69" y="44" />
+			<point x="71" y="43" />
+			<point x="73" y="42" />
+			<point x="75" y="41" />
+			<point x="77" y="40" />
+			<point x="79" y="38" />
+			<point x="77" y="37" />
+			<point x="75" y="36" />
+			<point x="73" y="35" />
+			<point x="71" y="33" />
+			<point x="73" y="31" />
+			<point x="75" y="29" />
+			<point x="77" y="27" />
+			<point x="75" y="25" />
+			<point x="73" y="24" />
+			<point x="71" y="23" />
+			<point x="69" y="22" />
+			<point x="67" y="21" />
+			<point x="65" y="19" />
+			<point x="63" y="17" />
+			<point x="61" y="17" />
+			<point x="59" y="17" />
+			<point x="57" y="17" />
+			<point x="55" y="17" />
+			<point x="53" y="17" />
+			<point x="51" y="17" />
+			<point x="49" y="19" />
+			<point x="47" y="21" />
+			<point x="45" y="22" />
+			<point x="43" y="24" />
+			<point x="41" y="26" />
+			<point x="39" y="26" />
+			<point x="37" y="26" />
+			<point x="35" y="24" />
+			<point x="33" y="24" />
+			<point x="31" y="24" />
+			<point x="29" y="24" />
+			<point x="27" y="26" />
+			<point x="25" y="28" />
+			<point x="23" y="30" />
+			<point x="21" y="32" />
+			<point x="19" y="34" />
+			<point x="17" y="36" />
+			<point x="15" y="38" />
+			<point x="13" y="40" />
+			<point x="11" y="42" />
+			<point x="13" y="44" />
+			<point x="15" y="46" />
+			<point x="17" y="48" />
+			<point x="19" y="50" />
+			<point x="21" y="50" />
+			<point x="23" y="52" />
+			<point x="25" y="52" />
+			<point x="27" y="54" />
+			<point x="29" y="54" />
+			<point x="31" y="54" />
+			<point x="33" y="54" />
+			<point x="35" y="56" />
+			<point x="37" y="58" />
+			<point x="37" y="60" />
+			<point x="39" y="62" />
+			<point x="41" y="64" />
+			<point x="43" y="66" />
+			<point x="45" y="68" />
+			<point x="47" y="68" />
+			<point x="49" y="68" />
+			<point x="51" y="68" />
+			<point x="53" y="68" />
+			<point x="55" y="68" />
+			<point x="57" y="68" />
+			<point x="59" y="66" />
+			<point x="61" y="66" />
+			<point x="63" y="64" />
+			<point x="65" y="64" />
+			<point x="67" y="62" />
+			<point x="69" y="60" />
+			<point x="71" y="60" />
+			<point x="73" y="60" />
+			<point x="75" y="58" />
+			<point x="77" y="56" />
+			<point x="79" y="54" />
+			<point x="81" y="54" />
+			<point x="83" y="54" />
+			<point x="85" y="56" />
+			<point x="87" y="56" />
+			<point x="89" y="56" />
+			<point x="91" y="54" />
+			<point x="93" y="52" />
+			<point x="95" y="51" />
+			<point x="97" y="49" />
+        </npc>
+		<npc id="4903" name="鼓手">
+            <point x="103" y="43" />
+            <point x="101" y="45" />
+            <point x="99" y="47" />
+			<point x="97" y="49" />
+			<point x="95" y="51" />
+			<point x="93" y="52" />
+			<point x="91" y="54" />
+			<point x="89" y="56" />
+			<point x="87" y="56" />
+			<point x="85" y="56" />
+			<point x="83" y="54" />
+			<point x="81" y="54" />
+			<point x="79" y="52" />
+			<point x="77" y="52" />
+			<point x="75" y="50" />
+			<point x="73" y="48" />
+			<point x="71" y="46" />
+			<point x="69" y="44" />
+			<point x="71" y="43" />
+			<point x="73" y="42" />
+			<point x="75" y="41" />
+			<point x="77" y="40" />
+			<point x="79" y="38" />
+			<point x="77" y="37" />
+			<point x="75" y="36" />
+			<point x="73" y="35" />
+			<point x="71" y="33" />
+			<point x="73" y="31" />
+			<point x="75" y="29" />
+			<point x="77" y="27" />
+			<point x="75" y="25" />
+			<point x="73" y="24" />
+			<point x="71" y="23" />
+			<point x="69" y="22" />
+			<point x="67" y="21" />
+			<point x="65" y="19" />
+			<point x="63" y="17" />
+			<point x="61" y="17" />
+			<point x="59" y="17" />
+			<point x="57" y="17" />
+			<point x="55" y="17" />
+			<point x="53" y="17" />
+			<point x="51" y="17" />
+			<point x="49" y="19" />
+			<point x="47" y="21" />
+			<point x="45" y="22" />
+			<point x="43" y="24" />
+			<point x="41" y="26" />
+			<point x="39" y="26" />
+			<point x="37" y="26" />
+			<point x="35" y="24" />
+			<point x="33" y="24" />
+			<point x="31" y="24" />
+			<point x="29" y="24" />
+			<point x="27" y="26" />
+			<point x="25" y="28" />
+			<point x="23" y="30" />
+			<point x="21" y="32" />
+			<point x="19" y="34" />
+			<point x="17" y="36" />
+			<point x="15" y="38" />
+			<point x="13" y="40" />
+			<point x="11" y="42" />
+			<point x="13" y="44" />
+			<point x="15" y="46" />
+			<point x="17" y="48" />
+			<point x="19" y="50" />
+			<point x="21" y="50" />
+			<point x="23" y="52" />
+			<point x="25" y="52" />
+			<point x="27" y="54" />
+			<point x="29" y="54" />
+			<point x="31" y="54" />
+			<point x="33" y="54" />
+			<point x="35" y="56" />
+			<point x="37" y="58" />
+			<point x="37" y="60" />
+			<point x="39" y="62" />
+			<point x="41" y="64" />
+			<point x="43" y="66" />
+			<point x="45" y="68" />
+			<point x="47" y="68" />
+			<point x="49" y="68" />
+			<point x="51" y="68" />
+			<point x="53" y="68" />
+			<point x="55" y="68" />
+			<point x="57" y="68" />
+			<point x="59" y="66" />
+			<point x="61" y="66" />
+			<point x="63" y="64" />
+			<point x="65" y="64" />
+			<point x="67" y="62" />
+			<point x="69" y="60" />
+			<point x="71" y="60" />
+			<point x="73" y="60" />
+			<point x="75" y="58" />
+			<point x="77" y="56" />
+			<point x="79" y="54" />
+			<point x="81" y="54" />
+			<point x="83" y="54" />
+			<point x="85" y="56" />
+			<point x="87" y="56" />
+			<point x="89" y="56" />
+			<point x="91" y="54" />
+			<point x="93" y="52" />
+			<point x="95" y="51" />
+        </npc>
+        <npc id="4911" name="新郎">
+            <point x="98" y="47" />
+            <point x="98" y="46" />
+            <point x="98" y="45" />
+            <point x="98" y="44" />
+			<point x="98" y="43" />
+        </npc>
+        <npc id="4912" name="新娘">
+            <point x="100" y="47" />
+            <point x="101" y="46" />
+            <point x="102" y="45" />
+            <point x="103" y="44" />
+			<point x="104" y="43" />
+        </npc>
+		<npc id="22010" name="树人">
+			<point x="23" y="8" />
+			<point x="23" y="10" />
+            <point x="23" y="12" />
+            <point x="23" y="14" />
+        </npc>
+		<npc id="22011" name="树人">
+			<point x="35" y="16" />
+			<point x="33" y="16" />
+            <point x="31" y="16" />
+			<point x="29" y="16" />
+			<point x="27" y="16" />
+			<point x="25" y="16" />
+        </npc>
+		<npc id="22012" name="树人">
+			<point x="23" y="24" />
+			<point x="23" y="22" />
+			<point x="23" y="20" />
+			<point x="23" y="18" />
+        </npc>
+		<npc id="22013" name="树人">
+			<point x="11" y="16" />
+			<point x="13" y="16" />
+			<point x="15" y="16" />
+			<point x="17" y="16" />
+			<point x="19" y="16" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="22014" name="疯狂猫妖">
+			<point x="23" y="8" />
+			<point x="23" y="10" />
+            <point x="23" y="12" />
+            <point x="23" y="14" />
+        </npc>
+		<npc id="22015" name="疯狂猫妖">
+			<point x="35" y="16" />
+			<point x="33" y="16" />
+            <point x="31" y="16" />
+			<point x="29" y="16" />
+			<point x="27" y="16" />
+			<point x="25" y="16" />
+        </npc>
+		<npc id="22016" name="疯狂猫妖">
+			<point x="23" y="24" />
+			<point x="23" y="22" />
+			<point x="23" y="20" />
+			<point x="23" y="18" />
+        </npc>
+		<npc id="22017" name="疯狂猫妖">
+			<point x="11" y="16" />
+			<point x="13" y="16" />
+			<point x="15" y="16" />
+			<point x="17" y="16" />
+			<point x="19" y="16" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="22018" name="树人">
+			<point x="23" y="8" />
+			<point x="23" y="10" />
+            <point x="23" y="12" />
+            <point x="23" y="14" />
+        </npc>
+		<npc id="22019" name="树人">
+			<point x="35" y="16" />
+			<point x="33" y="16" />
+            <point x="31" y="16" />
+			<point x="29" y="16" />
+			<point x="27" y="16" />
+			<point x="25" y="16" />
+        </npc>
+		<npc id="22020" name="树人">
+			<point x="23" y="24" />
+			<point x="23" y="22" />
+			<point x="23" y="20" />
+			<point x="23" y="18" />
+        </npc>
+		<npc id="22021" name="树人">
+			<point x="11" y="16" />
+			<point x="13" y="16" />
+			<point x="15" y="16" />
+			<point x="17" y="16" />
+			<point x="19" y="16" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="22022" name="树人">
+			<point x="23" y="8" />
+			<point x="23" y="10" />
+            <point x="23" y="12" />
+            <point x="23" y="14" />
+        </npc>
+		<npc id="22023" name="树人">
+			<point x="35" y="16" />
+			<point x="33" y="16" />
+            <point x="31" y="16" />
+			<point x="29" y="16" />
+			<point x="27" y="16" />
+			<point x="25" y="16" />
+        </npc>
+		<npc id="22024" name="树人">
+			<point x="23" y="24" />
+			<point x="23" y="22" />
+			<point x="23" y="20" />
+			<point x="23" y="18" />
+        </npc>
+		<npc id="22025" name="树人">
+			<point x="11" y="16" />
+			<point x="13" y="16" />
+			<point x="15" y="16" />
+			<point x="17" y="16" />
+			<point x="19" y="16" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="22026" name="树人">
+			<point x="23" y="8" />
+			<point x="23" y="10" />
+            <point x="23" y="12" />
+            <point x="23" y="14" />
+        </npc>
+		<npc id="22027" name="树人">
+			<point x="35" y="16" />
+			<point x="33" y="16" />
+            <point x="31" y="16" />
+			<point x="29" y="16" />
+			<point x="27" y="16" />
+			<point x="25" y="16" />
+        </npc>
+		<npc id="22028" name="树人">
+			<point x="23" y="24" />
+			<point x="23" y="22" />
+			<point x="23" y="20" />
+			<point x="23" y="18" />
+        </npc>
+		<npc id="22029" name="树人">
+			<point x="11" y="16" />
+			<point x="13" y="16" />
+			<point x="15" y="16" />
+			<point x="17" y="16" />
+			<point x="19" y="16" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="22030" name="树人">
+			<point x="23" y="8" />
+			<point x="23" y="10" />
+            <point x="23" y="12" />
+            <point x="23" y="14" />
+        </npc>
+		<npc id="22031" name="树人">
+			<point x="35" y="16" />
+			<point x="33" y="16" />
+            <point x="31" y="16" />
+			<point x="29" y="16" />
+			<point x="27" y="16" />
+			<point x="25" y="16" />
+        </npc>
+		<npc id="22032" name="树人">
+			<point x="23" y="24" />
+			<point x="23" y="22" />
+			<point x="23" y="20" />
+			<point x="23" y="18" />
+        </npc>
+		<npc id="22033" name="树人">
+			<point x="11" y="16" />
+			<point x="13" y="16" />
+			<point x="15" y="16" />
+			<point x="17" y="16" />
+			<point x="19" y="16" />
+			<point x="21" y="16" />
+        </npc>
+		<npc id="22034" name="树人">
+			<point x="23" y="8" />
+			<point x="23" y="10" />
+            <point x="23" y="12" />
+            <point x="23" y="14" />
+        </npc>
+		<npc id="22035" name="树人">
+			<point x="35" y="16" />
+			<point x="33" y="16" />
+            <point x="31" y="16" />
+			<point x="29" y="16" />
+			<point x="27" y="16" />
+			<point x="25" y="16" />
+        </npc>
+		<npc id="22036" name="树人">
+			<point x="23" y="24" />
+			<point x="23" y="22" />
+			<point x="23" y="20" />
+			<point x="23" y="18" />
+        </npc>
+		<npc id="22037" name="树人">
+			<point x="11" y="16" />
+			<point x="13" y="16" />
+			<point x="15" y="16" />
+			<point x="17" y="16" />
+			<point x="19" y="16" />
+			<point x="21" y="16" />
+        </npc>
+	</map>
+</Path>

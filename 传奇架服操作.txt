@@ -1,0 +1,38 @@
+总结：这套代码是可以完全运行的，放在git上供兴趣爱好者参考，使用
+【1】docker安装:
+apt-get -y install apt-transport-https
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+bash -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+
+sudo apt-get -y install lxc-docker
+
+
+进入docker命令:sudo docker exec -it 44fc0f0582d9 /bin/bash
+也可以用这个安装docker：sudo apt-get install docker.io
+加载docker环境:docker load < game_tdht.tar(重启后就不用再次加载了）
+
+docker脚本运行:./docker.py
+
+重启后需要重新启动docker下面的mysql：mysqld_safe&
+
+运行编译脚本:./build.py(第一次运行./build.py -i)
+
+执行启动shell脚本:./run.sh start
+
+查看日志:./log.sh
+
+生成release线上版本的话需要运行release.sh替换下common中的config文件
+
+docker下数据库登录:mysql -hlocalhost -uroot -p
+
+数据库初始化:mysql < sql/init-zone-20150806.sql
+
+
+【2】后台服务搭建流程:
+1：首先建立mysql数据库:通过数据传输一份，copy一份数据到新的mysql
+2：进入platserver目录下， 执行./docker.py进入docker环境 。 运行编译脚本:./build.py(第一次运行./build.py -i) ，配置config和loginserver.xml相关配置(连接到数据库)。 执行启动shell脚本:./run.sh start
+3：进入sdk_server目录下,搭建环境执行./install_pkgs.sh. 配置settings.py(连接到数据库) 执行启动脚本./run.sh start
+4：进入gatewayHttp目录下,配置settings.py(连接到数据库) 执行启动脚本nohup python $PWD/gate.py --logging=debug --port=18000 &
+5：进入gateway_release目录下,执行./docker.py进入docker环境 。配置loginserver.xml相关配置 执行启动脚本:./run.sh start
+6：进入plat_release目录下,配置config.xml(连接到数据库)相关配置 执行启动脚本:./run.sh start
+

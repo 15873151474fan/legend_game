@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="5" width="2" height="2" x="38" y="28" type="3" />
+		<zonedef id="6" width="2" height="2" x="14" y="17" type="3" />
+		<zonedef id="100" width="1" height="1" x="40" y="29" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+		<rect id="1" width="11" height="10" x="32" y="18" />
+		<rect id="2" width="14" height="13" x="17" y="15" />
+	</NpcRect>
+	<Npc>
+		<npc id="134" name="NPC名字" x="46" y="23" num="1" angle="0" />
+		<npc id="136" name="NPC名字" x="22" y="29" num="1" angle="0" />
+		<npc id="135" name="NPC名字" x="36" y="15" num="1" angle="0" />
+		<npc id="10034" name="怪物名字" x="32" y="18" num="40" interval="1">
+			<rect id="1" />
+		</npc>
+		<npc id="10035" name="怪物名字" x="17" y="15" num="40" interval="1">
+			<rect id="2" />
+		</npc>
+	</Npc>
+	<Way>
+		<WayPoint mapid="5" zoneid="2" enable="1">
+			<point x="42" y="29" />
+			<point x="42" y="30" />
+		</WayPoint>
+		<WayPoint mapid="23" zoneid="3" enable="1">
+			<point x="13" y="17" />
+			<point x="14" y="17" />
+		</WayPoint>
+	</Way>
+</Map>

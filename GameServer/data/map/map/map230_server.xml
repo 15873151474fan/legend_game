@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="100" width="1" height="1" x="4" y="27" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+	</NpcRect>
+	<Npc>
+		<npc id="272" name="NPC名字" x="5" y="21" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="3" y="22" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="15" y="13" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="13" y="12" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="25" y="13" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="6" y="24" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="28" y="13" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="33" y="24" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="6" y="21" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="38" y="14" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="43" y="20" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="9" y="18" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="45" y="15" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="16" y="16" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="12" y="26" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="17" y="22" num="1" angle="0" />
+		<npc id="272" name="NPC名字" x="23" y="25" num="1" angle="0" />
+	</Npc>
+	<Way>
+		<WayPoint mapid="2" zoneid="100" enable="1">
+			<point x="2" y="29" />
+		</WayPoint>
+	</Way>
+</Map>

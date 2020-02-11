@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Map>
+	<Zone>
+		<zonedef id="4" width="2" height="2" x="8" y="93" type="3" />
+		<zonedef id="3" width="1" height="1" x="147" y="82" type="3" />
+		<zonedef id="6" width="2" height="2" x="11" y="14" type="3" />
+		<zonedef id="100" width="3" height="2" x="88" y="52" type="3" />
+		<zonedef id="2" width="2" height="2" x="88" y="52" type="2" />
+		<zonedef id="224" width="2" height="2" x="15" y="10" type="3" />
+		<zonedef id="16" width="1" height="2" x="164" y="13" type="3" />
+	</Zone>
+	<RelivePosition />
+	<ArmyEquipArea />
+	<NpcRect>
+		<rect id="1" width="9" height="5" x="63" y="87" />
+		<rect id="2" width="9" height="6" x="88" y="79" />
+		<rect id="3" width="9" height="7" x="8" y="56" />
+		<rect id="4" width="10" height="5" x="105" y="28" />
+		<rect id="5" width="21" height="6" x="18" y="5" />
+		<rect id="6" width="10" height="5" x="85" y="18" />
+	</NpcRect>
+	<Npc>
+		<npc id="121" name="NPC名字" x="77" y="51" num="1" angle="0" />
+		<npc id="122" name="NPC名字" x="94" y="46" num="1" angle="0" />
+		<npc id="130" name="NPC名字" x="88" y="46" num="1" angle="0" />
+		<npc id="109" name="NPC名字" x="52" y="66" num="1" angle="0" />
+		<npc id="110" name="NPC名字" x="92" y="75" num="1" angle="0" />
+		<npc id="111" name="NPC名字" x="76" y="69" num="1" angle="0" />
+		<npc id="112" name="NPC名字" x="83" y="41" num="1" angle="0" />
+		<npc id="113" name="NPC名字" x="88" y="30" num="1" angle="0" />
+		<npc id="114" name="NPC名字" x="48" y="53" num="1" angle="0" />
+		<npc id="334" name="NPC名字" x="38" y="45" num="1" angle="0" />
+		<npc id="139" name="NPC名字" x="92" y="57" num="1" angle="0" />
+		<npc id="120" name="NPC名字" x="82" y="49" num="1" angle="0" />
+		<npc id="275" name="NPC名字" x="84" y="57" num="1" angle="0" />
+		<npc id="292" name="NPC名字" x="88" y="59" num="1" angle="0" />
+		<npc id="324" name="NPC名字" x="96" y="55" num="1" angle="0" />
+		<npc id="291" name="NPC名字" x="77" y="53" num="1" angle="0" />
+		<npc id="298" name="NPC名字" x="81" y="55" num="1" angle="0" />
+		<npc id="238" name="NPC名字" x="88" y="42" num="1" angle="0" />
+		<npc id="326" name="NPC名字" x="96" y="50" num="1" angle="0" />
+		<npc id="142" name="NPC名字" x="99" y="53" num="1" angle="0" />
+		<npc id="329" name="NPC名字" x="66" y="34" num="1" angle="0" />
+		<npc id="211" name="NPC名字" x="105" y="53" num="1" angle="0" />
+		<npc id="213" name="NPC名字" x="114" y="58" num="1" angle="0" />
+		<npc id="423" name="NPC名字" x="91" y="31" num="1" angle="0" />
+		<npc id="421" name="NPC名字" x="133" y="77" num="1" angle="0" />
+		<npc id="422" name="NPC名字" x="139" y="74" num="1" angle="0" />
+		<npc id="299" name="NPC名字" x="36" y="74" num="1" angle="0" />
+		<npc id="424" name="NPC名字" x="63" y="77" num="1" angle="0" />
+		<npc id="361" name="NPC名字" x="103" y="23" num="1" angle="0" />
+		<npc id="375" name="NPC名字" x="153" y="39" num="1" angle="0" />
+		<npc id="10001" name="怪物名字" x="63" y="87" num="3" interval="1">
+			<rect id="1" />
+		</npc>
+		<npc id="10001" name="怪物名字" x="88" y="79" num="3" interval="1">
+			<rect id="2" />
+		</npc>
+		<npc id="10001" name="怪物名字" x="8" y="56" num="8" interval="1">
+			<rect id="3" />
+		</npc>
+		<npc id="10002" name="怪物名字" x="105" y="28" num="4" interval="1">
+			<rect id="4" />
+		</npc>
+		<npc id="10002" name="怪物名字" x="18" y="5" num="6" interval="1">
+			<rect id="5" />
+		</npc>
+		<npc id="10002" name="怪物名字" x="85" y="18" num="2" interval="1">
+			<rect id="6" />
+		</npc>
+	</Npc>
+	<Way>
+		<WayPoint mapid="1" zoneid="3" enable="1">
+			<point x="151" y="84" />
+			<point x="151" y="85" />
+			<point x="152" y="84" />
+			<point x="152" y="85" />
+		</WayPoint>
+		<WayPoint mapid="3" zoneid="100" enable="1">
+			<point x="5" y="94" />
+			<point x="5" y="95" />
+			<point x="6" y="94" />
+			<point x="6" y="95" />
+		</WayPoint>
+		<WayPoint mapid="6" zoneid="3" enable="1">
+			<point x="5" y="7" />
+			<point x="5" y="8" />
+			<point x="6" y="7" />
+			<point x="6" y="8" />
+		</WayPoint>
+		<WayPoint mapid="16" zoneid="22" enable="1">
+			<point x="175" y="4" />
+			<point x="175" y="5" />
+		</WayPoint>
+	</Way>
+</Map>

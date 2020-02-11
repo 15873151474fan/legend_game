@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<Zebra>
+	<!-- FLServer列表 -->
+	<LoginServerList>
+
+		<server ip="111.229.167.100" port="6997"/> <!-- QA -->
+	</LoginServerList>
+	
+	<!-- NameServerList列表 -->
+	<NameServerList>q
+		<server ip="111.229.167.100" port="8009"/>
+	</NameServerList>
+
+</Zebra>
+

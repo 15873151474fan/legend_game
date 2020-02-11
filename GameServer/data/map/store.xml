@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 属性(check) 所属节点(store),值(0-服务器不验证，可以在任何地方打开，1-服务器验证) -->
+<!-- 属性(sell),所属节点(store),值(0-不可以在该商店出售物品,1-可以出售) -->
+<!-- 属性(fix),所属节点(sotre),值(0-不可以在此商店修理装备，1-可以修理装备) -->
+<!-- 属性(moneytype),所属节点(store,item,两个节点必须至少1个配置，内层属性优先级高)-->
+<!-- 值(1 金币，2 绑定元宝，8 元宝 )-->
+<!--注意：当moneytype大于8时，一定要指定price，道具表一般填的是银币或金币价-->
+<!-- 属性(needitem),所属节点(store,item,至少配置1个，内层优先级高),值(兑换道具) -->
+<!-- 属性(itemid),所属节点(item),值(道具ID) -->
+<!-- 属性(level),所属节点(item),值(合成等级),可选,默认为0 -->
+<!-- 属性(bind),所属节点(item),值(0-买后不绑定，默认，1-买后绑定),可选，默认0 -->
+<!-- 属性(price),所属节点(item),值(价格),可选，在type=1商店有效，没有该属性，默认读取道具表格的购买价格 -->
+<!-- 属性(basenum),所属节点(item),值(兑换单个指定道具需要的兑换道具数量，同单价意义),商店type=2有效 -->
+<!-- 属性(needlevel),所属节点(item),值(玩家等级限制,<needlevel商店不显示),可选,默认0 -->
+<!-- 属性(maxlevel),所属节点(item),值(玩家等级超过maxlevel的看不见) -->
+<!-- 属性(milirank),所属节点(item),值(玩家军衔限制),军衔不足不可购买，可选,默认为0 -->
+<!-- 属性(basebasenum),所属节点(item),值(单次购买物品的数量，允许1个铜币买多个道具 -->
+<!-- 属性(attr),所属节点(item),指定装备的属性,同iv gm指令,不支持自动鉴定,-->
+<!-- 属性(taskid),所属节点(item),玩家身上有此任务未完成才可见,-->
+<!-- 属性(zhe),所属节点(item),打折销售标识,-->
+<!-- 属性(re),所属节点(item),热卖标识,-->
+<!-- 属性(xin),所属节点(item),新售物品标识,-->
+<!-- 属性(xian),所属节点(item),限量售物品标识,-->
+<!-- 属性(pawnsellmax),所属节点(item),单人每日可卖给典当行的最大数量,-->
+<!-- 属性(pawnbuymax),所属节点(item),典当行库存量最大额-->
+<!-- 属性(buymax),所属节点(item),单日购买数量-->
+<!-- 属性(largessid),所属节点(item),值(买道具送的道具ID)-->
+<!-- 属性(largessbasenum),所属节点(item),值(买道具送的指定道具需要的数量)-->
+<!-- 属性(largessquality),所属节点(item),值(买道具送的指定道具的品质)-->
+<!-- 属性(largessbind),所属节点(item),值(买道具送的指定道具是否绑定)-->
+<!-- 属性(minviplevel),所属节点(item),值(玩家vip等级限制)-->
+<!-- 属性(maxviplevel),所属节点(item),值(玩家等级超过maxviplevel的看不见)-->
+<!--	<item id="8018" treeid="4" itemid="1501" moneytype="8" price="450" discount="3" oldPrice="1800" basenum="1" bind="1" limitbuy="999" weeklimit="1"/>	-->
+<!--	<item id="8019" treeid="4" itemid="1502" moneytype="8" price="1280" discount="3" oldPrice="5450" basenum="1" bind="1" limitbuy="999" weeklimit="1"/>	-->			
+<!--	<item id="8020" treeid="4" itemid="1503" moneytype="8" price="2680" discount="3" oldPrice="10800" basenum="1" bind="1" limitbuy="999" weeklimit="1"/>	-->
+
+
+
+	<Stores>
+		<store id="2" name="商城" check="0" sell="0" fix="0">
+		    <tab name="成长道具" >
+				<tree>
+					<root id="1" name="商品列表">
+						<child id="1" name="热卖"/>
+                    </root>
+				</tree>
+				<item id="1001" treeid="1" itemid="10127" moneytype="8" price="988" basenum="1" limitbuy="999"/>			
+				<item id="1000" treeid="1" itemid="10116" moneytype="8" price="100" basenum="1" limitbuy="999"/>
+				<item id="1012" treeid="1" itemid="10212" moneytype="8" price="988" basenum="1" limitbuy="999"/>
+				<item id="1015" treeid="1" itemid="10211" moneytype="8" price="100" basenum="1" limitbuy="999"/>
+				<item id="1003" treeid="1" itemid="10225" moneytype="8" price="988" basenum="1" limitbuy="999"/>
+				<item id="1006" treeid="1" itemid="10224" moneytype="8" price="200" basenum="1" limitbuy="999"/>
+				<item id="1013" treeid="1" itemid="10081" moneytype="8" price="100" basenum="1" limitbuy="999"/>
+				<item id="1016" treeid="1" itemid="10079" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+				<item id="1005" treeid="1" itemid="10120" moneytype="8" price="988" basenum="1" limitbuy="999"/>
+				<item id="1008" treeid="1" itemid="10119" moneytype="8" price="200" basenum="1" limitbuy="999"/>
+				<item id="1009" treeid="1" itemid="10222" moneytype="8" price="988" basenum="1" limitbuy="999"/>
+				<item id="1010" treeid="1" itemid="10221" moneytype="8" price="500" basenum="1" limitbuy="999"/>
+				<item id="1011" treeid="1" itemid="10220" moneytype="8" price="100" basenum="1" limitbuy="999"/>
+				<item id="1004" treeid="1" itemid="10080" moneytype="8" price="50" basenum="1" limitbuy="999"/>
+				<item id="1017" treeid="1" itemid="10097" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+			</tab>
+            <tab name="新鲜玩意">
+				<tree>
+					<root id="1" name="商品列表">
+						<child id="1" name="装备强化"/>
+                    </root>
+				</tree>
+
+
+				
+				<!--item id="2036" treeid="2" itemid="440104" moneytype="8" price="25" basenum="1" limitbuy="999"/-->
+				<item id="2037" treeid="2" itemid="10069" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+				<item id="2022" treeid="2" itemid="10160" moneytype="8" price="58" basenum="1" limitbuy="1"/>	
+				
+				<item id="2013" treeid="2" itemid="10121" moneytype="8" price="20" basenum="1" limitbuy="999"/>
+				<item id="2002" treeid="2" itemid="10402" moneytype="8" price="128" basenum="1" limitbuy="999"/>
+				<item id="2003" treeid="2" itemid="10403" moneytype="8" price="128" basenum="1" limitbuy="999"/>
+				<item id="2004" treeid="2" itemid="10404" moneytype="8" price="128" basenum="1" limitbuy="999"/>
+				<item id="2008" treeid="2" itemid="10095" moneytype="8" price="10" basenum="1" limitbuy="999"/>	
+				<item id="2009" treeid="2" itemid="10090" moneytype="8" price="288" basenum="1" limitbuy="999"/>
+				<item id="2010" treeid="2" itemid="10089" moneytype="8" price="15" basenum="1" limitbuy="999"/>
+				<item id="2017" treeid="2" itemid="10054" moneytype="8" price="50" basenum="99" limitbuy="999"/>	
+				<item id="2019" treeid="2" itemid="10075" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+				<item id="2020" treeid="2" itemid="17005" moneytype="8" price="500" basenum="1" limitbuy="999"/>
+				<item id="2032" treeid="2" itemid="10082" moneytype="8" price="20" basenum="1" limitbuy="999"/>
+				<item id="2033" treeid="2" itemid="10188" moneytype="8" price="5" basenum="1" limitbuy="999"/>	
+				
+
+			</tab>
+			<tab name="绑定商城" bind="1">
+				<tree>
+					<root id="0" name="商品列表">
+						<child id="0" name="商品列表"/>
+                    </root>
+				</tree>			
+				<item id="3001" treeid="3" itemid="10036" moneytype="2" price="300" basenum="1" limitbuy="999"/>
+				<item id="3002" treeid="3" itemid="10191" moneytype="2" price="20" basenum="1" limitbuy="999"/>
+				<item id="3003" treeid="3" itemid="10116" moneytype="2" price="400" basenum="1" limitbuy="999"/>
+				<item id="3004" treeid="3" itemid="10080" moneytype="2" price="100" basenum="1" limitbuy="999"/>
+				<item id="3005" treeid="3" itemid="10081" moneytype="2" price="200" basenum="1" limitbuy="999"/>
+				<item id="3006" treeid="3" itemid="10156" moneytype="2" price="40" basenum="1" limitbuy="999"/>
+				<item id="3007" treeid="3" itemid="10075" moneytype="2" price="20" basenum="1" limitbuy="999"/>
+				
+				<item id="3008" treeid="3" itemid="10252" moneytype="2" price="10" basenum="1" limitbuy="999"/>
+				<item id="3009" treeid="3" itemid="500002" moneytype="2" price="10" basenum="1" limitbuy="999"/>
+				
+				<item id="3010" treeid="3" itemid="10082" moneytype="2" price="40" basenum="1" limitbuy="999"/>
+				<item id="3011" treeid="3" itemid="10188" moneytype="2" price="10" basenum="1" limitbuy="999"/>	
+            </tab>
+			<tab name="银两商城" bind="1">
+				<tree>
+					<root id="0" name="商品列表">
+						<child id="0" name="商品列表"/>
+                    </root>
+				</tree>
+				<item id="4002" treeid="4" itemid="10223" moneytype="1" price="400000" basenum="1" limitbuy="999"/>
+				<item id="4003" treeid="4" itemid="10060" moneytype="1" price="50000" basenum="1" limitbuy="999"/>
+				<item id="4004" treeid="4" itemid="10061" moneytype="1" price="50000" basenum="1" limitbuy="999"/>
+				<item id="4005" treeid="4" itemid="10038" moneytype="1" price="1200" basenum="99" limitbuy="999"/>
+				<item id="4006" treeid="4" itemid="10039" moneytype="1" price="4000" basenum="99" limitbuy="999"/>
+				<item id="4007" treeid="4" itemid="10152" moneytype="1" price="150000" basenum="1" limitbuy="999"/>
+				<item id="4008" treeid="4" itemid="10056" moneytype="1" price="50000" basenum="99" limitbuy="999"/>
+				<item id="4009" treeid="4" itemid="10055" moneytype="1" price="50000" basenum="99" limitbuy="999"/>
+            </tab>
+			
+		    <tab name="折扣限购" >
+				<tree>
+					<root id="1" name="商品列表">
+						<child id="1" name="商品列表"/>
+                    </root>
+				</tree>
+				<item id="8002" treeid="4" itemid="10069" moneytype="8" price="9" discount="9" oldPrice="10" basenum="1" bind="1" limitbuy="20" daylimit="20"/>
+				<item id="8004" treeid="4" itemid="10095" moneytype="8" price="9" discount="9" oldPrice="10" basenum="1" bind="1" limitbuy="999" daylimit="50"/>
+				<item id="8005" treeid="4" itemid="10090" moneytype="8" price="258" discount="9" oldPrice="288" basenum="1" bind="1" limitbuy="999" daylimit="1"/>
+				<item id="8006" treeid="4" itemid="1025" moneytype="8" price="300" discount="8" oldPrice="384" basenum="1" bind="1" limitbuy="999" daylimit="15"/>
+				<item id="8009" treeid="4" itemid="10099" moneytype="8" price="250" discount="0" oldPrice="1600" basenum="1" bind="1" limitbuy="999" daylimit="1"/>
+				<item id="8010" treeid="4" itemid="10098" moneytype="8" price="50" discount="0" oldPrice="400" basenum="1" bind="1" limitbuy="999" daylimit="1"/>
+
+			</tab>		
+		</store>
+		<store id="3" name="灵戒兑换" check="0" sell="0" fix="0">
+		    <tab name="灵戒兑换" >
+				<tree>
+					<root id="1" name="商品列表">
+						<child id="1" name="灵戒"/>
+                    </root>
+				</tree>
+				<item id="5001" treeid="2" itemid="10220" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+				<item id="5002" treeid="2" itemid="10221" moneytype="8" price="100" basenum="1" limitbuy="999"/>
+				<item id="5003" treeid="2" itemid="10222" moneytype="8" price="1000" basenum="1" limitbuy="999"/>
+			</tab>
+		</store>
+		<store id="4" name="快速购买" check="0" sell="0" fix="0">
+		    <tab name="快速购买" >
+				<tree>
+					<root id="1" name="商品列表">
+						<child id="1" name="快速购买"/>
+                    </root>
+				</tree>
+				<item id="6017" treeid="4" itemid="10037" moneytype="1" price="300" basenum="99" bind="1" limitbuy="999"/>
+				<item id="6001" treeid="4" itemid="10038" moneytype="1" price="1200" basenum="99" bind="1" limitbuy="999"/>
+				<item id="6002" treeid="4" itemid="10039" moneytype="1" price="4000" basenum="99" bind="1" limitbuy="999"/>
+				<item id="6003" treeid="4" itemid="10075" moneytype="8" price="10" basenum="1" bind="1" limitbuy="999"/>
+				<item id="6004" treeid="4" itemid="10223" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+				<item id="6021" treeid="4" itemid="10224" moneytype="8" price="200" basenum="1" limitbuy="999"/>
+				<item id="6022" treeid="4" itemid="10225" moneytype="8" price="988" basenum="1" limitbuy="999"/>							
+				<item id="6005" treeid="4" itemid="10191" moneytype="2" price="20" basenum="1" bind="1" limitbuy="999"/>
+				<item id="6023" treeid="4" itemid="10195" moneytype="2" price="400" basenum="1" bind="1" limitbuy="999"/>
+				<item id="6024" treeid="4" itemid="10200" moneytype="2" price="2400" basenum="1" bind="1" limitbuy="999"/>							
+				<item id="6006" treeid="4" itemid="10210" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+				<item id="6025" treeid="4" itemid="10211" moneytype="8" price="100" basenum="1" limitbuy="999"/>
+				<item id="6026" treeid="4" itemid="10212" moneytype="8" price="988" basenum="1" limitbuy="999"/>
+				<item id="6039" treeid="4" itemid="10127" moneytype="8" price="988" basenum="1" limitbuy="999"/>								
+				<item id="6007" treeid="4" itemid="10000" moneytype="8" price="20" basenum="1" limitbuy="999"/>
+				<item id="6027" treeid="4" itemid="10077" moneytype="8" price="2" basenum="1" limitbuy="999"/>
+				<item id="6008" treeid="4" itemid="10079" moneytype="8" price="10" basenum="1" limitbuy="999"/>			
+				<item id="6010" treeid="4" itemid="10116" moneytype="8" price="100" basenum="1" limitbuy="999"/>
+				<item id="6011" treeid="4" itemid="10119" moneytype="8" price="200" basenum="1" limitbuy="999"/>
+				<item id="6012" treeid="4" itemid="10054" moneytype="8" price="50" basenum="99" limitbuy="999"/>
+				<item id="6013" treeid="4" itemid="10055" moneytype="1" price="50000" basenum="99" bind="1" limitbuy="999"/>
+				<item id="6014" treeid="4" itemid="10056" moneytype="1" price="50000" basenum="99" bind="1" limitbuy="999"/>
+				<item id="6018" treeid="4" itemid="10121" moneytype="8" price="20" basenum="1" limitbuy="999"/>
+				<item id="6019" treeid="4" itemid="10074" moneytype="8" price="100" basenum="1" limitbuy="999"/>
+				<item id="6028" treeid="4" itemid="10094" moneytype="8" price="2" basenum="1" limitbuy="999"/>
+				<item id="6029" treeid="4" itemid="10081" moneytype="8" price="100" basenum="1" limitbuy="999"/>
+				<item id="6030" treeid="4" itemid="10095" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+				<item id="6032" treeid="4" itemid="10097" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+				<item id="6033" treeid="4" itemid="19106" moneytype="8" price="20" basenum="1" limitbuy="999" largessid="10039"  largessbasenum="1" largessbind="1"/>
+				
+				<item id="6040" treeid="4" itemid="10120" moneytype="8" price="988" basenum="1" limitbuy="999"/>
+				<item id="6041" treeid="4" itemid="10221" moneytype="8" price="500" basenum="1" limitbuy="999"/>
+				<item id="6042" treeid="4" itemid="10222" moneytype="8" price="988" basenum="1" limitbuy="999"/>
+				<item id="6043" treeid="4" itemid="10250" moneytype="2" price="10" basenum="1" limitbuy="999"/>
+				<item id="6044" treeid="4" itemid="10251" moneytype="2" price="200" basenum="1" limitbuy="999"/>
+				<item id="6045" treeid="4" itemid="10076" moneytype="8" price="1" basenum="1" limitbuy="999"/>
+				<item id="6046" treeid="4" itemid="500002" moneytype="2" price="10" basenum="1" limitbuy="999"/>
+				<item id="6047" treeid="1" itemid="10080" moneytype="8" price="50" basenum="1" limitbuy="999"/>
+				<item id="6048" treeid="4" itemid="16002" moneytype="8" price="10" basenum="1" limitbuy="999"/>
+			</tab>
+		</store>
+		<store id="5" name="节日商店" check="0" sell="0" fix="0">
+		    <tab name="节日商店" >
+				<tree>
+					<root id="1" name="商品列表">
+						<child id="1" name="鞭炮"/>
+                    </root>
+				</tree>
+				<item id="7001" treeid="2" itemid="16003" moneytype="8" price="0" basenum="1" limitbuy="999"/>
+				<item id="7002" treeid="2" itemid="16005" moneytype="8" price="888" basenum="1" limitbuy="999"/>
+			</tab>
+		</store>
+		<store id="6" name="月老商店" check="0" sell="0" fix="0">
+		    <tab name="月老商店" >
+				<tree>
+					<root id="1" name="商品列表">
+						<child id="1" name="商品列表"/>
+                    </root>
+				</tree>
+				<item id="8001" treeid="5" itemid="10080" moneytype="8" price="88" basenum="1" limitbuy="999"/>
+
+			</tab>
+		</store>
+	</Stores>

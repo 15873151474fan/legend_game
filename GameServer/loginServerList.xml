@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Zebra>
+	<!-- FLServer列表 -->
+        <LoginServerList>
+                <server ip="121.43.197.240" port="47001"/> <!-- QA -->
+        </LoginServerList>
+
+        <!-- NameServerList列表 -->
+        <NameServerList>
+                <server ip="121.43.197.240" port="47005"/>
+        </NameServerList>
+        <GMServerList>
+                <server ip="121.43.197.240" port="7006"/>
+        </GMServerList>
+
+        <MonitorServerList>
+                <server ip="121.43.197.240" port="7011"/>
+        </MonitorServerList>
+
+</Zebra>
+
